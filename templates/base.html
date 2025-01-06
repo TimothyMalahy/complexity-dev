@@ -1,0 +1,61 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{% block title %}My Site{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
+    
+    
+    
+    <!-- jsDelivr :: Sortable :: Latest (https://www.jsdelivr.com/package/npm/sortablejs) -->
+    <script src="{% static 'js/sortable.min.js' %}" ></script>
+    <!-- Feather icons -->
+    <script src="{% static 'js/feather.min.js' %}"></script> <!-- https://github.com/feathericons/feather -->
+
+    <!-- HTMX and extensions -->
+    <script src="{% static 'js/htmx/htmx.min.js' %}" defer></script>
+    <script src="{% static 'js/htmx/extensions/sse.js' %}" defer></script>
+
+    {% block extrahead %}{% endblock %}
+</head>
+<body class="gradient-background" hx-ext="sse">
+    {% block header %}
+    <header>
+        
+        <div class="default-header">
+            <div class="header-autofit">
+                <h1><a href="{% url 'home:home' %}#home">Complexity.Dev</a></h1>
+                <nav class="default-nav">
+                    <ul class="nav-list">
+                        <li><a href="{% url 'home:home' %}#about">About</a></li>
+                        <li><a href="{% url 'polls:home' %}">See Topics</a></li>
+                        <li><a href="{% url 'home:home' %}#home">Home</a></li>
+                        <li><a href="{% url 'home:home' %}#blog">Blog</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        
+    </header>
+
+    {% endblock %}
+    <main>
+        <div class="container">
+            {% block content %}{% endblock %}
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2025 My Site</p>
+    </footer>
+</body>
+<script>
+    feather.replace();
+</script>
+{% block extra_scripts %}{% endblock %}
+</html>
+

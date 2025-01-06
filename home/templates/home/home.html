@@ -1,0 +1,61 @@
+{% extends "base.html" %}
+
+{% block extrahead %}
+    <style></style>
+{% endblock %}
+
+{% block title %}Home{% endblock %}
+
+{% block header %}
+<div id="home"></div>
+<div class="custom-header">
+    <div class="container">
+        <h1><a href="#home">Complexity.Dev</a></h1>
+        <h2>A system for communities to evaluate what are the least to most complicated skills to help others know what to learn next</h2>
+    </div>
+</div>
+<nav class="custom-nav">
+    <ul class="nav-list">
+        <li><a href="{% url 'home:home' %}#about">About</a></li>
+        <li><a href="{% url 'polls:home' %}">See Topics</a></li>
+        <li><a href="{% url 'home:home' %}#home">Home</a></li>
+        <li><a href="{% url 'home:home' %}#blog">Blog</a></li>
+    </ul>
+</nav>
+{% endblock %}
+
+{% block content %}
+    <article id="about">
+        <section class="container">
+            <h2>Why?</h2>
+            <p>I was about to post on bluesky one day.</p>
+            
+            <blockquote>
+                <p>
+                    There's a lot of great samples/tutorials out there related to CSS. If you're a beginner, when is someone capable enough to get into more complex things beyond responsiveness, but into Shadow DOM. Feels like there should be a "Topic by Complexity" list somewhere.
+                </p>
+            </blockquote>
+            <p>Before I did though - I thought "Why not make it myself?" So here we are.</p>
+        </section>
+    </article>
+    <article id="topics">
+        <section class="container">
+            <h2>Topics</h2>
+            <ul>
+                {% for topic in topics %}
+                    <li><a href="{% url 'polls:vote' topic.id %}">{{ topic.topic_text }}</a></li>
+                {% endfor %}
+                <li><a href="{% url 'polls:home' %}">{{total_extra}}+ More</a></li>
+            </ul>
+        </section>
+    </article>
+    <article id="blog">
+        <section class="container">
+            <h2>Blog</h2>
+            <ul>
+                <li><a>Where I'll put the Nth latest blogs</a></li>
+                
+            </ul>
+        </section>
+    </article>
+{% endblock %}

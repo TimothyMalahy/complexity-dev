@@ -1,0 +1,44 @@
+.poll-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0.5rem 0;
+}
+.poll-list-item {
+  margin: 0.25rem 0;
+  padding: 0.25rem 0 0.25rem 0.5rem;
+  width: 100%;
+  background-color: #8260dc;
+  color: #fff;
+  border: 1px solid #58768c;
+  border-radius: 0.25rem;
+  cursor: pointer;
+}
+
+.poll-list-item:focused {
+  background-color: #321a71;
+  border: 1px solid #8260dc;
+}
+
+.sortable-ghost {
+  margin: 0.25rem 0;
+  padding: 0.25rem 0 0.25rem 0.5rem;
+  width: 100%;
+  background-color: #9acef2;
+  border: 1px solid yellow;
+  border-radius: 0.25rem;
+  cursor: pointer;
+}
+
+.sortable-chosen {
+  margin: 0.25rem 0;
+  padding: 0.25rem 0 0.25rem 0.5rem;
+  width: 100%;
+  background-color: #321a71;
+  border: 1px solid #8260dc;
+  border-radius: 0.25rem;
+  cursor: pointer;
+}
+
+a:focus {
+  border: 1px solid yellow;
+}

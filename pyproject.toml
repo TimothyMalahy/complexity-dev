@@ -1,0 +1,13 @@
+[project]
+name = "dev-difficulty"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "django>=5.1.4",
+    "django-htmx>=1.21.0",
+    "django-improved-user[factory]>=2.1.0",
+    "django-post-office>=3.9.1",
+    "factory-boy>=3.3.1",
+]
