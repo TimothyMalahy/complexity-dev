@@ -78,3 +78,12 @@ class Vote(models.Model):
         return f"Vote by {self.user} on {self.topic}"
 
     ## Always return the latest voted date for each user
+
+
+class TopicOwner(models.Model):
+    user = models.ForeignKey(CustomUser, on_delete=models.CASCADE)
+    topic = models.ForeignKey(Topic, on_delete=models.CASCADE)
+    date_added = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return f"{self.user} owns {self.topic}"

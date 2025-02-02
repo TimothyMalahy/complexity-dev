@@ -43,14 +43,13 @@
 <!-- things that don't scroll -->
 <div class="modal__header">
     <h2>Modal Title</h2>
-    <button aria-label="Close modal" hx-post="{% url 'polls:render_modal' %}" hx-swap="outerHTML" hx-target="#modal" class="close-button">X</button>
+    <button aria-label="Close modal" hx-post="{% url 'polls:render_modal' %}" hx-swap="outerHTML" hx-target=".ballot__footer" class="close-button">X</button>
 </div>
 
     <div class="modal__guts">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos incidunt officia temporibus dolores laborum minima alias neque similique animi illo. Amet quis mollitia placeat! Quos ut unde facilis enim numquam expedita autem nobis impedit, magni repellat a pariatur at delectus fugiat quia suscipit. Tenetur, doloribus animi sunt corrupti nulla amet consequuntur temporibus pariatur natus culpa adipisci consequatur debitis iusto magnam porro modi possimus? In dolore similique rem eos autem illo ad tempore esse doloremque. Aliquam, necessitatibus modi iusto officia debitis aliquid explicabo quo quos ratione commodi. Rem, incidunt dolorem blanditiis possimus assumenda corporis a rerum ut deserunt numquam necessitatibus maxime?
     </div>
 </div>
-
 {% endcomment %}
 
 <div class="modal fade" id="modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -70,3 +69,5 @@
       </div>
     </div>
   </div>
+
+  

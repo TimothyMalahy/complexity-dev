@@ -1,0 +1,3 @@
+{% for topic in topics %}
+    <a class="topic" href="{% url 'polls:topic_detail' topic.id %}">{{ topic.topic_text }}</a>
+{% endfor %}

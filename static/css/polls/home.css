@@ -1,0 +1,192 @@
+:root {
+  --font-family: "Arial", sans-serif;
+  --brand-color-dark: hsl(316, 71%, 74%);
+  --accent-color-dark: hsl(198, 73%, 74%);
+}
+
+body {
+  background: hsl(0, 0%, 12%) !important;
+}
+
+h2 {
+  color: hsl(0, 0%, 100%);
+  font-size: 2rem;
+}
+
+/* Search Part of the page */
+.search-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem 0;
+  gap: 0.5rem;
+}
+
+input {
+  font-family: var(--font-family);
+  font-size: 1.25rem;
+  padding: 0.5rem;
+  background-color: hsl(0, 0%, 20%);
+  color: var(--brand-color-dark);
+  border: hsl(0, 0%, 40%) 2px solid;
+  border-radius: 6px;
+  flex: 1;
+}
+
+/* HTMX Loader */
+.loader {
+  width: 120px;
+  height: 20px;
+  -webkit-mask: linear-gradient(90deg, var(--brand-color-dark) 70%, #0000 0)
+    left/20% 100%;
+  background: linear-gradient(var(--brand-color-dark) 0 0) left -25% top 0 /20%
+    100% no-repeat var(--accent-color-dark);
+  animation: l7 1s infinite steps(6);
+}
+@keyframes l7 {
+  100% {
+    background-position: right -25% top 0;
+  }
+}
+
+/* Buttons part of the page */
+.buttons__container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  padding: 1rem;
+  gap: 1rem;
+  margin: 1rem 0;
+  background-color: hsl(0, 0%, 20%);
+  border: hsl(0, 0%, 40%) 2px solid;
+  border-radius: 6px;
+  font-size: 1.5rem;
+  font-family: var(--font-family);
+}
+
+.button {
+  background-color: hsl(0, 0%, 12%);
+  color: var(--accent-color-dark);
+  border: hsl(0, 0%, 40%) 2px solid;
+  border-radius: 6px;
+  padding: 0.75rem;
+  text-decoration: none;
+  text-align: center;
+}
+
+.button:hover {
+  background-color: hsl(0, 0%, 0%);
+  cursor: pointer;
+}
+
+.button:active {
+  background-color: hsl(0, 0%, 12%);
+  color: hsl(0, 0%, 100%);
+  border: hsl(0, 0%, 60%) 2px solid;
+}
+
+/* Topics Part of the page */
+.topics__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 0.5rem;
+  margin: 1rem 0;
+}
+
+.topic {
+  background-color: hsl(0, 0%, 20%);
+  border: hsl(0, 0%, 40%) 2px solid;
+  border-radius: 6px;
+  color: hsl(316, 71%, 74%);
+  font-size: 1.5rem;
+  text-decoration: none;
+  font-family: var(--font-family);
+  padding: 0.75rem;
+}
+
+.topic:hover {
+  border: hsl(0, 0%, 60%) 2px solid;
+  cursor: pointer;
+}
+
+.modal {
+  gap: 0.5rem;
+  background-color: hsl(0, 0%, 20%);
+  border: hsl(0, 0%, 40%) 2px solid;
+  border-radius: 6px;
+}
+
+.modal__header {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 0.5rem;
+}
+
+.new-topic-form {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 0.5rem;
+  grid-template-areas:
+    "new-topic-form__topic"
+    "new-topic-form__reference-link"
+    "new-topic-form__buttons";
+}
+
+.modal-content div:has(> input) {
+  display: grid;
+  justify-content: center;
+}
+.modal-content label {
+  font-family: var(--font-family);
+  font-size: 1.25rem;
+  color: hsl(0, 0%, 100%);
+  padding-bottom: 0.25rem;
+}
+.modal-content input + span {
+  display: inline-block;
+  height: 1.25rem;
+}
+
+.new-topic-form__topic {
+  grid-area: new-topic-form__topic;
+}
+.new-topic-form__reference-link {
+  grid-area: new-topic-form__reference-link;
+}
+.new-topic-form__buttons {
+  grid-area: new-topic-form__buttons;
+  align-self: end;
+}
+
+.modal::backdrop {
+  background-color: hsl(0, 0%, 0%, 0.5);
+}
+
+.modal__button {
+  font-size: 1rem;
+  font-weight: 600;
+  font-family: var(--font-family);
+}
+
+.modal__button:disabled {
+  background-color: hsl(0, 0%, 40%);
+  color: hsl(0, 0%, 60%);
+  cursor: not-allowed;
+}
+
+.asterisk::after {
+  content: "*";
+  color: hsl(0, 100%, 89%);
+  font-family: var(--font-family);
+  font-size: 1.25rem;
+}
+
+.error-message {
+  color: hsl(0, 100%, 89%);
+  font-family: var(--font-family);
+}
+
+.button {
+  justify-content: center;
+}

@@ -5,11 +5,11 @@
 
 {% block extrahead %}
     <link rel="stylesheet" href="{% static 'css/polls/vote.css' %}">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    
 {% endblock %}
 
 {% block content %}
+
     <h2 tabindex="0" >Order the below items from least complex to most complex</h2>
     
     <div class="ballot">
@@ -18,9 +18,17 @@
         </div>
         <div id="polllist" class="poll-list" role="list" aria-label="List of subjects to order">
             {% for subject in subjects %}
+            
             <div class="poll-list__item" tabindex="0" data-id="{{ subject.id }}" aria-label="{{ subject.subject_text }}" role="listitem" aria-grabbed="false">
+
                 <p class="poll-list__subject-text"><span aria-hidden="true">{{ subject.subject_text }}    </span>    </p>
                 {% for link in subject.subjectlinks_set.all %}
+                {% comment %}
+                <div id="poll-list__item__popover{{forloop.parentloop.counter}}{{forloop.counter}}" popover>
+                    <a href="{{link.link_url}}" target="_blank">{{link.get_source_domain}}</a>
+                </div>
+                <button class="popover-button" popovertarget="poll-list__item__popover{{forloop.parentloop.counter}}{{forloop.counter}}"><i data-feather="link-2"></i></button></p>
+                {% endcomment %}
                 <a href="{{ link.link_url }}" class="poll-list__item__link" target="_blank" data-href="{{ link.link_url }}" role="link">
                     <span aria-label="View source at {{link.get_source_domain}}" class="sr-only">View source at {{link.get_source_domain}}</span>
                     <div class="tooltip">
@@ -36,7 +44,10 @@
             
             </div>
             {% endfor %}
+
         </div>
+
+        
         <div class="ballot__footer">
             <h4 class="ballot__footer__label">Most Complex</h4>
             <div class="ballot__controls">
@@ -48,18 +59,32 @@
                     {% endcomment %}
                     Submit ballot
                 </button>
-                <button type="button" hx-get="{% url 'polls:render_modal' %}" hx-swap="beforeend" hx-target="body">
+                <button 
+                    type="button" 
+                    class="button open-modal"
+                    id="new-subject"
+                    hx-get="{% url 'polls:render_modal' %}"
+                    hx-target="#modal-content" 
+                    >
                     <span class="button__tooltip">
                         <span class="button__tooltip__text">Think we missed a subject?</span>
                     </span>
                     Add New Subject
                 </button>
-                <button type="button">
+                <button type="button"
+                    class="button open-modal"
+                    id="new-topic"
+                    hx-get="{% url 'polls:render_modal' %}"
+                    hx-target="#modal-content">
                     <span class="button__tooltip">
                         <span class="button__tooltip__text">Topic too large?<br> Click this button to create a sub topic</span>
                     </span>
                     Make Sub Topic
                 </button>
+            </div>
+            <div class="ballot-details">
+                <p>Topic created by {{ topic_owner }}</p>
+                <p>Created on {{ topic.pub_date }}</p>
             </div>
         </div>
         
@@ -67,23 +92,44 @@
 
     <div id="screen-reader-updates" aria-live="polite" style="position: absolute; left: -9999px;"></div>
 
-
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-    crossorigin="anonymous"></script>
+    <dialog class="modal" id="modal">
+        <div class="modal__header" id="modal__header">
+            <button class="button modal__button" id="modalClose">X</button>
+        </div>
+        <div class="modal-content" id="modal-content"></div>
+        
+    </dialog>
 {% endblock %}
 
 {% block extra_scripts %}
 <script>
+    const modal = document.getElementById('modal')
+    
+    const openModalButtons = document.querySelectorAll('.open-modal');
+    openModalButtons.forEach(button => {
+        button.onclick = () => modal.showModal();
+    });
+    const closeModal = document.getElementById('modalClose')
+    
+    closeModal.onclick = () => modal.close()
 
-    document.addEventListener("modal:show", () => {
-        const modalEl = document.getElementById("modal");
-        const bsModal = window.bootstrap.Modal.getOrCreateInstance(modalEl);
-        bsModal.show();
-        modalEl.addEventListener("hidden.bs.modal", () => {
-          modalEl.remove();
-        });
+    document.body.addEventListener('closeModal', () => {
+        /* Views.py need to return this in the trigger_client_event to close the modal */
+        modal.close()
+    })
+
+</script>
+{% comment %}
+<script>
+
+     document.addEventListener("modal:show", () => {
+      const modalEl = document.getElementById("modal");
+      const bsModal = window.bootstrap.Modal.getOrCreateInstance(modalEl);
+      bsModal.show();
+      modalEl.addEventListener("hidden.bs.modal", () => {
+        modalEl.remove();
       });
+    });
     document.addEventListener('DOMContentLoaded', function() {
         var sortable = new Sortable(document.getElementById('polllist'), {
             animation: 150,
@@ -201,4 +247,5 @@
         }
     });
 </script>
+{% endcomment %}
 {% endblock %}

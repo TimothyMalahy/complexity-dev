@@ -14,16 +14,24 @@
     
     <!-- jsDelivr :: Sortable :: Latest (https://www.jsdelivr.com/package/npm/sortablejs) -->
     <script src="{% static 'js/sortable.min.js' %}" ></script>
+    {% comment %}
     <!-- Feather icons -->
     <script src="{% static 'js/feather.min.js' %}"></script> <!-- https://github.com/feathericons/feather -->
+    {% endcomment %}
 
     <!-- HTMX and extensions -->
+    {% load django_htmx %}
     <script src="{% static 'js/htmx/htmx.min.js' %}" defer></script>
     <script src="{% static 'js/htmx/extensions/sse.js' %}" defer></script>
+    <script src="{% static 'js/htmx/extensions/response-targets.js' %}" defer></script>
+    <script src="{% static 'js/htmx/extensions/debug.js' %}" defer></script>
+    <script src="{% static 'js/htmx/extensions/remove-me.js' %}" defer></script>
+    
+    {% django_htmx_script %}
 
     {% block extrahead %}{% endblock %}
 </head>
-<body class="gradient-background" hx-ext="sse">
+<body class="gradient-background" hx-ext="sse, debug, response-targets" hx-headers='{"X-CSRFToken": "{{ csrf_token }}"}'>
     {% block header %}
     <header>
         
@@ -32,10 +40,10 @@
                 <h1><a href="{% url 'home:home' %}#home">Complexity.Dev</a></h1>
                 <nav class="default-nav">
                     <ul class="nav-list">
-                        <li><a href="{% url 'home:home' %}#about">About</a></li>
-                        <li><a href="{% url 'polls:home' %}">See Topics</a></li>
-                        <li><a href="{% url 'home:home' %}#home">Home</a></li>
-                        <li><a href="{% url 'home:home' %}#blog">Blog</a></li>
+                        <li><a class="nav-link" href="{% url 'home:home' %}#about">About</a></li>
+                        <li><a class="nav-link" href="{% url 'polls:home' %}">See Topics</a></li>
+                        <li><a class="nav-link" href="{% url 'home:home' %}#home">Home</a></li>
+                        <li><a class="nav-link" href="{% url 'home:home' %}#blog">Blog</a></li>
                     </ul>
                 </nav>
             </div>
@@ -53,9 +61,11 @@
         <p>&copy; 2025 My Site</p>
     </footer>
 </body>
+{% comment %}
 <script>
     feather.replace();
 </script>
+{% endcomment %}
 {% block extra_scripts %}{% endblock %}
 </html>
 

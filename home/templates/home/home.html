@@ -10,7 +10,7 @@
 <div id="home"></div>
 <div class="custom-header">
     <div class="container">
-        <h1><a href="#home">Complexity.Dev</a></h1>
+        <h1><a href="#home">Complexity Index</a></h1>
         <h2>A system for communities to evaluate what are the least to most complicated skills to help others know what to learn next</h2>
     </div>
 </div>
@@ -43,7 +43,7 @@
             <h2>Topics</h2>
             <ul>
                 {% for topic in topics %}
-                    <li><a href="{% url 'polls:vote' topic.id %}">{{ topic.topic_text }}</a></li>
+                    <li><a href="{% url 'polls:topic_detail' topic.id %}">{{ topic.topic_text }}</a></li>
                 {% endfor %}
                 <li><a href="{% url 'polls:home' %}">{{total_extra}}+ More</a></li>
             </ul>

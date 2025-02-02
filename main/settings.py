@@ -29,21 +29,31 @@ ALLOWED_HOSTS = ["*"]
 
 
 # Application definition
-
-INSTALLED_APPS = [
+DEFAULT_APPS = [
     "django.contrib.admin",
     "django.contrib.auth",
     "django.contrib.contenttypes",
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
-    "django_browser_reload",
-    "post_office",
+]
+
+FIRST_PARTY_APPS = [
     "user_app",
-    "django_extensions",
     "polls",
     "home",
 ]
+
+THIRD_PARTY_APPS = [
+    "django_browser_reload",
+    "post_office",
+    "django_extensions",
+    "guardian",
+    "django_htmx",
+]
+
+
+INSTALLED_APPS = DEFAULT_APPS + FIRST_PARTY_APPS + THIRD_PARTY_APPS
 
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
@@ -54,7 +64,13 @@ MIDDLEWARE = [
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
     "django_browser_reload.middleware.BrowserReloadMiddleware",
+    "django_htmx.middleware.HtmxMiddleware",
 ]
+
+AUTHENTICATION_BACKENDS = (
+    "django.contrib.auth.backends.ModelBackend",  # default
+    "guardian.backends.ObjectPermissionBackend",
+)
 
 EMAIL_BACKEND = "post_office.EmailBackend"
 # EMAIL_HOST = "smtp.example.com"
