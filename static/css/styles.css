@@ -1,5 +1,4 @@
 /* 
-CSS heavily inspired by https://stylestage.dev/styles/hackytoberfest/ and others on the parent directory 
 Initial set of rules below from - https://piccalil.li/blog/a-more-modern-css-reset/
 CSS heavily inspired by options on https://stylestage.dev/ 
 CSS more specifically inspired by https://stylestage.dev/styles/hackytoberfest/ 
@@ -10,16 +9,25 @@ CSS more specifically inspired by https://stylestage.dev/styles/hackytoberfest/
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 :root {
-  --font-family: "Inter", sans-serif;
+  --font-family: "Inter", "Arial", sans-serif;
   --font-weight-strong: 600;
   --font-size-h1: 3rem;
   --font-size-h2: 1.5rem;
   --font-size-h3: 1.6rem;
   --font-size-h4: 1.35rem;
-  --font-size-text: 1rem;
+  --font-size-text: 1.25rem;
   --border-radius: 0;
   --brand-color-dark: hsl(316, 71%, 74%);
+  --brand-color-dark-intense: hsl(316, 91%, 74%);
+  --brand-color-dark-subtle: hsl(316, 31%, 74%);
+  --accent-color-dark-intense: hsl(198, 93%, 74%);
   --accent-color-dark: hsl(198, 73%, 74%);
+  --accent-color-dark-subtle: hsl(198, 33%, 74%);
+  --container-background-color-dark: hsl(0, 0%, 20%);
+  --container-border-color-dark: hsl(0, 0%, 40%) 2px solid;
+  --container-border-radius-dark: 6px;
+
+  --quote-background-color: hsl(197, 9%, 45%);
 }
 
 /* Box sizing rules */
@@ -117,46 +125,16 @@ textarea:not([rows]) {
 /* ########## Custom CSS ########## */
 /* ################################ */
 
-.gradient-background {
-  background: conic-gradient(
-    from -0.5turn at bottom right,
-    deeppink,
-    cyan,
-    rebeccapurple
-  );
-  background-repeat: no-repeat;
-}
-
 body {
   min-height: 100vh;
   font-size: 100%;
   line-height: 1.5;
   text-rendering: optimizeSpeed;
   overflow-x: hidden;
+  background: hsl(0, 0%, 12%);
 }
 
-li a {
-  color: red;
-  font-family: var(--font-family);
-}
-li a:hover {
-  text-decoration-color: currentColor;
-  text-decoration-line: none;
-  text-decoration-style: solid;
-  text-decoration-thickness: auto;
-}
-
-.custom-nav {
-  width: 100%;
-  padding: 6vh 2rem;
-}
-
-/* .default-nav {
-  width: 100%;
-  padding: 6vh 2rem;
-} */
-
-nav ul {
+.nav-list {
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
@@ -167,21 +145,19 @@ nav ul {
   padding: 0;
 }
 
-nav ul li {
-  margin: 0 0.5rem 0 0;
-}
-
-nav ul a {
+.nav-link {
+  color: var(--brand-color-dark-intense);
+  font-size: 1.5rem;
+  font-family: var(--font-family);
+  font-weight: 700;
+  text-transform: uppercase;
+  text-decoration: none;
   display: inline-grid;
   padding: 0.5rem;
-  color: var(--accent-color-dark);
-  font-size: 1.25rem;
-  text-decoration: none;
-  text-transform: uppercase;
-  font-weight: 700;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
 
-nav ul a::after {
+.nav-link::after {
   width: 100%;
   height: 0.33em;
   /* background-color: #fff; */
@@ -189,21 +165,13 @@ nav ul a::after {
   opacity: 0;
   content: "";
 }
-nav ul a:hover::after {
+.nav-link:hover::after {
   opacity: 1;
   color: #fff;
 }
 
-.custom-header {
-  display: grid;
-  min-height: 80vh;
-  place-items: center;
-  padding: 0 2rem;
-}
-@media (max-width: 600px) {
-  .custom-header {
-    padding: 0 1rem;
-  }
+.nav-item {
+  margin: 0 0.5rem 0 0;
 }
 
 .container {
@@ -211,12 +179,6 @@ nav ul a:hover::after {
   max-width: 950px;
   margin-right: auto;
   margin-left: auto;
-  h1 {
-    font-size: var(--font-size-h1);
-    margin-bottom: 1rem;
-    color: #e87ccb;
-    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
-  }
 }
 
 .default-header {
@@ -224,20 +186,20 @@ nav ul a:hover::after {
   max-width: 950px;
   margin-right: auto;
   margin-left: auto;
-}
-.header-autofit {
   display: grid;
   place-items: center;
   align-items: end;
-  h1 {
-    font-size: var(--font-size-h1);
-    color: var(--brand-color-dark);
-    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
-  }
-  nav {
-    margin: 0.25rem 0 0 0;
-    padding: 0rem 0 0 0;
-  }
+}
+
+.default-header__h1 {
+  font-size: var(--font-size-h1);
+  color: var(--brand-color-dark-intense);
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+.default-header__default-nav {
+  margin: 0.25rem 0 0 0;
+  padding: 0rem 0 0 0;
 }
 
 h1,
@@ -246,6 +208,7 @@ h3,
 h4 {
   font-family: var(--font-family);
   font-weight: 700;
+  color: hsl(0, 0%, 100%);
 }
 
 p {
@@ -253,62 +216,4 @@ p {
   font-weight: 400;
   font-size: var(--font-size-text);
   line-height: 1.5;
-}
-
-/*Adapted from https://css-tricks.com/snippets/css/simple-and-nice-blockquote-styling/ */
-blockquote {
-  background: #f9f9f9;
-  border-left: 10px solid #ccc;
-  margin: 1.5em 10px;
-  padding: 0.5em 10px;
-  quotes: "\201C""\201D""\2018""\2019";
-}
-blockquote:before {
-  color: #ccc;
-  font-size: 4em;
-  line-height: 0.1em;
-  margin-right: 0.25em;
-  vertical-align: -0.4em;
-}
-blockquote p {
-  display: inline;
-}
-/* ################### */
-
-article {
-  background: #9acef2;
-
-  padding: 2rem;
-  border-radius: 6px;
-  margin: 1rem 0;
-}
-
-article ul {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-start;
-  margin: 1rem 0 2rem;
-  padding: 0;
-  list-style: none;
-}
-article ul li a {
-  margin: 0 0.5rem 0.5rem 0;
-  display: inline-grid;
-  background-color: #e87ccb;
-  padding: 0.3em 1.2em;
-  font-weight: 600;
-  border-radius: 3px;
-  border-width: 1px;
-  border-color: black;
-  border-style: solid;
-  text-decoration: none;
-}
-
-.nav-link {
-  color: var(--brand-color-dark);
-  font-size: 1.5rem;
-}
-
-.nav-link:hover {
-  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }

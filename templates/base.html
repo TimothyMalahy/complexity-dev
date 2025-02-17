@@ -1,11 +1,13 @@
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>{% block title %}My Site{% endblock %}</title>
     <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <link rel="stylesheet" href="{% static 'css/login-modal.css' %}">
     <link rel="preconnect" href="https://fonts.googleapis.com"> 
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
@@ -14,6 +16,7 @@
     
     <!-- jsDelivr :: Sortable :: Latest (https://www.jsdelivr.com/package/npm/sortablejs) -->
     <script src="{% static 'js/sortable.min.js' %}" ></script>
+    
     {% comment %}
     <!-- Feather icons -->
     <script src="{% static 'js/feather.min.js' %}"></script> <!-- https://github.com/feathericons/feather -->
@@ -31,22 +34,27 @@
 
     {% block extrahead %}{% endblock %}
 </head>
-<body class="gradient-background" hx-ext="sse, debug, response-targets" hx-headers='{"X-CSRFToken": "{{ csrf_token }}"}'>
+<body class="gradient-background" hx-ext="sse,  response-targets" hx-headers='{"X-CSRFToken": "{{ csrf_token }}"}'>
     {% block header %}
     <header>
         
         <div class="default-header">
-            <div class="header-autofit">
-                <h1><a href="{% url 'home:home' %}#home">Complexity.Dev</a></h1>
-                <nav class="default-nav">
+                <h1 class="default-header__h1"><a href="{% url 'home:home' %}#home">Complexity Index</a></h1>
+                <nav class="default-header__default-nav">
                     <ul class="nav-list">
-                        <li><a class="nav-link" href="{% url 'home:home' %}#about">About</a></li>
-                        <li><a class="nav-link" href="{% url 'polls:home' %}">See Topics</a></li>
-                        <li><a class="nav-link" href="{% url 'home:home' %}#home">Home</a></li>
-                        <li><a class="nav-link" href="{% url 'home:home' %}#blog">Blog</a></li>
+                        <li class="nav-item"><a class="nav-link" href="{% url 'home:home' %}#about">About</a></li>
+                        <li class="nav-item"><a class="nav-link" href="{% url 'polls:home' %}">See Topics</a></li>
+                        <li class="nav-item"><a class="nav-link" href="{% url 'home:home' %}#home">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="{% url 'home:home' %}#blog">Blog</a></li>
+                        {% if user.is_authenticated %}
+                            <li class="nav-item"><a class="nav-link" href="#">Logout</a></li>
+                            {% comment %} TODO: Make this into an icon and dropdown? {% endcomment %}
+                        {% else %}
+                            <li class="nav-item"><a class="nav-link" href="#">Login</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#">Register</a></li>
+                        {% endif %}
                     </ul>
                 </nav>
-            </div>
         </div>
         
     </header>
@@ -66,6 +74,7 @@
     feather.replace();
 </script>
 {% endcomment %}
+
 {% block extra_scripts %}{% endblock %}
 </html>
 

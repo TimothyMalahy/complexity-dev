@@ -4,54 +4,95 @@
 {% block title %}Home{% endblock %}
 
 {% block extrahead %}
-    <link rel="stylesheet" href="{% static 'css/polls/vote.css' %}">
+    <link rel="stylesheet" href="{% static 'css/polls/topic-detail.css' %}">
     
 {% endblock %}
 
 {% block content %}
-
-    <h2 tabindex="0" >Order the below items from least complex to most complex</h2>
     
-    <div class="ballot">
+    <h2 tabindex="0" >Order the below items from least complex to most complex</h2>
+    {% if user.is_authenticated %}
+
+        <label for="switch" class="gui-switch" style="color:white;">
+            CHECKED = COMMUNITY
+            <input type="checkbox" role="switch" id="switch"
+            name="is-community-list"
+            hx-get="{% url 'polls:load_subjects' %}"
+            hx-trigger='load, confirmed'
+            hx-swap="innerHTML"
+            hx-target="#poll-form"
+            hx-vals='{"topic":"{{topic.id}}"}'
+            onClick="showSwapAlert()"
+            
+            >
+            <span class="slider round"></span>
+        </label>
+      {% else %}
+        <label for="switch" class="gui-switch" style="color:white;">
+            CHECKED = COMMUNITY
+            <input type="checkbox" role="switch" id="switch" disabled
+            checked
+            name="is-community-list"
+            hx-get="{% url 'polls:load_subjects' %}"
+            hx-trigger='load, confirmed'
+            hx-swap="innerHTML"
+            hx-target="#poll-form"
+            hx-vals='{"topic":"{{topic.id}}"}'
+            onClick="showSwapAlert()"
+            >
+            Showing Community List (Login to vote)
+            <span class="slider round"></span>
+        </label>
+    {% endif %}
+    <div class="ballot inner-container" id="ballot">
         <div class="ballot__header">
             <h4 tabindex="0" class="ballot__header__label">Least Complex</h4>
         </div>
-        <div id="polllist" class="poll-list" role="list" aria-label="List of subjects to order">
-            {% for subject in subjects %}
-            
-            <div class="poll-list__item" tabindex="0" data-id="{{ subject.id }}" aria-label="{{ subject.subject_text }}" role="listitem" aria-grabbed="false">
+        
+        <form 
+        class="sortable" 
+        {% comment %}
+        hx-post="{% url 'polls:sort_subjects' %}" 
+        hx-trigger="end" 
+        hx-swap="none" 
+        {% endcomment %}
+        id="poll-form" 
+        name="poll-form">
+        </form>
 
-                <p class="poll-list__subject-text"><span aria-hidden="true">{{ subject.subject_text }}    </span>    </p>
-                {% for link in subject.subjectlinks_set.all %}
-                {% comment %}
-                <div id="poll-list__item__popover{{forloop.parentloop.counter}}{{forloop.counter}}" popover>
-                    <a href="{{link.link_url}}" target="_blank">{{link.get_source_domain}}</a>
-                </div>
-                <button class="popover-button" popovertarget="poll-list__item__popover{{forloop.parentloop.counter}}{{forloop.counter}}"><i data-feather="link-2"></i></button></p>
-                {% endcomment %}
-                <a href="{{ link.link_url }}" class="poll-list__item__link" target="_blank" data-href="{{ link.link_url }}" role="link">
-                    <span aria-label="View source at {{link.get_source_domain}}" class="sr-only">View source at {{link.get_source_domain}}</span>
-                    <div class="tooltip">
-                        <svg class="poll-list__item__tooltip"
-                        xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-link-2"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg>
-                        <div class="poll-list__item__tooltip__text">
-
-                            <p>{{ link.get_source_domain }}<i data-feather="link-2"></i></p>
-                        </div>
-                    </div>
-                </a>
-                {% endfor %}
-            
-            </div>
-            {% endfor %}
-
-        </div>
 
         
         <div class="ballot__footer">
             <h4 class="ballot__footer__label">Most Complex</h4>
+            <div id="ballot-status">
+                <p></p>
+            </div>
+            
             <div class="ballot__controls">
-                <button type="button">
+                <button type="button"
+                name="save-ballot-btn"
+                class="button"
+                {% if not user.is_authenticated %} disabled {% endif %}
+                hx-post="{% url 'polls:sort_subjects' %}"
+                hx-target="this"
+                hx-swap="none"
+                hx-include="#poll-form"
+                >
+
+                    <span class="button__tooltip">
+                        <span class="button__tooltip__text">Your score won't be added to the aggregate, but you can edit later</span>
+                    </span>
+                    Save Ballot
+                </button>
+                <button type="button"
+                class="button"
+                name="submit-ballot-btn"
+                {% if not user.is_authenticated  %} disabled {% endif %}
+                hx-post="{% url 'polls:sort_subjects' %}"
+                hx-target="this"
+                hx-swap="none"
+                hx-include="#poll-form"
+                >
                     {% comment %}
                     <span class="button__tooltip">
                         <span class="button__tooltip__text">You can use the arrow keys to move items up and down</span>
@@ -64,11 +105,14 @@
                     class="button open-modal"
                     id="new-subject"
                     hx-get="{% url 'polls:render_modal' %}"
+                    
                     hx-target="#modal-content" 
                     >
                     <span class="button__tooltip">
                         <span class="button__tooltip__text">Think we missed a subject?</span>
                     </span>
+                    <!-- if user is in group that can suggest a new topic then make a button "suggest a new subject" -->
+                    <!-- if user is in group that can create a new topic then make the button say "add a new subject"  -->
                     Add New Subject
                 </button>
                 <button type="button"
@@ -99,9 +143,12 @@
         <div class="modal-content" id="modal-content"></div>
         
     </dialog>
+    {% static 'js/sweetalert.min.js' %}
 {% endblock %}
 
 {% block extra_scripts %}
+<script src="{% static 'js/sweetalert.min.js' %}"></script>
+
 <script>
     const modal = document.getElementById('modal')
     
@@ -117,9 +164,108 @@
         /* Views.py need to return this in the trigger_client_event to close the modal */
         modal.close()
     })
+    
+
+    document.addEventListener('DOMContentLoaded', function() {
+        var sortables = document.querySelectorAll(".sortable");
+        for (var i=0; i<sortables.length; i++) {
+            var sortable = sortables[i]
+            var sortableInstance = new Sortable(sortable, {
+                animation: 150,
+                ghostClass: 'sortable-ghost',
+
+                // Make the `.htmx-indicator` unsortable
+                filter: ".ignore-elements",
+                onMove: function (evt) {
+                    return evt.related.className.indexOf('htmx-indicator') === -1;
+                },
+            });
+            // Re-enable sorting on the `htmx:afterSwap` event
+            sortable.addEventListener("htmx:afterSwap", function() {
+                sortableInstance.option("disabled", false);
+            });
+        }
+    });
+    
+    const switchElement = document.getElementById('switch');
+    switchElement.addEventListener('change', function() {
+        const pollForm = document.getElementById('poll-form');
+        if (this.checked) {
+            pollForm.classList.remove('sortable');
+        } else {
+            pollForm.classList.add('sortable');
+        }
+    });
+
+    function showSwapAlert() {
+        console.log('Checkbox value:', document.getElementById('switch').checked);
+        element = document.getElementById('switch');
+        isCommunityList = document.getElementById('switch').checked;
+        
+        if (isCommunityList) {
+        <!-- if the community list is True, then confirm they want to go to it or return and save -->
+        Swal.fire({
+            title: 'Continue?' ,
+            text: 'Unsaved changes will be lost',
+            icon: "warning",
+            showCancelButton: true,
+            confirmButtonText: 'Continue Without Saving',
+            cancelButtonText: 'Take Me Back',
+        }).then((result, ) => {
+            if (result.isConfirmed) {
+                Swal.fire({
+                    title:'Swapping',
+                    showConfirmButton: false,
+                    text: 'Viewing Community Rankings', 
+                    icon:'success',
+                    timer: 750});
+                                
+                htmx.trigger(element, 'confirmed', ); // Trigger the confirmed htmx action on the element
+
+                // Add logic to save changes
+            } else if (result.isDismissed) {
+                {% comment %} Swal.fire('Returning', 'Viewing User Rankings', 'info'); {% endcomment %}
+                element.checked = false; // set the element back to false
+                // Add logic to continue without saving
+            }
+        })} else {
+            htmx.trigger(element, 'confirmed', );
+        };
+    };
+
+    
 
 </script>
-{% comment %}
+    {% comment %}
+    
+    document.addEventListener('DOMContentLoaded', function() {
+        var el = document.getElementById('sortable-list');
+        var sortable = new Sortable(document.getElementById('polllist'), {
+            animation: 150,
+            ghostClass: 'sortable-ghost',
+            
+            // Make the `.htmx-indicator` unsortable
+            filter: ".htmx-indicator",
+            onMove: function (evt) {
+                return evt.related.className.indexOf('htmx-indicator') === -1;
+            },
+            
+            // Disable sorting on the `end` event
+            onEnd: function (evt) {
+                this.option("disabled", true);
+            },
+            delay: 300, // time in milliseconds to define when the sorting should start
+            delayOnTouchOnly: true // only delay if user is using touch
+        });
+            // Re-enable sorting on the `htmx:afterSwap` event
+        htmx.on('htmx:afterSwap', function(evt) {
+            console.log('HTMX afterSwap event triggered');
+            sortableInstance.option("disabled", false);
+        });
+    });
+    
+</script>
+
 <script>
 
      document.addEventListener("modal:show", () => {

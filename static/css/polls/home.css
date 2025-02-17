@@ -1,11 +1,10 @@
-:root {
-  --font-family: "Arial", sans-serif;
+.variables {
+  --font-family: "Inter", "Arial", sans-serif;
   --brand-color-dark: hsl(316, 71%, 74%);
   --accent-color-dark: hsl(198, 73%, 74%);
-}
-
-body {
-  background: hsl(0, 0%, 12%) !important;
+  --container-background-color-dark: hsl(0, 0%, 20%);
+  --container-border-color-dark: hsl(0, 0%, 40%) 2px solid;
+  --container-border-radius-dark: 6px;
 }
 
 h2 {
@@ -93,10 +92,10 @@ input {
 }
 
 .topic {
-  background-color: hsl(0, 0%, 20%);
-  border: hsl(0, 0%, 40%) 2px solid;
+  background-color: var(--container-background-color-dark);
+  border: var(--container-border-color-dark);
   border-radius: 6px;
-  color: hsl(316, 71%, 74%);
+  color: var(--brand-color-dark);
   font-size: 1.5rem;
   text-decoration: none;
   font-family: var(--font-family);
@@ -122,21 +121,14 @@ input {
   padding: 0.5rem;
 }
 
-.new-topic-form {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 1fr 1fr 1fr;
-  gap: 0.5rem;
-  grid-template-areas:
-    "new-topic-form__topic"
-    "new-topic-form__reference-link"
-    "new-topic-form__buttons";
-}
+/* The following is for the new-topic modal and is stored in a separate CSS */
 
-.modal-content div:has(> input) {
+.modal-content div:has(> input),
+.modal-content div:has(> select) {
   display: grid;
   justify-content: center;
 }
+
 .modal-content label {
   font-family: var(--font-family);
   font-size: 1.25rem;
@@ -145,18 +137,7 @@ input {
 }
 .modal-content input + span {
   display: inline-block;
-  height: 1.25rem;
-}
-
-.new-topic-form__topic {
-  grid-area: new-topic-form__topic;
-}
-.new-topic-form__reference-link {
-  grid-area: new-topic-form__reference-link;
-}
-.new-topic-form__buttons {
-  grid-area: new-topic-form__buttons;
-  align-self: end;
+  min-height: 1.25rem;
 }
 
 .modal::backdrop {

@@ -32,3 +32,15 @@ def validate_topic(request: HtmxHttpRequest) -> HttpResponse:
     response = HttpResponse("", status=200)
     response = retarget(response, "#topic-error")
     return response
+
+
+def validate_subject(request: HtmxHttpRequest) -> HttpResponse:
+    subject = request.POST.get("subject")
+    if not subject:
+        response = HttpResponse("Subject is required", status=400)
+        response = retarget(response, "#subject-error")
+        return response
+
+    response = HttpResponse("", status=200)
+    response = retarget(response, "#subject-error")
+    return response

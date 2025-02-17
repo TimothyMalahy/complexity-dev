@@ -1,0 +1,26 @@
+{% csrf_token %}
+<div class="htmx-indicator ignore-elements">Updating...</div>
+<div class="ignore-elements"><input type="hidden" value="{{topic.id}}" name="topic" id="topic"></div>
+
+{% for subject in subjects %}
+<div class="poll-list__item  {{ignore_tag}}">
+    <input type="hidden" name="subject", value="{{subject.id}}">
+    <div class="poll-list__item__details">
+        <span class="poll-list__item__details__main">{{subject.id}} - {{subject.subject_text}}</span>
+        <br>
+        <span class="poll-list__item__details__sub">Original Position: {{forloop.counter}} Score: {{subject.total_score}} Published: {{subject.pub_date}}</span>
+    </div>
+</div>
+{% endfor %}
+
+{% comment %}
+THIS NEEDS WORK FOR THE DRAG AND DROP
+    {% if unvoted_subjects %}
+    <div>
+        <h2 class="ignore-elements">Unvoted on subjects</h2>
+        {% for subject in unvoted_subjects %}
+        <div><input type="hidden" name="subject", value="{{subject.id}}">{{subject.subject_text}} - published: {{subject.pub_date}}</div>
+        {% endfor %}
+    </div>
+    {% endif %}
+{% endcomment %}

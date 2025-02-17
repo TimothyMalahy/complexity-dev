@@ -1,0 +1,9 @@
+textarea {
+  max-width: 150px;
+  height: 100px;
+}
+
+details {
+  margin: 10px;
+  padding: 10px;
+}

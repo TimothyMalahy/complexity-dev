@@ -1,0 +1,92 @@
+.custom-header {
+  display: grid;
+  min-height: 80vh;
+  place-items: center;
+  padding: 0 2rem;
+  min-height: calc(100vh - 12vh);
+}
+@media (max-width: 600px) {
+  .custom-header {
+    padding: 0 1rem;
+  }
+}
+
+.custom-header__h1 {
+  font-size: var(--font-size-h1);
+  margin-bottom: 1rem;
+  color: var(--brand-color-dark-intense);
+
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+.custom-nav {
+  width: 100%;
+  padding: 6vh 2rem;
+}
+
+.custom-nav__nav-list__nav-item {
+  margin: 0 0.5rem 0 0;
+}
+
+/*Adapted from https://css-tricks.com/snippets/css/simple-and-nice-blockquote-styling/ */
+.about-quote {
+  background: var(--quote-background-color);
+  border-left: 10px solid var(--accent-color-dark);
+  border-top-right-radius: 6px;
+  border-bottom-right-radius: 6px;
+  margin: 1.5em 10px;
+  padding: 0.5em 10px;
+  quotes: "\201C""\201D""\2018""\2019";
+}
+.about-quote:before {
+  /* color: #ccc; */
+  color: var(--accent-color-dark);
+  font-size: 4em;
+  line-height: 0.1em;
+  margin-right: 0.25em;
+  vertical-align: -0.4em;
+}
+.about-quote__text {
+  display: inline;
+  color: white;
+}
+/* ################### */
+
+article {
+  background: var(--container-background-color-dark);
+  border: var(--container-border-color-dark);
+  padding: 2rem;
+  border-radius: 6px;
+  margin: 1rem 0;
+}
+
+.about__container__text {
+  color: white;
+  font-size: 1.25rem;
+  line-height: 1.5;
+}
+
+.topics-list,
+.blogs-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  margin: 1rem 0 2rem;
+  padding: 0;
+  list-style: none;
+  font-family: var(--font-family);
+}
+
+.topics-list__item {
+  margin: 0 0.5rem 0.5rem 0;
+  display: inline-grid;
+  background-color: hsl(316, 70%, 70%);
+  color: currentColor;
+  padding: 0.3em 1.2em;
+  font-weight: 600;
+  border-radius: 3px;
+  border-width: 1px;
+  border-color: black;
+  border-style: solid;
+  text-decoration: none;
+  text-decoration-skip-ink: auto;
+}

@@ -1,0 +1,161 @@
+/* These are just for calling later and autocomplete */
+.variables {
+  --font-family: "Inter", "Arial", sans-serif;
+  --brand-color-dark: hsl(316, 71%, 74%);
+  --brand-color-dark-subtle: hsl(316, 11%, 74%);
+  --accent-color-dark: hsl(198, 73%, 74%);
+  --container-background-color-dark: hsl(0, 0%, 20%);
+  --container-border-color-dark: hsl(0, 0%, 40%) 2px solid;
+  --container-border-radius-dark: 6px;
+}
+
+.inner-container {
+  padding: 1rem;
+  gap: 1rem;
+  margin: 1rem 0;
+  background-color: hsl(0, 0%, 10%);
+  border: hsl(0, 0%, 30%) 2px solid;
+  border-radius: 6px;
+}
+
+.ballot {
+  color: white;
+  font-size: 1rem;
+  font-family: var(--font-family);
+}
+
+.ballot h4 {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.ballot__footer {
+  margin-bottom: 0.5rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.poll-list__item {
+  background-color: var(--container-background-color-dark);
+  border: hsl(0, 0%, 40%) 2px solid;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-family: var(--font-family);
+  padding: 0.75rem;
+  margin: 0.25rem 0;
+  line-height: 1.25;
+  user-select: none;
+}
+
+.poll-list__item__details {
+  color: var(--brand-color-dark);
+}
+
+.poll-list__item__details__main {
+  font-weight: 600;
+}
+
+.poll-list__item__details__sub {
+  font-weight: 300;
+  color: var(--brand-color-dark-subtle);
+}
+
+/* ########################### */
+/* ###### Sortable List ###### */
+/* ########################### */
+
+.sortable-chosen {
+  width: 100%;
+  background-color: #331a7138;
+  color: hsl(257, 64%, 84%);
+  border: 1px solid hsl(257, 64%, 84%);
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-family: var(--font-family);
+  padding: 0.75rem;
+  margin: 0.25rem 0;
+}
+
+.ballot__controls {
+  margin: 0.5rem 0;
+  --min: 15ch;
+  --gap: 1rem;
+  display: grid;
+  grid-gap: var(--gap);
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, var(--min)), 1fr));
+}
+
+.button {
+  background-color: hsl(0, 0%, 17%);
+  color: var(--accent-color-dark);
+  border: hsl(0, 0%, 40%) 2px solid;
+  border-radius: 6px;
+  padding: 0.75rem;
+  text-decoration: none;
+  text-align: center;
+}
+
+.button:hover {
+  background-color: hsl(0, 0%, 0%);
+  cursor: pointer;
+}
+
+.button:active {
+  background-color: hsl(0, 0%, 12%);
+  color: hsl(0, 0%, 100%);
+  border: hsl(0, 0%, 60%) 2px solid;
+}
+.button:disabled {
+  background-color: hsl(0, 0%, 40%);
+  color: hsl(0, 0%, 60%);
+  cursor: not-allowed;
+}
+
+.ballot__controls .button__tooltip {
+  position: absolute;
+  width: 200px;
+  opacity: 0;
+  z-index: 1;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  padding: 0.5rem;
+  border-radius: 6px;
+  bottom: 100%;
+  margin-bottom: 5px;
+  /* margin-left: -40px; */
+  visibility: hidden;
+  /* margin-left: -100px; */
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.ballot__controls button:hover .button__tooltip {
+  visibility: visible;
+  opacity: 1;
+  transition: opacity 0.3s;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+.test-link {
+  display: flex;
+  justify-content: center;
+  justify-items: center;
+}
+
+body.swal2-shown > [aria-hidden="true"] {
+  transition: 0.1s filter;
+  filter: blur(3px);
+}

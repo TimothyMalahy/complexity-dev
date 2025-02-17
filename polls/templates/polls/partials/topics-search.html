@@ -1,3 +1,5 @@
 {% for topic in topics %}
-    <a class="topic" href="{% url 'polls:topic_detail' topic.id %}">{{ topic.topic_text }}</a>
+    <a class="topic" href="{% url 'polls:topic_detail' topic.id %}">
+        
+        {{ topic.owner|default_if_none:"ComplexityIndex" }}/{{ topic.topic_text }}</a>
 {% endfor %}

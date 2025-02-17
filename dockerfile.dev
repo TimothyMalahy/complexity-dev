@@ -1,0 +1,233 @@
+FROM python:3.12-slim-bookworm
+
+# The installer requires curl (and certificates) to download the release archive
+RUN apt-get update && apt-get install -y --no-install-recommends curl ca-certificates
+
+# Download the latest installer
+ADD https://astral.sh/uv/install.sh /uv-installer.sh
+
+# Run the installer then remove it
+RUN sh /uv-installer.sh && rm /uv-installer.sh
+
+RUN python -m venv /app/.venv
+
+ENV PATH="/app/.venv/bin:$PATH"
+ENV VIRTUAL_ENV="/app/.venv"
+
+COPY requirements.txt pyproject.toml ./
+COPY uv.lock ./
+
+CMD ["tail", "-f", "/dev/null"]
+
+# CMD ["uv", "pip", "install", "-r", "requirements.txt"]
+
+# COPY . .
+
+# CMD ["uv","run", "manage.py", "runserver", "0.0.0.0:8000"]
+
+# Ensure the installed binary is on the `PATH`
+# ENV PATH="/root/.local/bin/:$PATH"
+
+
+
+# FROM python:3.12-slim-bookworm
+# COPY --from=ghcr.io/astral-sh/uv:0.5.26 /uv /uvx /bin/
+
+
+
+# # Sync the project into a new environment, using the frozen lockfile
+# WORKDIR /app
+
+# ENV UV_COMPILE_BYTECODE=1
+
+# ENV UV_LINK_MODE=copy
+
+# RUN --mount=type=cache,target=/root/.cache/uv \
+#     --mount=type=bind,source=uv.lock,target=uv.lock \
+#     --mount=type=bind,source=pyproject.toml,target=pyproject.toml \
+#     uv sync --frozen --no-install-project --no-dev
+
+# ADD . /app
+# RUN --mount=type=cache,target=/root/.cache/uv \
+#     uv sync --frozen --no-dev
+
+# # Place executables in the environment at the front of the path
+# ENV PATH="/app/.venv/bin:$PATH"
+
+
+# # # Copy the project into the image
+# # COPY . /app
+
+# # RUN uv sync --frozen --no-cache
+
+# # ENV PATH="/app/.venv/bin:$PATH"
+
+# # # CMD ["uv", "run", "manage.py", "runserver", "
+
+# # # CMD ["/app/.venv/bin/manage"]
+
+
+
+
+
+
+
+
+
+# # # FROM python:3.11-slim-bookworm
+
+# # # RUN apt-get update && apt-get install -y --no-install-recommends curl ca-certificates
+
+# # # ADD https://astral.sh/uv/install.sh /uv-installer.sh
+
+# # # RUN sh /uv-installer.sh && rm /uv-installer.sh
+
+# # # # Ensure the installed binary is on the `PATH`
+# # # ENV PATH="/root/.cargo/bin/:$PATH"
+
+# # # RUN uv --version
+
+# # # COPY --from=ghcr.io/astral-sh/uv:0.4.12 /uv /bin/uv
+
+# # # WORKDIR /app
+# # # ADD . /app
+
+# # # RUN uv venv
+
+# # # ENV PATH="/app/.venv/bin:$PATH"
+
+# # # COPY requirements.txt /app/requirements.txt
+
+# # # CMD ["uv", "run", "manage.py", "runserver", ]
+
+# # # # FROM python:3.11-slim-bookworm
+
+# # # # # The installer requires curl (and certificates) to download the release archive
+# # # # RUN apt-get update && apt-get install -y --no-install-recommends curl ca-certificates
+
+# # # # # Download the latest installer
+# # # # ADD https://astral.sh/uv/install.sh /uv-installer.sh
+
+# # # # # Run the installer then remove it
+# # # # RUN sh /uv-installer.sh && rm /uv-installer.sh
+
+# # # # # Ensure the installed binary is on the `PATH`
+# # # # ENV PATH="/root/.cargo/bin/:$PATH"
+
+# # # # # Verify the installation of uv
+# # # # RUN uv --version
+
+# # # # WORKDIR /app
+
+# # # # # COPY requirements.txt /app/
+# # # # COPY pyproject.toml /app/
+# # # # # RUN uv 
+# # # # # RUN pip install -r requirements.txt
+
+# # # # COPY . /app/
+
+# # # # # Verify the installation of uv and the project setup
+# # # # RUN uv --version
+# # # # RUN uv venv
+# # # # RUN uv pip install -r requirements.txt
+
+# # # # # Ensure the installed binary is on the `PATH`
+# # # # ENV PATH="/app/.venv/bin:$PATH"
+
+
+# # # # # Copy the entrypoint script
+# # # # COPY entrypoint.sh /app/entrypoint.sh
+# # # # RUN chmod +x /app/entrypoint.sh
+
+# # # # # Use the entrypoint script
+# # # # ENTRYPOINT ["/app/entrypoint.sh"]
+
+# # # # # # Run the Django application by default
+# # # # # CMD ["uv", "run", "manage.py", "runserver", "0.0.0.0:8000"]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# # # # # FROM python:3.12-slim-bookworm
+# # # # # COPY --from=ghcr.io/astral-sh/uv:latest /uv /uvx /bin/
+
+# # # # # ADD . /app
+
+# # # # # WORKDIR /app
+# # # # # RUN uv sync --frozen
+
+# # # # # CMD ["uv", "run", "manage.py", "runserver", "0.0.0.0:8000"]
+
+# # # # # # CMD ["uv","tool","install","cowsay"]
+
+# # # # # # FROM ghcr.io/astral-sh/uv:python3.12-bookworm-slim
+
+# # # # # # WORKDIR /app
+
+# # # # # # ENV UV_COMPILE_BYTECODE=1
+
+
+# # # # # # # Copy from the cache instead of linking since it's a mounted volume
+# # # # # # ENV UV_LINK_MODE=copy
+
+# # # # # # # Install the project's dependencies using the lockfile and settings
+# # # # # # RUN --mount=type=cache,target=/root/.cache/uv \
+# # # # # #     --mount=type=bind,source=uv.lock,target=uv.lock \
+# # # # # #     --mount=type=bind,source=pyproject.toml,target=pyproject.toml \
+# # # # # #     uv sync --frozen --no-install-project --no-dev
+
+# # # # # # RUN uv --version
+# # # # # # # Installing separately from its dependencies allows optimal layer caching
+# # # # # # ADD . /code
+# # # # # # RUN --mount=type=cache,target=/root/.cache/uv \
+# # # # # #     uv sync --frozen --no-dev
+
+# # # # # # # Place executables in the environment at the front of the path
+# # # # # # ENV PATH="/app/.venv/bin:$PATH"
+
+# # # # # # # Reset the entrypoint, don't invoke `uv`
+# # # # # # ENTRYPOINT []
+
+# # # # # # # Run the FastAPI application by default
+# # # # # # # Uses `fastapi dev` to enable hot-reloading when the `watch` sync occurs
+# # # # # # # Uses `--host 0.0.0.0` to allow access from outside the container
+# # # # # # CMD ["uv", "run", "manage.py", "runserver"]
+
+# # # # # # # # The installer requires curl (and certificates) to download the release archive
+# # # # # # # RUN apt-get update && apt-get install -y --no-install-recommends curl ca-certificates
+
+# # # # # # # # Download the latest installer
+# # # # # # # ADD https://astral.sh/uv/install.sh /uv-installer.sh
+
+# # # # # # # # Run the installer then remove it
+# # # # # # # RUN sh /uv-installer.sh && rm /uv-installer.sh
+
+# # # # # # # # Ensure the installed binary is on the `PATH`
+# # # # # # # ENV PATH="/root/.local/bin/:$PATH"
+
+# # # # # # # RUN uv --version
+
+# # # # # # # ENV PYTHONUNBUFFERED 1
+
+# # # # # # # WORKDIR /code
+
+# # # # # # # COPY requirements.txt /code/
+# # # # # # # RUN pip install -r requirements.txt
+
+# # # # # # # COPY . /code/
