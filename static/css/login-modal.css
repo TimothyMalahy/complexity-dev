@@ -1,0 +1,12 @@
+.login-form__buttons,
+.register-form__buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.login-form__buttons .button,
+.register-form__buttons .button {
+  width: 100%;
+}

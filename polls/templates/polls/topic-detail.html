@@ -1,0 +1,397 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Home{% endblock %}
+
+{% block extrahead %}
+    <link rel="stylesheet" href="{% static 'css/polls/topic-detail.css' %}">
+    
+{% endblock %}
+
+{% block content %}
+    
+    <h2 tabindex="0" >Order the below items from least complex to most complex</h2>
+    {% if user.is_authenticated %}
+
+        <label for="switch" class="gui-switch" style="color:white;">
+            CHECKED = COMMUNITY
+            <input type="checkbox" role="switch" id="switch"
+            name="is-community-list"
+            hx-get="{% url 'polls:load_subjects' %}"
+            hx-trigger='load, confirmed'
+            hx-swap="innerHTML"
+            hx-target="#poll-form"
+            hx-vals='{"topic":"{{topic.id}}"}'
+            onClick="showSwapAlert()"
+            
+            >
+            <span class="slider round"></span>
+        </label>
+      {% else %}
+        <label for="switch" class="gui-switch" style="color:white;">
+            CHECKED = COMMUNITY
+            <input type="checkbox" role="switch" id="switch" disabled
+            checked
+            name="is-community-list"
+            hx-get="{% url 'polls:load_subjects' %}"
+            hx-trigger='load, confirmed'
+            hx-swap="innerHTML"
+            hx-target="#poll-form"
+            hx-vals='{"topic":"{{topic.id}}"}'
+            onClick="showSwapAlert()"
+            >
+            Showing Community List (Login to vote)
+            <span class="slider round"></span>
+        </label>
+    {% endif %}
+    <div class="ballot inner-container" id="ballot">
+        <div class="ballot__header">
+            <h4 tabindex="0" class="ballot__header__label">Least Complex</h4>
+        </div>
+        
+        <form 
+        class="sortable" 
+        {% comment %}
+        hx-post="{% url 'polls:sort_subjects' %}" 
+        hx-trigger="end" 
+        hx-swap="none" 
+        {% endcomment %}
+        id="poll-form" 
+        name="poll-form">
+        </form>
+
+
+        
+        <div class="ballot__footer">
+            <h4 class="ballot__footer__label">Most Complex</h4>
+            <div id="ballot-status">
+                <p></p>
+            </div>
+            
+            <div class="ballot__controls">
+                <button type="button"
+                name="save-ballot-btn"
+                class="button"
+                {% if not user.is_authenticated %} disabled {% endif %}
+                hx-post="{% url 'polls:sort_subjects' %}"
+                hx-target="this"
+                hx-swap="none"
+                hx-include="#poll-form"
+                >
+
+                    <span class="button__tooltip">
+                        <span class="button__tooltip__text">Your score won't be added to the aggregate, but you can edit later</span>
+                    </span>
+                    Save Ballot
+                </button>
+                <button type="button"
+                class="button"
+                name="submit-ballot-btn"
+                {% if not user.is_authenticated  %} disabled {% endif %}
+                hx-post="{% url 'polls:sort_subjects' %}"
+                hx-target="this"
+                hx-swap="none"
+                hx-include="#poll-form"
+                >
+                    {% comment %}
+                    <span class="button__tooltip">
+                        <span class="button__tooltip__text">You can use the arrow keys to move items up and down</span>
+                    </span>
+                    {% endcomment %}
+                    Submit ballot
+                </button>
+                <button 
+                    type="button" 
+                    class="button open-modal"
+                    id="new-subject"
+                    hx-get="{% url 'polls:render_modal' %}"
+                    
+                    hx-target="#modal-content" 
+                    >
+                    <span class="button__tooltip">
+                        <span class="button__tooltip__text">Think we missed a subject?</span>
+                    </span>
+                    <!-- if user is in group that can suggest a new topic then make a button "suggest a new subject" -->
+                    <!-- if user is in group that can create a new topic then make the button say "add a new subject"  -->
+                    Add New Subject
+                </button>
+                <button type="button"
+                    class="button open-modal"
+                    id="new-topic"
+                    hx-get="{% url 'polls:render_modal' %}"
+                    hx-target="#modal-content">
+                    <span class="button__tooltip">
+                        <span class="button__tooltip__text">Topic too large?<br> Click this button to create a sub topic</span>
+                    </span>
+                    Make Sub Topic
+                </button>
+            </div>
+            <div class="ballot-details">
+                <p>Topic created by {{ topic_owner }}</p>
+                <p>Created on {{ topic.pub_date }}</p>
+            </div>
+        </div>
+        
+    </div>
+
+    <div id="screen-reader-updates" aria-live="polite" style="position: absolute; left: -9999px;"></div>
+
+    <dialog class="modal" id="modal">
+        <div class="modal__header" id="modal__header">
+            <button class="button modal__button" id="modalClose">X</button>
+        </div>
+        <div class="modal-content" id="modal-content"></div>
+        
+    </dialog>
+    {% static 'js/sweetalert.min.js' %}
+{% endblock %}
+
+{% block extra_scripts %}
+<script src="{% static 'js/sweetalert.min.js' %}"></script>
+
+<script>
+    const modal = document.getElementById('modal')
+    
+    const openModalButtons = document.querySelectorAll('.open-modal');
+    openModalButtons.forEach(button => {
+        button.onclick = () => modal.showModal();
+    });
+    const closeModal = document.getElementById('modalClose')
+    
+    closeModal.onclick = () => modal.close()
+
+    document.body.addEventListener('closeModal', () => {
+        /* Views.py need to return this in the trigger_client_event to close the modal */
+        modal.close()
+    })
+    
+
+    document.addEventListener('DOMContentLoaded', function() {
+        var sortables = document.querySelectorAll(".sortable");
+        for (var i=0; i<sortables.length; i++) {
+            var sortable = sortables[i]
+            var sortableInstance = new Sortable(sortable, {
+                animation: 150,
+                ghostClass: 'sortable-ghost',
+
+                // Make the `.htmx-indicator` unsortable
+                filter: ".ignore-elements",
+                onMove: function (evt) {
+                    return evt.related.className.indexOf('htmx-indicator') === -1;
+                },
+            });
+            // Re-enable sorting on the `htmx:afterSwap` event
+            sortable.addEventListener("htmx:afterSwap", function() {
+                sortableInstance.option("disabled", false);
+            });
+        }
+    });
+    
+    const switchElement = document.getElementById('switch');
+    switchElement.addEventListener('change', function() {
+        const pollForm = document.getElementById('poll-form');
+        if (this.checked) {
+            pollForm.classList.remove('sortable');
+        } else {
+            pollForm.classList.add('sortable');
+        }
+    });
+
+    function showSwapAlert() {
+        console.log('Checkbox value:', document.getElementById('switch').checked);
+        element = document.getElementById('switch');
+        isCommunityList = document.getElementById('switch').checked;
+        
+        if (isCommunityList) {
+        <!-- if the community list is True, then confirm they want to go to it or return and save -->
+        Swal.fire({
+            title: 'Continue?' ,
+            text: 'Unsaved changes will be lost',
+            icon: "warning",
+            showCancelButton: true,
+            confirmButtonText: 'Continue Without Saving',
+            cancelButtonText: 'Take Me Back',
+        }).then((result, ) => {
+            if (result.isConfirmed) {
+                Swal.fire({
+                    title:'Swapping',
+                    showConfirmButton: false,
+                    text: 'Viewing Community Rankings', 
+                    icon:'success',
+                    timer: 750});
+                                
+                htmx.trigger(element, 'confirmed', ); // Trigger the confirmed htmx action on the element
+
+                // Add logic to save changes
+            } else if (result.isDismissed) {
+                {% comment %} Swal.fire('Returning', 'Viewing User Rankings', 'info'); {% endcomment %}
+                element.checked = false; // set the element back to false
+                // Add logic to continue without saving
+            }
+        })} else {
+            htmx.trigger(element, 'confirmed', );
+        };
+    };
+
+    
+
+</script>
+    {% comment %}
+    
+    document.addEventListener('DOMContentLoaded', function() {
+        var el = document.getElementById('sortable-list');
+        var sortable = new Sortable(document.getElementById('polllist'), {
+            animation: 150,
+            ghostClass: 'sortable-ghost',
+            
+            // Make the `.htmx-indicator` unsortable
+            filter: ".htmx-indicator",
+            onMove: function (evt) {
+                return evt.related.className.indexOf('htmx-indicator') === -1;
+            },
+            
+            // Disable sorting on the `end` event
+            onEnd: function (evt) {
+                this.option("disabled", true);
+            },
+            delay: 300, // time in milliseconds to define when the sorting should start
+            delayOnTouchOnly: true // only delay if user is using touch
+        });
+            // Re-enable sorting on the `htmx:afterSwap` event
+        htmx.on('htmx:afterSwap', function(evt) {
+            console.log('HTMX afterSwap event triggered');
+            sortableInstance.option("disabled", false);
+        });
+    });
+    
+</script>
+
+<script>
+
+     document.addEventListener("modal:show", () => {
+      const modalEl = document.getElementById("modal");
+      const bsModal = window.bootstrap.Modal.getOrCreateInstance(modalEl);
+      bsModal.show();
+      modalEl.addEventListener("hidden.bs.modal", () => {
+        modalEl.remove();
+      });
+    });
+    document.addEventListener('DOMContentLoaded', function() {
+        var sortable = new Sortable(document.getElementById('polllist'), {
+            animation: 150,
+            ghostClass: 'sortable-ghost',
+            delay: 300, // time in milliseconds to define when the sorting should start
+            delayOnTouchOnly: true // only delay if user is using touch
+        });
+
+        document.querySelectorAll('.poll-list__item').forEach(function(item) {
+            item.addEventListener('dblclick', function(event) {
+                // Handle double-click event
+                console.log('Double-clicked on:', item);
+                // Add your custom logic here
+            });
+
+            // Handle touch events to simulate hover
+            item.addEventListener('touchstart', function(event) {
+                var tooltipText = item.querySelector('.poll-list__item__tooltip__text');
+                if (tooltipText) {
+                    tooltipText.classList.add('hover');
+                }
+            });
+
+            item.addEventListener('touchend', function(event) {
+                var tooltipText = item.querySelector('.poll-list__item__tooltip__text');
+                if (tooltipText) {
+                    tooltipText.classList.remove('hover');
+                }
+            });
+
+            item.addEventListener('touchcancel', function(event) {
+                var tooltipText = item.querySelector('.poll-list__item__tooltip__text');
+                if (tooltipText) {
+                    tooltipText.classList.remove('hover');
+                }
+            });
+        });
+    });
+</script>
+<script>
+    feather.replace();
+</script>
+
+
+
+
+<script>
+    
+    /**
+     * everything below needs reworked for screen readers *
+     * TODO add a variable to true if a screenreader is used at all to show a finalized list and let them edit
+     * If the user is using a screen reader let them go over every item on the list and if they hit a certain key then go back to focus on the list with a focus on that object precisely
+     * Let them hit Ctrl + s to submit for verification
+     */
+
+    document.addEventListener('keydown', function(event) {
+        if (event.code === 'Space' && document.activeElement.classList.contains('poll-list__item')) {
+            event.preventDefault(); // Prevent the default spacebar action (scrolling)
+            console.log('Spacebar pressed');
+            let activeElement = document.activeElement;
+            let sortableInstance = Sortable.get(activeElement.parentElement);
+
+        }
+    });
+    
+        document.addEventListener('keydown', function(event) {
+            let activeElement = document.activeElement;
+            let items = document.querySelectorAll('#polllist .poll-list__item');
+            let currentIndex = Array.from(items).indexOf(activeElement);
+            let nextIndex;
+    
+            switch (event.code) {
+                case 'ArrowUp':
+                    event.preventDefault(); // Prevent the default arrow key action (scrolling)
+                    nextIndex = currentIndex - 1;
+                    if (nextIndex >= 0) {
+                        let nextElement = items[nextIndex];
+                        activeElement.parentElement.insertBefore(activeElement, nextElement);
+                        activeElement.focus();
+                        updateAriaLiveRegion(activeElement, items[nextIndex - 1], nextElement);
+
+                    }
+                    break;
+                case 'ArrowDown':
+                    event.preventDefault(); // Prevent the default arrow key action (scrolling)
+                    nextIndex = currentIndex + 1;
+                    if (nextIndex < items.length) {
+                        let nextElement = items[nextIndex].nextSibling;
+                        activeElement.parentElement.insertBefore(activeElement, nextElement);
+                        activeElement.focus();
+                        updateAriaLiveRegion(activeElement, nextElement, items[nextIndex + 1]);
+                    }
+                    break;
+                // Add more cases here for other key actions if needed
+            }
+        });
+        function updateAriaLiveRegion(movedElement, previousElement, nextElement) {
+            let message = `Moved ${movedElement.getAttribute('aria-label')}`;
+            if (previousElement && previousElement.getAttribute) {
+                message += ` between ${previousElement.getAttribute('aria-label')}`;
+            }
+            if (nextElement && nextElement.getAttribute) {
+                message += ` and ${nextElement.getAttribute('aria-label')}`;
+            }
+            document.getElementById('screen-reader-updates').textContent = message;
+        }
+
+</script>
+<script>
+    document.getElementById('polllist').addEventListener('keydown', function(event) {
+        if ((event.ctrlKey || event.metaKey || event.shiftKey) && (event.key === 'ArrowUp' || event.key === 'ArrowDown')) {
+            event.preventDefault();
+            
+            // Add your custom logic here
+        }
+    });
+</script>
+{% endcomment %}
+{% endblock %}

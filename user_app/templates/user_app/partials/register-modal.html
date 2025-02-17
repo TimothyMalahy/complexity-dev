@@ -1,0 +1,49 @@
+{% comment %}https://docs.djangoproject.com/en/5.1/topics/auth/default/#how-to-log-a-user-in{% endcomment %}
+
+<form hx-post="{% url 'user_app:register_user' %}" id="register-form" class="register-form"
+hx-vals='js:{errors: getInner(["email-error", "password-error", "confirm-password-error"])}'
+>
+    {% csrf_token %}
+    <div class="register-form__email">
+        <label class="asterisk" for="email">Email</label>
+        <input type="email" id="email" name="email" required {% if debug %} value="{{email}}" {% endif %}
+        hx-post="{% url 'user_app:user_registration_email' %}"
+        hx-trigger="input changed delay:200ms"
+        hx-swap="innerHTML">
+        <span id="email-error" class="error-message"></span>
+    </div>
+    <div class="regsiter-from__first-name">
+        <label for="first-name">First Name</label>
+        <input type="text" id="first-name" name="first-name" {% if debug %} value="John" {% endif %}>
+    </div>
+    <div class="regsiter-from__last-name">
+        <label for="last-name">Last Name</label>
+        <input type="text" id="last-name" name="last-name" {% if debug %} value="Smith" {% endif %}>
+    </div>
+    <div class="register-form__password">
+        <label class="asterisk" for="password">Password</label>
+        <input type="password" id="password" name="password" required {% if debug %} value="abcdefgh12" {% endif %}
+        hx-post="{% url 'user_app:user_registration_pass' %}"
+        hx-trigger="input changed  delay:200ms"
+        hx-swap="innerHTML">
+        <span id="password-error" class="error-message"></span>
+    </div>
+    <div class="register-form__confirm-password">
+        <label class="asterisk" for="confirm-password">Confirm Password</label>
+        <input type="password" id="confirm-password" name="confirm-password" required {% if debug %} value="abcdefgh12" {% endif %}
+        hx-post="{% url 'user_app:user_registration_pass' %}"
+        hx-trigger="input changed  delay:200ms"
+        hx-swap="innerHTML">
+        <span id="confirm-password-error" class="error-message"></span>
+    </div>
+    <div class="register-form__buttons">
+        <button class="button modal__button btn-register" name="btn-register" type="submit">Register</button>
+        <button 
+        class="button modal__button btn-login"
+        name="btn-login" 
+        type="button"
+        hx-target="#modal-content"
+        hx-get="{% url 'user_app:render_login_modal' %}">Switch to Login Form</button>
+    </div>
+    <span id="form-errors" class="error-message"></span>
+</form>

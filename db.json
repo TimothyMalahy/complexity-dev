@@ -1,0 +1,4145 @@
+[
+  {
+    "model": "admin.logentry",
+    "pk": 1,
+    "fields": {
+      "action_time": "2025-01-05T15:40:31.286Z",
+      "user": 1,
+      "content_type": 12,
+      "object_id": "1",
+      "object_repr": "CSS",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 2,
+    "fields": {
+      "action_time": "2025-01-05T15:40:54.214Z",
+      "user": 1,
+      "content_type": 11,
+      "object_id": "1",
+      "object_repr": "Shadow DOM",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 3,
+    "fields": {
+      "action_time": "2025-01-05T15:41:30.203Z",
+      "user": 1,
+      "content_type": 13,
+      "object_id": "1",
+      "object_repr": "Mozilla Shadow DOMs",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 4,
+    "fields": {
+      "action_time": "2025-01-05T23:51:56.106Z",
+      "user": 1,
+      "content_type": 13,
+      "object_id": "1",
+      "object_repr": "Mozilla",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"Link text\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 5,
+    "fields": {
+      "action_time": "2025-01-05T23:53:02.276Z",
+      "user": 1,
+      "content_type": 13,
+      "object_id": "1",
+      "object_repr": "Source Mozilla",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"Link text\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 6,
+    "fields": {
+      "action_time": "2025-01-06T00:12:04.381Z",
+      "user": 1,
+      "content_type": 13,
+      "object_id": "1",
+      "object_repr": "abcdefafdsafasdfadsfads",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"Link text\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 7,
+    "fields": {
+      "action_time": "2025-01-06T00:13:45.693Z",
+      "user": 1,
+      "content_type": 13,
+      "object_id": "1",
+      "object_repr": "abcdefafdsafasdfadsfadsfdsafadsfdasfdsa",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"Link text\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 8,
+    "fields": {
+      "action_time": "2025-01-06T00:14:21.078Z",
+      "user": 1,
+      "content_type": 13,
+      "object_id": "1",
+      "object_repr": "Mozilla Website Because I said so",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"Link text\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 9,
+    "fields": {
+      "action_time": "2025-01-06T00:14:36.390Z",
+      "user": 1,
+      "content_type": 13,
+      "object_id": "1",
+      "object_repr": "Mozilla",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"Link text\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 11,
+    "fields": {
+      "action_time": "2025-02-02T15:12:34.248Z",
+      "user": 1,
+      "content_type": 11,
+      "object_id": "27",
+      "object_repr": "tesatesafds",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 12,
+    "fields": {
+      "action_time": "2025-02-02T15:13:59.370Z",
+      "user": 1,
+      "content_type": 15,
+      "object_id": "50",
+      "object_repr": "Vote by timothymalahy@protonmail.com on CSS",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"Rankings\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 13,
+    "fields": {
+      "action_time": "2025-02-02T15:14:47.735Z",
+      "user": 1,
+      "content_type": 15,
+      "object_id": "51",
+      "object_repr": "Vote by timothymalahy@protonmail.com on CSS",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"Rankings\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 14,
+    "fields": {
+      "action_time": "2025-02-02T15:15:33.550Z",
+      "user": 1,
+      "content_type": 15,
+      "object_id": "52",
+      "object_repr": "Vote by timothymalahy@protonmail.com on CSS",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"Rankings\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 15,
+    "fields": {
+      "action_time": "2025-02-02T16:07:26.264Z",
+      "user": 1,
+      "content_type": 15,
+      "object_id": "62",
+      "object_repr": "Vote by AnonymousUser on CSS",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"User\"]}}]"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 1,
+    "fields": {
+      "name": "Can add log entry",
+      "content_type": 1,
+      "codename": "add_logentry"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 2,
+    "fields": {
+      "name": "Can change log entry",
+      "content_type": 1,
+      "codename": "change_logentry"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 3,
+    "fields": {
+      "name": "Can delete log entry",
+      "content_type": 1,
+      "codename": "delete_logentry"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 4,
+    "fields": {
+      "name": "Can view log entry",
+      "content_type": 1,
+      "codename": "view_logentry"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 5,
+    "fields": {
+      "name": "Can add permission",
+      "content_type": 2,
+      "codename": "add_permission"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 6,
+    "fields": {
+      "name": "Can change permission",
+      "content_type": 2,
+      "codename": "change_permission"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 7,
+    "fields": {
+      "name": "Can delete permission",
+      "content_type": 2,
+      "codename": "delete_permission"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 8,
+    "fields": {
+      "name": "Can view permission",
+      "content_type": 2,
+      "codename": "view_permission"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 9,
+    "fields": {
+      "name": "Can add group",
+      "content_type": 3,
+      "codename": "add_group"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 11,
+    "fields": {
+      "name": "Can delete group",
+      "content_type": 3,
+      "codename": "delete_group"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 12,
+    "fields": {
+      "name": "Can view group",
+      "content_type": 3,
+      "codename": "view_group"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 13,
+    "fields": {
+      "name": "Can add content type",
+      "content_type": 4,
+      "codename": "add_contenttype"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 14,
+    "fields": {
+      "name": "Can change content type",
+      "content_type": 4,
+      "codename": "change_contenttype"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 15,
+    "fields": {
+      "name": "Can delete content type",
+      "content_type": 4,
+      "codename": "delete_contenttype"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 16,
+    "fields": {
+      "name": "Can view content type",
+      "content_type": 4,
+      "codename": "view_contenttype"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 17,
+    "fields": {
+      "name": "Can add session",
+      "content_type": 5,
+      "codename": "add_session"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 18,
+    "fields": {
+      "name": "Can change session",
+      "content_type": 5,
+      "codename": "change_session"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 19,
+    "fields": {
+      "name": "Can delete session",
+      "content_type": 5,
+      "codename": "delete_session"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 20,
+    "fields": {
+      "name": "Can view session",
+      "content_type": 5,
+      "codename": "view_session"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 21,
+    "fields": {
+      "name": "Can add Attachment",
+      "content_type": 6,
+      "codename": "add_attachment"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 22,
+    "fields": {
+      "name": "Can change Attachment",
+      "content_type": 6,
+      "codename": "change_attachment"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 23,
+    "fields": {
+      "name": "Can delete Attachment",
+      "content_type": 6,
+      "codename": "delete_attachment"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 24,
+    "fields": {
+      "name": "Can view Attachment",
+      "content_type": 6,
+      "codename": "view_attachment"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 25,
+    "fields": {
+      "name": "Can add Email",
+      "content_type": 7,
+      "codename": "add_email"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 26,
+    "fields": {
+      "name": "Can change Email",
+      "content_type": 7,
+      "codename": "change_email"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 27,
+    "fields": {
+      "name": "Can delete Email",
+      "content_type": 7,
+      "codename": "delete_email"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 28,
+    "fields": {
+      "name": "Can view Email",
+      "content_type": 7,
+      "codename": "view_email"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 29,
+    "fields": {
+      "name": "Can add Email Template",
+      "content_type": 8,
+      "codename": "add_emailtemplate"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 30,
+    "fields": {
+      "name": "Can change Email Template",
+      "content_type": 8,
+      "codename": "change_emailtemplate"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 31,
+    "fields": {
+      "name": "Can delete Email Template",
+      "content_type": 8,
+      "codename": "delete_emailtemplate"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 32,
+    "fields": {
+      "name": "Can view Email Template",
+      "content_type": 8,
+      "codename": "view_emailtemplate"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 33,
+    "fields": {
+      "name": "Can add Log",
+      "content_type": 9,
+      "codename": "add_log"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 34,
+    "fields": {
+      "name": "Can change Log",
+      "content_type": 9,
+      "codename": "change_log"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 35,
+    "fields": {
+      "name": "Can delete Log",
+      "content_type": 9,
+      "codename": "delete_log"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 36,
+    "fields": {
+      "name": "Can view Log",
+      "content_type": 9,
+      "codename": "view_log"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 37,
+    "fields": {
+      "name": "Can add custom user",
+      "content_type": 10,
+      "codename": "add_customuser"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 38,
+    "fields": {
+      "name": "Can change custom user",
+      "content_type": 10,
+      "codename": "change_customuser"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 39,
+    "fields": {
+      "name": "Can delete custom user",
+      "content_type": 10,
+      "codename": "delete_customuser"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 40,
+    "fields": {
+      "name": "Can view custom user",
+      "content_type": 10,
+      "codename": "view_customuser"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 41,
+    "fields": {
+      "name": "Can add subject",
+      "content_type": 11,
+      "codename": "add_subject"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 42,
+    "fields": {
+      "name": "Can change subject",
+      "content_type": 11,
+      "codename": "change_subject"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 43,
+    "fields": {
+      "name": "Can delete subject",
+      "content_type": 11,
+      "codename": "delete_subject"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 44,
+    "fields": {
+      "name": "Can view subject",
+      "content_type": 11,
+      "codename": "view_subject"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 45,
+    "fields": {
+      "name": "Can add topic",
+      "content_type": 12,
+      "codename": "add_topic"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 46,
+    "fields": {
+      "name": "Can change topic",
+      "content_type": 12,
+      "codename": "change_topic"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 47,
+    "fields": {
+      "name": "Can delete topic",
+      "content_type": 12,
+      "codename": "delete_topic"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 48,
+    "fields": {
+      "name": "Can view topic",
+      "content_type": 12,
+      "codename": "view_topic"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 49,
+    "fields": {
+      "name": "Can add subject links",
+      "content_type": 13,
+      "codename": "add_subjectlinks"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 50,
+    "fields": {
+      "name": "Can change subject links",
+      "content_type": 13,
+      "codename": "change_subjectlinks"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 51,
+    "fields": {
+      "name": "Can delete subject links",
+      "content_type": 13,
+      "codename": "delete_subjectlinks"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 52,
+    "fields": {
+      "name": "Can view subject links",
+      "content_type": 13,
+      "codename": "view_subjectlinks"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 53,
+    "fields": {
+      "name": "Can add subject score",
+      "content_type": 14,
+      "codename": "add_subjectscore"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 54,
+    "fields": {
+      "name": "Can change subject score",
+      "content_type": 14,
+      "codename": "change_subjectscore"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 55,
+    "fields": {
+      "name": "Can delete subject score",
+      "content_type": 14,
+      "codename": "delete_subjectscore"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 56,
+    "fields": {
+      "name": "Can view subject score",
+      "content_type": 14,
+      "codename": "view_subjectscore"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 57,
+    "fields": {
+      "name": "Can add vote",
+      "content_type": 15,
+      "codename": "add_vote"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 58,
+    "fields": {
+      "name": "Can change vote",
+      "content_type": 15,
+      "codename": "change_vote"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 59,
+    "fields": {
+      "name": "Can delete vote",
+      "content_type": 15,
+      "codename": "delete_vote"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 60,
+    "fields": {
+      "name": "Can view vote",
+      "content_type": 15,
+      "codename": "view_vote"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 61,
+    "fields": {
+      "name": "Can add topic owner",
+      "content_type": 16,
+      "codename": "add_topicowner"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 62,
+    "fields": {
+      "name": "Can change topic owner",
+      "content_type": 16,
+      "codename": "change_topicowner"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 63,
+    "fields": {
+      "name": "Can delete topic owner",
+      "content_type": 16,
+      "codename": "delete_topicowner"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 64,
+    "fields": {
+      "name": "Can view topic owner",
+      "content_type": 16,
+      "codename": "view_topicowner"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 65,
+    "fields": {
+      "name": "Can add group object permission",
+      "content_type": 17,
+      "codename": "add_groupobjectpermission"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 66,
+    "fields": {
+      "name": "Can change group object permission",
+      "content_type": 17,
+      "codename": "change_groupobjectpermission"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 67,
+    "fields": {
+      "name": "Can delete group object permission",
+      "content_type": 17,
+      "codename": "delete_groupobjectpermission"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 68,
+    "fields": {
+      "name": "Can view group object permission",
+      "content_type": 17,
+      "codename": "view_groupobjectpermission"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 69,
+    "fields": {
+      "name": "Can add user object permission",
+      "content_type": 18,
+      "codename": "add_userobjectpermission"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 70,
+    "fields": {
+      "name": "Can change user object permission",
+      "content_type": 18,
+      "codename": "change_userobjectpermission"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 71,
+    "fields": {
+      "name": "Can delete user object permission",
+      "content_type": 18,
+      "codename": "delete_userobjectpermission"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 72,
+    "fields": {
+      "name": "Can view user object permission",
+      "content_type": 18,
+      "codename": "view_userobjectpermission"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 1,
+    "fields": { "app_label": "admin", "model": "logentry" }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 2,
+    "fields": { "app_label": "auth", "model": "permission" }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 3,
+    "fields": { "app_label": "auth", "model": "group" }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 4,
+    "fields": { "app_label": "contenttypes", "model": "contenttype" }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 5,
+    "fields": { "app_label": "sessions", "model": "session" }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 17,
+    "fields": { "app_label": "guardian", "model": "groupobjectpermission" }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 18,
+    "fields": { "app_label": "guardian", "model": "userobjectpermission" }
+  },
+  {
+    "model": "sessions.session",
+    "pk": "4u5fh96227ybyu1yi4508064starp5kx",
+    "fields": {
+      "session_data": ".eJxVjEEOwiAQRe_C2pACU8q4dO8ZyDCAVA1NSrsy3l1JutDte-__l_C0b8XvLa1-juIslDj9skD8SLWLeKd6WyQvdVvnIHsiD9vkdYnpeTnav4NCrXzXWlkMgGiyBrKBtaEM1nXKNFmm4AYgQ5AUoxmRB-0mhWrklB2AEe8P0HI3Rg:1tUSjs:jSN3OlK7_WDQg1Rx8UvQzetD7WlPcXueN7QW4I0Vy_Q",
+      "expire_date": "2025-01-19T15:40:28.891Z"
+    }
+  },
+  {
+    "model": "sessions.session",
+    "pk": "fk8ubigo0xj2u42mob8hv961rtqxd5cc",
+    "fields": {
+      "session_data": ".eJxVjEEOwiAQRe_C2pACU8q4dO8ZyDCAVA1NSrsy3l1JutDte-__l_C0b8XvLa1-juIslDj9skD8SLWLeKd6WyQvdVvnIHsiD9vkdYnpeTnav4NCrXzXWlkMgGiyBrKBtaEM1nXKNFmm4AYgQ5AUoxmRB-0mhWrklB2AEe8P0HI3Rg:1tbfqM:NGNv0PYsTk3hihH8qC2UY0xjupAbS6dYBKsvc4i078c",
+      "expire_date": "2025-02-08T13:04:58.167Z"
+    }
+  },
+  {
+    "model": "sessions.session",
+    "pk": "gsnw0ks8opcm7y7cheonm5lkng3m3ggh",
+    "fields": {
+      "session_data": ".eJxVjEEOwiAQRe_C2pACU8q4dO8ZyDCAVA1NSrsy3l1JutDte-__l_C0b8XvLa1-juIslDj9skD8SLWLeKd6WyQvdVvnIHsiD9vkdYnpeTnav4NCrXzXWlkMgGiyBrKBtaEM1nXKNFmm4AYgQ5AUoxmRB-0mhWrklB2AEe8P0HI3Rg:1tcMqi:mGEBVLtHwKz6Py0Mim7JsHkoGGNPerHMlmqmTcmkpLs",
+      "expire_date": "2025-02-10T11:00:12.237Z"
+    }
+  },
+  {
+    "model": "sessions.session",
+    "pk": "he58ultyhk002n5mlf9i5pyxh9lwjpj2",
+    "fields": {
+      "session_data": ".eJxVjEEOwiAQRe_C2pACU8q4dO8ZyDCAVA1NSrsy3l1JutDte-__l_C0b8XvLa1-juIslDj9skD8SLWLeKd6WyQvdVvnIHsiD9vkdYnpeTnav4NCrXzXWlkMgGiyBrKBtaEM1nXKNFmm4AYgQ5AUoxmRB-0mhWrklB2AEe8P0HI3Rg:1tUaOe:tPolkqkg-W7tWZsVM30gg1QakmaK7XTACvRjFhVRg-k",
+      "expire_date": "2025-01-19T23:51:04.353Z"
+    }
+  },
+  {
+    "model": "sessions.session",
+    "pk": "yeln4vt7puyhgsor9bh8dl5vewru73vj",
+    "fields": {
+      "session_data": ".eJxVjEEOwiAQRe_C2pACU8q4dO8ZyDCAVA1NSrsy3l1JutDte-__l_C0b8XvLa1-juIslDj9skD8SLWLeKd6WyQvdVvnIHsiD9vkdYnpeTnav4NCrXzXWlkMgGiyBrKBtaEM1nXKNFmm4AYgQ5AUoxmRB-0mhWrklB2AEe8P0HI3Rg:1teFdf:b5MBmr-nOffaTki-gHyFoq9BxZsaMQbioWTcb2IW9Ew",
+      "expire_date": "2025-02-15T15:42:31.359Z"
+    }
+  },
+  {
+    "model": "user_app.customuser",
+    "pk": 1,
+    "fields": {
+      "password": "pbkdf2_sha256$870000$J7NrMa0kg8i0yl0yLUMJzq$/Vr929PvCHyWlh50Az49eq/43Z/6YYnedgfYsvvZGNY=",
+      "last_login": "2025-02-01T15:42:31.348Z",
+      "email": "timothymalahy@protonmail.com",
+      "first_name": "",
+      "last_name": "",
+      "is_active": true,
+      "is_staff": true,
+      "is_superuser": true,
+      "date_joined": "2025-01-05T15:40:12.943Z",
+      "is_verified": false,
+      "verification_token": null,
+      "token_expiration": null,
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "user_app.customuser",
+    "pk": 2,
+    "fields": {
+      "password": "!PNpZqfSp2smohwE5ODncK4t40Qo1oL3CyOev6oJJ",
+      "last_login": null,
+      "email": "AnonymousUser",
+      "first_name": "",
+      "last_name": "",
+      "is_active": true,
+      "is_staff": false,
+      "is_superuser": false,
+      "date_joined": "2025-01-25T13:04:38.589Z",
+      "is_verified": false,
+      "verification_token": null,
+      "token_expiration": null,
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "polls.topic",
+    "pk": 1,
+    "fields": {
+      "topic_text": "CSS",
+      "pub_date": "2025-01-05T15:40:30Z",
+      "reference_link": null
+    }
+  },
+  {
+    "model": "polls.topic",
+    "pk": 2,
+    "fields": {
+      "topic_text": "Curl",
+      "pub_date": "2025-01-05T18:23:59.000Z",
+      "reference_link": null
+    }
+  },
+  {
+    "model": "polls.topic",
+    "pk": 3,
+    "fields": {
+      "topic_text": "Wolfram",
+      "pub_date": "2025-01-05T18:24:17.926Z",
+      "reference_link": null
+    }
+  },
+  {
+    "model": "polls.topic",
+    "pk": 4,
+    "fields": {
+      "topic_text": "Scratch",
+      "pub_date": "2025-01-05T18:24:17.939Z",
+      "reference_link": null
+    }
+  },
+  {
+    "model": "polls.topic",
+    "pk": 5,
+    "fields": {
+      "topic_text": "ML",
+      "pub_date": "2025-01-05T18:24:17.951Z",
+      "reference_link": null
+    }
+  },
+  {
+    "model": "polls.topic",
+    "pk": 6,
+    "fields": {
+      "topic_text": "ABAP",
+      "pub_date": "2025-01-05T18:24:17.963Z",
+      "reference_link": null
+    }
+  },
+  {
+    "model": "polls.topic",
+    "pk": 7,
+    "fields": {
+      "topic_text": "CHILL",
+      "pub_date": "2025-01-05T18:24:17.974Z",
+      "reference_link": null
+    }
+  },
+  {
+    "model": "polls.topic",
+    "pk": 8,
+    "fields": {
+      "topic_text": "MQL5",
+      "pub_date": "2025-01-05T18:24:17.985Z",
+      "reference_link": null
+    }
+  },
+  {
+    "model": "polls.topic",
+    "pk": 9,
+    "fields": {
+      "topic_text": "VHDL",
+      "pub_date": "2025-01-05T18:24:17.998Z",
+      "reference_link": null
+    }
+  },
+  {
+    "model": "polls.topic",
+    "pk": 11,
+    "fields": {
+      "topic_text": "TypeScript",
+      "pub_date": "2025-01-05T18:24:18.022Z",
+      "reference_link": null
+    }
+  },
+  {
+    "model": "polls.topic",
+    "pk": 12,
+    "fields": {
+      "topic_text": "CFML",
+      "pub_date": "2025-01-05T18:24:18.036Z",
+      "reference_link": null
+    }
+  },
+  {
+    "model": "polls.topic",
+    "pk": 13,
+    "fields": {
+      "topic_text": "Scala",
+      "pub_date": "2025-01-05T18:32:21.381Z",
+      "reference_link": null
+    }
+  },
+  {
+    "model": "polls.topic",
+    "pk": 14,
+    "fields": {
+      "topic_text": "PL/SQL",
+      "pub_date": "2025-01-05T18:33:32.784Z",
+      "reference_link": null
+    }
+  },
+  {
+    "model": "polls.topic",
+    "pk": 15,
+    "fields": {
+      "topic_text": "Swift",
+      "pub_date": "2025-01-05T18:33:32.796Z",
+      "reference_link": null
+    }
+  },
+  {
+    "model": "polls.topic",
+    "pk": 16,
+    "fields": {
+      "topic_text": "Prolog",
+      "pub_date": "2025-01-05T18:33:32.807Z",
+      "reference_link": null
+    }
+  },
+  {
+    "model": "polls.topic",
+    "pk": 17,
+    "fields": {
+      "topic_text": "Visual Basic",
+      "pub_date": "2025-01-05T18:33:32.819Z",
+      "reference_link": null
+    }
+  },
+  {
+    "model": "polls.topic",
+    "pk": 18,
+    "fields": {
+      "topic_text": "Logo",
+      "pub_date": "2025-01-05T18:33:32.831Z",
+      "reference_link": null
+    }
+  },
+  {
+    "model": "polls.topic",
+    "pk": 19,
+    "fields": {
+      "topic_text": "J",
+      "pub_date": "2025-01-05T18:33:32.842Z",
+      "reference_link": null
+    }
+  },
+  {
+    "model": "polls.topic",
+    "pk": 20,
+    "fields": {
+      "topic_text": "C ",
+      "pub_date": "2025-01-05T18:33:32.853Z",
+      "reference_link": null
+    }
+  },
+  {
+    "model": "polls.topic",
+    "pk": 21,
+    "fields": {
+      "topic_text": "Hack",
+      "pub_date": "2025-01-05T18:33:32.864Z",
+      "reference_link": null
+    }
+  },
+  {
+    "model": "polls.topic",
+    "pk": 22,
+    "fields": {
+      "topic_text": "F#",
+      "pub_date": "2025-01-05T18:33:32.876Z",
+      "reference_link": null
+    }
+  },
+  {
+    "model": "polls.topic",
+    "pk": 23,
+    "fields": {
+      "topic_text": "Elm",
+      "pub_date": "2025-01-05T18:33:32.888Z",
+      "reference_link": null
+    }
+  },
+  {
+    "model": "polls.topic",
+    "pk": 24,
+    "fields": {
+      "topic_text": "Go",
+      "pub_date": "2025-01-05T18:33:32.900Z",
+      "reference_link": null
+    }
+  },
+  {
+    "model": "polls.topic",
+    "pk": 25,
+    "fields": {
+      "topic_text": "Ada",
+      "pub_date": "2025-01-05T18:33:32.911Z",
+      "reference_link": null
+    }
+  },
+  {
+    "model": "polls.topic",
+    "pk": 26,
+    "fields": {
+      "topic_text": "Lua",
+      "pub_date": "2025-01-05T18:33:32.923Z",
+      "reference_link": null
+    }
+  },
+  {
+    "model": "polls.topic",
+    "pk": 27,
+    "fields": {
+      "topic_text": "Delphi/Object Pascal",
+      "pub_date": "2025-01-05T18:33:32.934Z",
+      "reference_link": null
+    }
+  },
+  {
+    "model": "polls.topic",
+    "pk": 28,
+    "fields": {
+      "topic_text": "Kotlin",
+      "pub_date": "2025-01-05T18:33:32.946Z",
+      "reference_link": null
+    }
+  },
+  {
+    "model": "polls.topic",
+    "pk": 29,
+    "fields": {
+      "topic_text": "Apex",
+      "pub_date": "2025-01-05T18:33:32.957Z",
+      "reference_link": null
+    }
+  },
+  {
+    "model": "polls.topic",
+    "pk": 30,
+    "fields": {
+      "topic_text": "MATLAB",
+      "pub_date": "2025-01-05T18:33:32.968Z",
+      "reference_link": null
+    }
+  },
+  {
+    "model": "polls.topic",
+    "pk": 31,
+    "fields": {
+      "topic_text": "Ladder Logic",
+      "pub_date": "2025-01-05T18:33:32.979Z",
+      "reference_link": null
+    }
+  },
+  {
+    "model": "polls.topic",
+    "pk": 32,
+    "fields": {
+      "topic_text": "NATURAL",
+      "pub_date": "2025-01-05T18:33:32.991Z",
+      "reference_link": null
+    }
+  },
+  {
+    "model": "polls.topic",
+    "pk": 33,
+    "fields": {
+      "topic_text": "Eiffel",
+      "pub_date": "2025-01-05T18:33:33.002Z",
+      "reference_link": null
+    }
+  },
+  {
+    "model": "polls.topic",
+    "pk": 34,
+    "fields": {
+      "topic_text": "(Visual) FoxPro",
+      "pub_date": "2025-01-05T18:33:33.013Z",
+      "reference_link": null
+    }
+  },
+  {
+    "model": "polls.topic",
+    "pk": 35,
+    "fields": {
+      "topic_text": "test",
+      "pub_date": "2025-01-27T10:59:48.423Z",
+      "reference_link": null
+    }
+  },
+  {
+    "model": "polls.topic",
+    "pk": 36,
+    "fields": {
+      "topic_text": "adsfas",
+      "pub_date": "2025-01-27T11:30:51.073Z",
+      "reference_link": ""
+    }
+  },
+  {
+    "model": "polls.topic",
+    "pk": 37,
+    "fields": {
+      "topic_text": "asdfhgf",
+      "pub_date": "2025-01-27T11:31:04.216Z",
+      "reference_link": "https://test.com/"
+    }
+  },
+  {
+    "model": "polls.topic",
+    "pk": 38,
+    "fields": {
+      "topic_text": "cvxbcxv",
+      "pub_date": "2025-01-27T11:31:07.753Z",
+      "reference_link": ""
+    }
+  },
+  {
+    "model": "polls.topic",
+    "pk": 39,
+    "fields": {
+      "topic_text": "vcx",
+      "pub_date": "2025-01-27T11:32:18.691Z",
+      "reference_link": ""
+    }
+  },
+  {
+    "model": "polls.topic",
+    "pk": 40,
+    "fields": {
+      "topic_text": "test2",
+      "pub_date": "2025-02-01T13:24:19.438Z",
+      "reference_link": ""
+    }
+  },
+  {
+    "model": "polls.topic",
+    "pk": 41,
+    "fields": {
+      "topic_text": "testsetest",
+      "pub_date": "2025-02-01T13:42:00.407Z",
+      "reference_link": ""
+    }
+  },
+  {
+    "model": "polls.topic",
+    "pk": 42,
+    "fields": {
+      "topic_text": "testt",
+      "pub_date": "2025-02-01T15:59:42.503Z",
+      "reference_link": ""
+    }
+  },
+  {
+    "model": "polls.topic",
+    "pk": 43,
+    "fields": {
+      "topic_text": "asdf",
+      "pub_date": "2025-02-01T16:12:52.028Z",
+      "reference_link": ""
+    }
+  },
+  {
+    "model": "polls.topic",
+    "pk": 44,
+    "fields": {
+      "topic_text": "gfds",
+      "pub_date": "2025-02-01T16:13:09.561Z",
+      "reference_link": ""
+    }
+  },
+  {
+    "model": "polls.topic",
+    "pk": 45,
+    "fields": {
+      "topic_text": "bg",
+      "pub_date": "2025-02-01T16:14:32.339Z",
+      "reference_link": ""
+    }
+  },
+  {
+    "model": "polls.topic",
+    "pk": 46,
+    "fields": {
+      "topic_text": "tes",
+      "pub_date": "2025-02-01T16:26:46.276Z",
+      "reference_link": ""
+    }
+  },
+  {
+    "model": "polls.topic",
+    "pk": 47,
+    "fields": {
+      "topic_text": "te",
+      "pub_date": "2025-02-01T16:27:14.622Z",
+      "reference_link": ""
+    }
+  },
+  {
+    "model": "polls.topic",
+    "pk": 48,
+    "fields": {
+      "topic_text": "testtt",
+      "pub_date": "2025-02-02T12:06:32.596Z",
+      "reference_link": ""
+    }
+  },
+  {
+    "model": "polls.topic",
+    "pk": 49,
+    "fields": {
+      "topic_text": "testttt",
+      "pub_date": "2025-02-02T12:07:27.221Z",
+      "reference_link": ""
+    }
+  },
+  {
+    "model": "polls.subject",
+    "pk": 1,
+    "fields": {
+      "topic": 1,
+      "subject_text": "Shadow DOM",
+      "details": "",
+      "pub_date": "2025-01-05T15:40:50Z",
+      "current_score": 0
+    }
+  },
+  {
+    "model": "polls.subject",
+    "pk": 2,
+    "fields": {
+      "topic": 1,
+      "subject_text": "CSS Selectors",
+      "details": null,
+      "pub_date": "2025-01-05T19:39:54.100Z",
+      "current_score": 0
+    }
+  },
+  {
+    "model": "polls.subject",
+    "pk": 3,
+    "fields": {
+      "topic": 1,
+      "subject_text": "Box Model",
+      "details": null,
+      "pub_date": "2025-01-05T19:39:54.118Z",
+      "current_score": 0
+    }
+  },
+  {
+    "model": "polls.subject",
+    "pk": 4,
+    "fields": {
+      "topic": 1,
+      "subject_text": "Positioning",
+      "details": null,
+      "pub_date": "2025-01-05T19:39:54.132Z",
+      "current_score": 0
+    }
+  },
+  {
+    "model": "polls.subject",
+    "pk": 5,
+    "fields": {
+      "topic": 1,
+      "subject_text": "Flexbox",
+      "details": null,
+      "pub_date": "2025-01-05T19:39:54.143Z",
+      "current_score": 0
+    }
+  },
+  {
+    "model": "polls.subject",
+    "pk": 6,
+    "fields": {
+      "topic": 1,
+      "subject_text": "Grid Layout",
+      "details": null,
+      "pub_date": "2025-01-05T19:39:54.155Z",
+      "current_score": 0
+    }
+  },
+  {
+    "model": "polls.subject",
+    "pk": 7,
+    "fields": {
+      "topic": 1,
+      "subject_text": "Responsive Design",
+      "details": null,
+      "pub_date": "2025-01-05T19:39:54.165Z",
+      "current_score": 0
+    }
+  },
+  {
+    "model": "polls.subject",
+    "pk": 8,
+    "fields": {
+      "topic": 1,
+      "subject_text": "CSS Variables",
+      "details": null,
+      "pub_date": "2025-01-05T19:39:54.176Z",
+      "current_score": 0
+    }
+  },
+  {
+    "model": "polls.subject",
+    "pk": 9,
+    "fields": {
+      "topic": 1,
+      "subject_text": "Typography",
+      "details": null,
+      "pub_date": "2025-01-05T19:39:54.187Z",
+      "current_score": 0
+    }
+  },
+  {
+    "model": "polls.subject",
+    "pk": 11,
+    "fields": {
+      "topic": 1,
+      "subject_text": "CSS Animations",
+      "details": null,
+      "pub_date": "2025-01-05T19:39:54.208Z",
+      "current_score": 0
+    }
+  },
+  {
+    "model": "polls.subject",
+    "pk": 12,
+    "fields": {
+      "topic": 1,
+      "subject_text": "CSS Transforms",
+      "details": null,
+      "pub_date": "2025-01-05T19:39:54.219Z",
+      "current_score": 0
+    }
+  },
+  {
+    "model": "polls.subject",
+    "pk": 13,
+    "fields": {
+      "topic": 1,
+      "subject_text": "Shadows",
+      "details": null,
+      "pub_date": "2025-01-05T19:39:54.229Z",
+      "current_score": 0
+    }
+  },
+  {
+    "model": "polls.subject",
+    "pk": 14,
+    "fields": {
+      "topic": 1,
+      "subject_text": "CSS Colors",
+      "details": null,
+      "pub_date": "2025-01-05T19:39:54.242Z",
+      "current_score": 0
+    }
+  },
+  {
+    "model": "polls.subject",
+    "pk": 15,
+    "fields": {
+      "topic": 1,
+      "subject_text": "Z-Index",
+      "details": null,
+      "pub_date": "2025-01-05T19:39:54.252Z",
+      "current_score": 0
+    }
+  },
+  {
+    "model": "polls.subject",
+    "pk": 16,
+    "fields": {
+      "topic": 1,
+      "subject_text": "Float and Clear",
+      "details": null,
+      "pub_date": "2025-01-05T19:39:54.263Z",
+      "current_score": 0
+    }
+  },
+  {
+    "model": "polls.subject",
+    "pk": 17,
+    "fields": {
+      "topic": 1,
+      "subject_text": "CSS Functions",
+      "details": null,
+      "pub_date": "2025-01-05T19:39:54.274Z",
+      "current_score": 0
+    }
+  },
+  {
+    "model": "polls.subject",
+    "pk": 18,
+    "fields": {
+      "topic": 1,
+      "subject_text": "CSS Layout Techniques",
+      "details": null,
+      "pub_date": "2025-01-05T19:39:54.287Z",
+      "current_score": 0
+    }
+  },
+  {
+    "model": "polls.subject",
+    "pk": 19,
+    "fields": {
+      "topic": 1,
+      "subject_text": "Form Styling",
+      "details": null,
+      "pub_date": "2025-01-05T19:39:54.298Z",
+      "current_score": 0
+    }
+  },
+  {
+    "model": "polls.subject",
+    "pk": 20,
+    "fields": {
+      "topic": 1,
+      "subject_text": "CSS Filters",
+      "details": null,
+      "pub_date": "2025-01-05T19:39:54.309Z",
+      "current_score": 0
+    }
+  },
+  {
+    "model": "polls.subject",
+    "pk": 21,
+    "fields": {
+      "topic": 1,
+      "subject_text": "Clip-path",
+      "details": null,
+      "pub_date": "2025-01-05T19:39:54.320Z",
+      "current_score": 0
+    }
+  },
+  {
+    "model": "polls.subject",
+    "pk": 22,
+    "fields": {
+      "topic": 1,
+      "subject_text": "CSS Specificity",
+      "details": null,
+      "pub_date": "2025-01-05T19:39:54.330Z",
+      "current_score": 0
+    }
+  },
+  {
+    "model": "polls.subject",
+    "pk": 23,
+    "fields": {
+      "topic": 1,
+      "subject_text": "CSS Frameworks",
+      "details": null,
+      "pub_date": "2025-01-05T19:39:54.341Z",
+      "current_score": 0
+    }
+  },
+  {
+    "model": "polls.subject",
+    "pk": 24,
+    "fields": {
+      "topic": 1,
+      "subject_text": "CSS Preprocessors",
+      "details": null,
+      "pub_date": "2025-01-05T19:39:54.352Z",
+      "current_score": 0
+    }
+  },
+  {
+    "model": "polls.subject",
+    "pk": 25,
+    "fields": {
+      "topic": 1,
+      "subject_text": "CSS Custom Properties (Scoped)",
+      "details": null,
+      "pub_date": "2025-01-05T19:39:54.362Z",
+      "current_score": 0
+    }
+  },
+  {
+    "model": "polls.subject",
+    "pk": 26,
+    "fields": {
+      "topic": 1,
+      "subject_text": "CSS Grid and Flexbox Responsiveness",
+      "details": null,
+      "pub_date": "2025-01-05T19:39:54.373Z",
+      "current_score": 0
+    }
+  },
+  {
+    "model": "polls.subject",
+    "pk": 27,
+    "fields": {
+      "topic": 1,
+      "subject_text": "tesatesafds",
+      "details": "",
+      "pub_date": "2025-02-02T15:12:34.247Z",
+      "current_score": 0
+    }
+  },
+  {
+    "model": "polls.subjectlinks",
+    "pk": 1,
+    "fields": {
+      "subject": 1,
+      "link_text": "Mozilla",
+      "link_url": "https://developer.mozilla.org/en-US/docs/Web/API/Web_components/Using_shadow_DOM",
+      "pub_date": "2025-01-05T15:41:29Z"
+    }
+  },
+  {
+    "model": "polls.subjectlinks",
+    "pk": 2,
+    "fields": {
+      "subject": 4,
+      "link_text": "facebook",
+      "link_url": "https://facebook.com",
+      "pub_date": "2025-01-09T10:42:00.085Z"
+    }
+  },
+  {
+    "model": "polls.vote",
+    "pk": 1,
+    "fields": {
+      "user": 1,
+      "topic": 1,
+      "submitted": false,
+      "date_voted": null,
+      "date_updated": "2025-02-02T14:20:09.201Z",
+      "rankings": [
+        { "order": 1, "subject": "1" },
+        { "order": 2, "subject": "2" },
+        { "order": 3, "subject": "3" },
+        { "order": 4, "subject": "4" },
+        { "order": 5, "subject": "5" },
+        { "order": 6, "subject": "6" },
+        { "order": 7, "subject": "7" },
+        { "order": 8, "subject": "8" },
+        { "order": 9, "subject": "9" },
+        { "order": 10, "subject": "10" },
+        { "order": 11, "subject": "11" },
+        { "order": 12, "subject": "12" },
+        { "order": 13, "subject": "13" },
+        { "order": 14, "subject": "14" },
+        { "order": 15, "subject": "15" },
+        { "order": 16, "subject": "16" },
+        { "order": 17, "subject": "18" },
+        { "order": 18, "subject": "19" },
+        { "order": 19, "subject": "20" },
+        { "order": 20, "subject": "17" },
+        { "order": 21, "subject": "21" },
+        { "order": 22, "subject": "22" },
+        { "order": 23, "subject": "23" },
+        { "order": 24, "subject": "24" },
+        { "order": 25, "subject": "25" },
+        { "order": 26, "subject": "26" }
+      ]
+    }
+  },
+  {
+    "model": "polls.vote",
+    "pk": 2,
+    "fields": {
+      "user": 1,
+      "topic": 1,
+      "submitted": false,
+      "date_voted": null,
+      "date_updated": "2025-02-02T14:20:31.978Z",
+      "rankings": [
+        { "order": 1, "subject": "1" },
+        { "order": 2, "subject": "2" },
+        { "order": 3, "subject": "3" },
+        { "order": 4, "subject": "4" },
+        { "order": 5, "subject": "5" },
+        { "order": 6, "subject": "7" },
+        { "order": 7, "subject": "8" },
+        { "order": 8, "subject": "9" },
+        { "order": 9, "subject": "10" },
+        { "order": 10, "subject": "11" },
+        { "order": 11, "subject": "12" },
+        { "order": 12, "subject": "6" },
+        { "order": 13, "subject": "13" },
+        { "order": 14, "subject": "14" },
+        { "order": 15, "subject": "15" },
+        { "order": 16, "subject": "16" },
+        { "order": 17, "subject": "18" },
+        { "order": 18, "subject": "19" },
+        { "order": 19, "subject": "20" },
+        { "order": 20, "subject": "17" },
+        { "order": 21, "subject": "21" },
+        { "order": 22, "subject": "22" },
+        { "order": 23, "subject": "23" },
+        { "order": 24, "subject": "24" },
+        { "order": 25, "subject": "25" },
+        { "order": 26, "subject": "26" }
+      ]
+    }
+  },
+  {
+    "model": "polls.vote",
+    "pk": 3,
+    "fields": {
+      "user": 1,
+      "topic": 1,
+      "submitted": false,
+      "date_voted": null,
+      "date_updated": "2025-02-02T14:21:45.932Z",
+      "rankings": [
+        { "order": 1, "subject": "1" },
+        { "order": 2, "subject": "2" },
+        { "order": 3, "subject": "3" },
+        { "order": 4, "subject": "4" },
+        { "order": 5, "subject": "5" },
+        { "order": 6, "subject": "7" },
+        { "order": 7, "subject": "8" },
+        { "order": 8, "subject": "9" },
+        { "order": 9, "subject": "10" },
+        { "order": 10, "subject": "11" },
+        { "order": 11, "subject": "12" },
+        { "order": 12, "subject": "6" },
+        { "order": 13, "subject": "13" },
+        { "order": 14, "subject": "14" },
+        { "order": 15, "subject": "16" },
+        { "order": 16, "subject": "18" },
+        { "order": 17, "subject": "19" },
+        { "order": 18, "subject": "15" },
+        { "order": 19, "subject": "20" },
+        { "order": 20, "subject": "17" },
+        { "order": 21, "subject": "21" },
+        { "order": 22, "subject": "22" },
+        { "order": 23, "subject": "23" },
+        { "order": 24, "subject": "24" },
+        { "order": 25, "subject": "25" },
+        { "order": 26, "subject": "26" }
+      ]
+    }
+  },
+  {
+    "model": "polls.vote",
+    "pk": 4,
+    "fields": {
+      "user": 1,
+      "topic": 1,
+      "submitted": false,
+      "date_voted": null,
+      "date_updated": "2025-02-02T14:21:55.359Z",
+      "rankings": [
+        { "order": 1, "subject": "1" },
+        { "order": 2, "subject": "2" },
+        { "order": 3, "subject": "3" },
+        { "order": 4, "subject": "4" },
+        { "order": 5, "subject": "5" },
+        { "order": 6, "subject": "6" },
+        { "order": 7, "subject": "7" },
+        { "order": 8, "subject": "8" },
+        { "order": 9, "subject": "9" },
+        { "order": 10, "subject": "10" },
+        { "order": 11, "subject": "11" },
+        { "order": 12, "subject": "12" },
+        { "order": 13, "subject": "13" },
+        { "order": 14, "subject": "15" },
+        { "order": 15, "subject": "16" },
+        { "order": 16, "subject": "17" },
+        { "order": 17, "subject": "18" },
+        { "order": 18, "subject": "19" },
+        { "order": 19, "subject": "20" },
+        { "order": 20, "subject": "14" },
+        { "order": 21, "subject": "21" },
+        { "order": 22, "subject": "22" },
+        { "order": 23, "subject": "23" },
+        { "order": 24, "subject": "24" },
+        { "order": 25, "subject": "25" },
+        { "order": 26, "subject": "26" }
+      ]
+    }
+  },
+  {
+    "model": "polls.vote",
+    "pk": 5,
+    "fields": {
+      "user": 1,
+      "topic": 1,
+      "submitted": false,
+      "date_voted": null,
+      "date_updated": "2025-02-02T14:22:06.478Z",
+      "rankings": [
+        { "order": 1, "subject": "1" },
+        { "order": 2, "subject": "2" },
+        { "order": 3, "subject": "3" },
+        { "order": 4, "subject": "4" },
+        { "order": 5, "subject": "5" },
+        { "order": 6, "subject": "6" },
+        { "order": 7, "subject": "7" },
+        { "order": 8, "subject": "8" },
+        { "order": 9, "subject": "13" },
+        { "order": 10, "subject": "9" },
+        { "order": 11, "subject": "10" },
+        { "order": 12, "subject": "11" },
+        { "order": 13, "subject": "12" },
+        { "order": 14, "subject": "15" },
+        { "order": 15, "subject": "16" },
+        { "order": 16, "subject": "17" },
+        { "order": 17, "subject": "18" },
+        { "order": 18, "subject": "19" },
+        { "order": 19, "subject": "20" },
+        { "order": 20, "subject": "14" },
+        { "order": 21, "subject": "21" },
+        { "order": 22, "subject": "22" },
+        { "order": 23, "subject": "23" },
+        { "order": 24, "subject": "24" },
+        { "order": 25, "subject": "25" },
+        { "order": 26, "subject": "26" }
+      ]
+    }
+  },
+  {
+    "model": "polls.vote",
+    "pk": 6,
+    "fields": {
+      "user": 1,
+      "topic": 1,
+      "submitted": false,
+      "date_voted": null,
+      "date_updated": "2025-02-02T14:22:09.937Z",
+      "rankings": [
+        { "order": 1, "subject": "1" },
+        { "order": 2, "subject": "2" },
+        { "order": 3, "subject": "3" },
+        { "order": 4, "subject": "4" },
+        { "order": 5, "subject": "5" },
+        { "order": 6, "subject": "6" },
+        { "order": 7, "subject": "7" },
+        { "order": 8, "subject": "8" },
+        { "order": 9, "subject": "13" },
+        { "order": 10, "subject": "9" },
+        { "order": 11, "subject": "10" },
+        { "order": 12, "subject": "11" },
+        { "order": 13, "subject": "12" },
+        { "order": 14, "subject": "15" },
+        { "order": 15, "subject": "16" },
+        { "order": 16, "subject": "17" },
+        { "order": 17, "subject": "19" },
+        { "order": 18, "subject": "20" },
+        { "order": 19, "subject": "14" },
+        { "order": 20, "subject": "21" },
+        { "order": 21, "subject": "18" },
+        { "order": 22, "subject": "22" },
+        { "order": 23, "subject": "23" },
+        { "order": 24, "subject": "24" },
+        { "order": 25, "subject": "25" },
+        { "order": 26, "subject": "26" }
+      ]
+    }
+  },
+  {
+    "model": "polls.vote",
+    "pk": 7,
+    "fields": {
+      "user": 1,
+      "topic": 1,
+      "submitted": false,
+      "date_voted": null,
+      "date_updated": "2025-02-02T14:22:38.881Z",
+      "rankings": [
+        { "order": 1, "subject": "1" },
+        { "order": 2, "subject": "2" },
+        { "order": 3, "subject": "3" },
+        { "order": 4, "subject": "4" },
+        { "order": 5, "subject": "5" },
+        { "order": 6, "subject": "6" },
+        { "order": 7, "subject": "8" },
+        { "order": 8, "subject": "13" },
+        { "order": 9, "subject": "9" },
+        { "order": 10, "subject": "10" },
+        { "order": 11, "subject": "11" },
+        { "order": 12, "subject": "7" },
+        { "order": 13, "subject": "12" },
+        { "order": 14, "subject": "15" },
+        { "order": 15, "subject": "16" },
+        { "order": 16, "subject": "17" },
+        { "order": 17, "subject": "19" },
+        { "order": 18, "subject": "20" },
+        { "order": 19, "subject": "14" },
+        { "order": 20, "subject": "21" },
+        { "order": 21, "subject": "18" },
+        { "order": 22, "subject": "22" },
+        { "order": 23, "subject": "23" },
+        { "order": 24, "subject": "24" },
+        { "order": 25, "subject": "25" },
+        { "order": 26, "subject": "26" }
+      ]
+    }
+  },
+  {
+    "model": "polls.vote",
+    "pk": 8,
+    "fields": {
+      "user": 1,
+      "topic": 1,
+      "submitted": false,
+      "date_voted": null,
+      "date_updated": "2025-02-02T14:22:42.234Z",
+      "rankings": [
+        { "order": 1, "subject": "1" },
+        { "order": 2, "subject": "2" },
+        { "order": 3, "subject": "3" },
+        { "order": 4, "subject": "4" },
+        { "order": 5, "subject": "5" },
+        { "order": 6, "subject": "6" },
+        { "order": 7, "subject": "14" },
+        { "order": 8, "subject": "8" },
+        { "order": 9, "subject": "13" },
+        { "order": 10, "subject": "9" },
+        { "order": 11, "subject": "10" },
+        { "order": 12, "subject": "11" },
+        { "order": 13, "subject": "7" },
+        { "order": 14, "subject": "12" },
+        { "order": 15, "subject": "15" },
+        { "order": 16, "subject": "16" },
+        { "order": 17, "subject": "17" },
+        { "order": 18, "subject": "19" },
+        { "order": 19, "subject": "20" },
+        { "order": 20, "subject": "21" },
+        { "order": 21, "subject": "18" },
+        { "order": 22, "subject": "22" },
+        { "order": 23, "subject": "23" },
+        { "order": 24, "subject": "24" },
+        { "order": 25, "subject": "25" },
+        { "order": 26, "subject": "26" }
+      ]
+    }
+  },
+  {
+    "model": "polls.vote",
+    "pk": 9,
+    "fields": {
+      "user": 1,
+      "topic": 1,
+      "submitted": false,
+      "date_voted": null,
+      "date_updated": "2025-02-02T14:28:17.551Z",
+      "rankings": [
+        { "order": 1, "subject": "1" },
+        { "order": 2, "subject": "2" },
+        { "order": 3, "subject": "3" },
+        { "order": 4, "subject": "4" },
+        { "order": 5, "subject": "5" },
+        { "order": 6, "subject": "6" },
+        { "order": 7, "subject": "14" },
+        { "order": 8, "subject": "8" },
+        { "order": 9, "subject": "9" },
+        { "order": 10, "subject": "10" },
+        { "order": 11, "subject": "11" },
+        { "order": 12, "subject": "7" },
+        { "order": 13, "subject": "12" },
+        { "order": 14, "subject": "13" },
+        { "order": 15, "subject": "15" },
+        { "order": 16, "subject": "16" },
+        { "order": 17, "subject": "17" },
+        { "order": 18, "subject": "19" },
+        { "order": 19, "subject": "20" },
+        { "order": 20, "subject": "21" },
+        { "order": 21, "subject": "18" },
+        { "order": 22, "subject": "22" },
+        { "order": 23, "subject": "23" },
+        { "order": 24, "subject": "24" },
+        { "order": 25, "subject": "25" },
+        { "order": 26, "subject": "26" }
+      ]
+    }
+  },
+  {
+    "model": "polls.vote",
+    "pk": 10,
+    "fields": {
+      "user": 1,
+      "topic": 1,
+      "submitted": false,
+      "date_voted": null,
+      "date_updated": "2025-02-02T14:32:38.833Z",
+      "rankings": [
+        { "order": 1, "subject": "1" },
+        { "order": 2, "subject": "2" },
+        { "order": 3, "subject": "3" },
+        { "order": 4, "subject": "4" },
+        { "order": 5, "subject": "5" },
+        { "order": 6, "subject": "6" },
+        { "order": 7, "subject": "7" },
+        { "order": 8, "subject": "9" },
+        { "order": 9, "subject": "10" },
+        { "order": 10, "subject": "11" },
+        { "order": 11, "subject": "12" },
+        { "order": 12, "subject": "13" },
+        { "order": 13, "subject": "14" },
+        { "order": 14, "subject": "8" },
+        { "order": 15, "subject": "15" },
+        { "order": 16, "subject": "16" },
+        { "order": 17, "subject": "17" },
+        { "order": 18, "subject": "18" },
+        { "order": 19, "subject": "19" },
+        { "order": 20, "subject": "20" },
+        { "order": 21, "subject": "21" },
+        { "order": 22, "subject": "22" },
+        { "order": 23, "subject": "23" },
+        { "order": 24, "subject": "24" },
+        { "order": 25, "subject": "25" },
+        { "order": 26, "subject": "26" }
+      ]
+    }
+  },
+  {
+    "model": "polls.vote",
+    "pk": 11,
+    "fields": {
+      "user": 1,
+      "topic": 1,
+      "submitted": false,
+      "date_voted": null,
+      "date_updated": "2025-02-02T14:34:54.120Z",
+      "rankings": [
+        { "order": 1, "subject": "1" },
+        { "order": 2, "subject": "2" },
+        { "order": 3, "subject": "3" },
+        { "order": 4, "subject": "4" },
+        { "order": 5, "subject": "5" },
+        { "order": 6, "subject": "6" },
+        { "order": 7, "subject": "8" },
+        { "order": 8, "subject": "9" },
+        { "order": 9, "subject": "10" },
+        { "order": 10, "subject": "11" },
+        { "order": 11, "subject": "12" },
+        { "order": 12, "subject": "7" },
+        { "order": 13, "subject": "13" },
+        { "order": 14, "subject": "14" },
+        { "order": 15, "subject": "15" },
+        { "order": 16, "subject": "16" },
+        { "order": 17, "subject": "17" },
+        { "order": 18, "subject": "18" },
+        { "order": 19, "subject": "19" },
+        { "order": 20, "subject": "20" },
+        { "order": 21, "subject": "21" },
+        { "order": 22, "subject": "22" },
+        { "order": 23, "subject": "23" },
+        { "order": 24, "subject": "24" },
+        { "order": 25, "subject": "25" },
+        { "order": 26, "subject": "26" }
+      ]
+    }
+  },
+  {
+    "model": "polls.vote",
+    "pk": 12,
+    "fields": {
+      "user": 1,
+      "topic": 1,
+      "submitted": false,
+      "date_voted": null,
+      "date_updated": "2025-02-02T14:34:55.021Z",
+      "rankings": [
+        { "order": 1, "subject": "1" },
+        { "order": 2, "subject": "2" },
+        { "order": 3, "subject": "3" },
+        { "order": 4, "subject": "4" },
+        { "order": 5, "subject": "5" },
+        { "order": 6, "subject": "12" },
+        { "order": 7, "subject": "6" },
+        { "order": 8, "subject": "8" },
+        { "order": 9, "subject": "9" },
+        { "order": 10, "subject": "10" },
+        { "order": 11, "subject": "11" },
+        { "order": 12, "subject": "7" },
+        { "order": 13, "subject": "13" },
+        { "order": 14, "subject": "14" },
+        { "order": 15, "subject": "15" },
+        { "order": 16, "subject": "16" },
+        { "order": 17, "subject": "17" },
+        { "order": 18, "subject": "18" },
+        { "order": 19, "subject": "19" },
+        { "order": 20, "subject": "20" },
+        { "order": 21, "subject": "21" },
+        { "order": 22, "subject": "22" },
+        { "order": 23, "subject": "23" },
+        { "order": 24, "subject": "24" },
+        { "order": 25, "subject": "25" },
+        { "order": 26, "subject": "26" }
+      ]
+    }
+  },
+  {
+    "model": "polls.vote",
+    "pk": 13,
+    "fields": {
+      "user": 1,
+      "topic": 1,
+      "submitted": false,
+      "date_voted": null,
+      "date_updated": "2025-02-02T14:34:55.879Z",
+      "rankings": [
+        { "order": 1, "subject": "1" },
+        { "order": 2, "subject": "2" },
+        { "order": 3, "subject": "3" },
+        { "order": 4, "subject": "4" },
+        { "order": 5, "subject": "5" },
+        { "order": 6, "subject": "12" },
+        { "order": 7, "subject": "8" },
+        { "order": 8, "subject": "9" },
+        { "order": 9, "subject": "10" },
+        { "order": 10, "subject": "11" },
+        { "order": 11, "subject": "7" },
+        { "order": 12, "subject": "13" },
+        { "order": 13, "subject": "6" },
+        { "order": 14, "subject": "14" },
+        { "order": 15, "subject": "15" },
+        { "order": 16, "subject": "16" },
+        { "order": 17, "subject": "17" },
+        { "order": 18, "subject": "18" },
+        { "order": 19, "subject": "19" },
+        { "order": 20, "subject": "20" },
+        { "order": 21, "subject": "21" },
+        { "order": 22, "subject": "22" },
+        { "order": 23, "subject": "23" },
+        { "order": 24, "subject": "24" },
+        { "order": 25, "subject": "25" },
+        { "order": 26, "subject": "26" }
+      ]
+    }
+  },
+  {
+    "model": "polls.vote",
+    "pk": 14,
+    "fields": {
+      "user": 1,
+      "topic": 1,
+      "submitted": false,
+      "date_voted": null,
+      "date_updated": "2025-02-02T14:34:56.859Z",
+      "rankings": [
+        { "order": 1, "subject": "1" },
+        { "order": 2, "subject": "2" },
+        { "order": 3, "subject": "3" },
+        { "order": 4, "subject": "4" },
+        { "order": 5, "subject": "5" },
+        { "order": 6, "subject": "12" },
+        { "order": 7, "subject": "8" },
+        { "order": 8, "subject": "9" },
+        { "order": 9, "subject": "20" },
+        { "order": 10, "subject": "10" },
+        { "order": 11, "subject": "11" },
+        { "order": 12, "subject": "7" },
+        { "order": 13, "subject": "13" },
+        { "order": 14, "subject": "6" },
+        { "order": 15, "subject": "14" },
+        { "order": 16, "subject": "15" },
+        { "order": 17, "subject": "16" },
+        { "order": 18, "subject": "17" },
+        { "order": 19, "subject": "18" },
+        { "order": 20, "subject": "19" },
+        { "order": 21, "subject": "21" },
+        { "order": 22, "subject": "22" },
+        { "order": 23, "subject": "23" },
+        { "order": 24, "subject": "24" },
+        { "order": 25, "subject": "25" },
+        { "order": 26, "subject": "26" }
+      ]
+    }
+  },
+  {
+    "model": "polls.vote",
+    "pk": 15,
+    "fields": {
+      "user": 1,
+      "topic": 1,
+      "submitted": false,
+      "date_voted": null,
+      "date_updated": "2025-02-02T14:35:33.403Z",
+      "rankings": [
+        { "order": 1, "subject": "1" },
+        { "order": 2, "subject": "2" },
+        { "order": 3, "subject": "3" },
+        { "order": 4, "subject": "4" },
+        { "order": 5, "subject": "5" },
+        { "order": 6, "subject": "12" },
+        { "order": 7, "subject": "8" },
+        { "order": 8, "subject": "20" },
+        { "order": 9, "subject": "10" },
+        { "order": 10, "subject": "11" },
+        { "order": 11, "subject": "7" },
+        { "order": 12, "subject": "9" },
+        { "order": 13, "subject": "13" },
+        { "order": 14, "subject": "6" },
+        { "order": 15, "subject": "14" },
+        { "order": 16, "subject": "15" },
+        { "order": 17, "subject": "16" },
+        { "order": 18, "subject": "17" },
+        { "order": 19, "subject": "18" },
+        { "order": 20, "subject": "19" },
+        { "order": 21, "subject": "21" },
+        { "order": 22, "subject": "22" },
+        { "order": 23, "subject": "23" },
+        { "order": 24, "subject": "24" },
+        { "order": 25, "subject": "25" },
+        { "order": 26, "subject": "26" }
+      ]
+    }
+  },
+  {
+    "model": "polls.vote",
+    "pk": 16,
+    "fields": {
+      "user": 1,
+      "topic": 1,
+      "submitted": false,
+      "date_voted": null,
+      "date_updated": "2025-02-02T14:35:41.036Z",
+      "rankings": [
+        { "order": 1, "subject": "1" },
+        { "order": 2, "subject": "2" },
+        { "order": 3, "subject": "3" },
+        { "order": 4, "subject": "4" },
+        { "order": 5, "subject": "5" },
+        { "order": 6, "subject": "6" },
+        { "order": 7, "subject": "7" },
+        { "order": 8, "subject": "8" },
+        { "order": 9, "subject": "9" },
+        { "order": 10, "subject": "10" },
+        { "order": 11, "subject": "15" },
+        { "order": 12, "subject": "11" },
+        { "order": 13, "subject": "12" },
+        { "order": 14, "subject": "13" },
+        { "order": 15, "subject": "14" },
+        { "order": 16, "subject": "16" },
+        { "order": 17, "subject": "17" },
+        { "order": 18, "subject": "18" },
+        { "order": 19, "subject": "19" },
+        { "order": 20, "subject": "20" },
+        { "order": 21, "subject": "21" },
+        { "order": 22, "subject": "22" },
+        { "order": 23, "subject": "23" },
+        { "order": 24, "subject": "24" },
+        { "order": 25, "subject": "25" },
+        { "order": 26, "subject": "26" }
+      ]
+    }
+  },
+  {
+    "model": "polls.vote",
+    "pk": 17,
+    "fields": {
+      "user": 1,
+      "topic": 1,
+      "submitted": false,
+      "date_voted": null,
+      "date_updated": "2025-02-02T14:36:10.620Z",
+      "rankings": [
+        { "order": 1, "subject": "1" },
+        { "order": 2, "subject": "2" },
+        { "order": 3, "subject": "3" },
+        { "order": 4, "subject": "4" },
+        { "order": 5, "subject": "5" },
+        { "order": 6, "subject": "6" },
+        { "order": 7, "subject": "7" },
+        { "order": 8, "subject": "8" },
+        { "order": 9, "subject": "9" },
+        { "order": 10, "subject": "11" },
+        { "order": 11, "subject": "12" },
+        { "order": 12, "subject": "13" },
+        { "order": 13, "subject": "14" },
+        { "order": 14, "subject": "10" },
+        { "order": 15, "subject": "15" },
+        { "order": 16, "subject": "16" },
+        { "order": 17, "subject": "17" },
+        { "order": 18, "subject": "18" },
+        { "order": 19, "subject": "19" },
+        { "order": 20, "subject": "20" },
+        { "order": 21, "subject": "21" },
+        { "order": 22, "subject": "22" },
+        { "order": 23, "subject": "23" },
+        { "order": 24, "subject": "24" },
+        { "order": 25, "subject": "25" },
+        { "order": 26, "subject": "26" }
+      ]
+    }
+  },
+  {
+    "model": "polls.vote",
+    "pk": 18,
+    "fields": {
+      "user": 1,
+      "topic": 1,
+      "submitted": false,
+      "date_voted": null,
+      "date_updated": "2025-02-02T14:36:11.604Z",
+      "rankings": [
+        { "order": 1, "subject": "1" },
+        { "order": 2, "subject": "2" },
+        { "order": 3, "subject": "3" },
+        { "order": 4, "subject": "4" },
+        { "order": 5, "subject": "5" },
+        { "order": 6, "subject": "6" },
+        { "order": 7, "subject": "10" },
+        { "order": 8, "subject": "7" },
+        { "order": 9, "subject": "8" },
+        { "order": 10, "subject": "9" },
+        { "order": 11, "subject": "11" },
+        { "order": 12, "subject": "12" },
+        { "order": 13, "subject": "13" },
+        { "order": 14, "subject": "14" },
+        { "order": 15, "subject": "15" },
+        { "order": 16, "subject": "16" },
+        { "order": 17, "subject": "17" },
+        { "order": 18, "subject": "18" },
+        { "order": 19, "subject": "19" },
+        { "order": 20, "subject": "20" },
+        { "order": 21, "subject": "21" },
+        { "order": 22, "subject": "22" },
+        { "order": 23, "subject": "23" },
+        { "order": 24, "subject": "24" },
+        { "order": 25, "subject": "25" },
+        { "order": 26, "subject": "26" }
+      ]
+    }
+  },
+  {
+    "model": "polls.vote",
+    "pk": 19,
+    "fields": {
+      "user": 1,
+      "topic": 1,
+      "submitted": false,
+      "date_voted": null,
+      "date_updated": "2025-02-02T14:36:12.437Z",
+      "rankings": [
+        { "order": 1, "subject": "1" },
+        { "order": 2, "subject": "2" },
+        { "order": 3, "subject": "3" },
+        { "order": 4, "subject": "4" },
+        { "order": 5, "subject": "5" },
+        { "order": 6, "subject": "6" },
+        { "order": 7, "subject": "7" },
+        { "order": 8, "subject": "8" },
+        { "order": 9, "subject": "9" },
+        { "order": 10, "subject": "11" },
+        { "order": 11, "subject": "12" },
+        { "order": 12, "subject": "13" },
+        { "order": 13, "subject": "10" },
+        { "order": 14, "subject": "14" },
+        { "order": 15, "subject": "15" },
+        { "order": 16, "subject": "16" },
+        { "order": 17, "subject": "17" },
+        { "order": 18, "subject": "18" },
+        { "order": 19, "subject": "19" },
+        { "order": 20, "subject": "20" },
+        { "order": 21, "subject": "21" },
+        { "order": 22, "subject": "22" },
+        { "order": 23, "subject": "23" },
+        { "order": 24, "subject": "24" },
+        { "order": 25, "subject": "25" },
+        { "order": 26, "subject": "26" }
+      ]
+    }
+  },
+  {
+    "model": "polls.vote",
+    "pk": 20,
+    "fields": {
+      "user": 1,
+      "topic": 1,
+      "submitted": false,
+      "date_voted": null,
+      "date_updated": "2025-02-02T14:36:13.571Z",
+      "rankings": [
+        { "order": 1, "subject": "1" },
+        { "order": 2, "subject": "2" },
+        { "order": 3, "subject": "3" },
+        { "order": 4, "subject": "4" },
+        { "order": 5, "subject": "5" },
+        { "order": 6, "subject": "6" },
+        { "order": 7, "subject": "7" },
+        { "order": 8, "subject": "8" },
+        { "order": 9, "subject": "9" },
+        { "order": 10, "subject": "11" },
+        { "order": 11, "subject": "18" },
+        { "order": 12, "subject": "12" },
+        { "order": 13, "subject": "13" },
+        { "order": 14, "subject": "10" },
+        { "order": 15, "subject": "14" },
+        { "order": 16, "subject": "15" },
+        { "order": 17, "subject": "16" },
+        { "order": 18, "subject": "17" },
+        { "order": 19, "subject": "19" },
+        { "order": 20, "subject": "20" },
+        { "order": 21, "subject": "21" },
+        { "order": 22, "subject": "22" },
+        { "order": 23, "subject": "23" },
+        { "order": 24, "subject": "24" },
+        { "order": 25, "subject": "25" },
+        { "order": 26, "subject": "26" }
+      ]
+    }
+  },
+  {
+    "model": "polls.vote",
+    "pk": 21,
+    "fields": {
+      "user": 1,
+      "topic": 1,
+      "submitted": false,
+      "date_voted": null,
+      "date_updated": "2025-02-02T14:36:37.294Z",
+      "rankings": [
+        { "order": 1, "subject": "1" },
+        { "order": 2, "subject": "2" },
+        { "order": 3, "subject": "3" },
+        { "order": 4, "subject": "4" },
+        { "order": 5, "subject": "5" },
+        { "order": 6, "subject": "6" },
+        { "order": 7, "subject": "8" },
+        { "order": 8, "subject": "9" },
+        { "order": 9, "subject": "10" },
+        { "order": 10, "subject": "11" },
+        { "order": 11, "subject": "12" },
+        { "order": 12, "subject": "13" },
+        { "order": 13, "subject": "7" },
+        { "order": 14, "subject": "14" },
+        { "order": 15, "subject": "15" },
+        { "order": 16, "subject": "16" },
+        { "order": 17, "subject": "17" },
+        { "order": 18, "subject": "18" },
+        { "order": 19, "subject": "19" },
+        { "order": 20, "subject": "20" },
+        { "order": 21, "subject": "21" },
+        { "order": 22, "subject": "22" },
+        { "order": 23, "subject": "23" },
+        { "order": 24, "subject": "24" },
+        { "order": 25, "subject": "25" },
+        { "order": 26, "subject": "26" }
+      ]
+    }
+  },
+  {
+    "model": "polls.vote",
+    "pk": 22,
+    "fields": {
+      "user": 1,
+      "topic": 1,
+      "submitted": false,
+      "date_voted": null,
+      "date_updated": "2025-02-02T14:36:39.061Z",
+      "rankings": [
+        { "order": 1, "subject": "1" },
+        { "order": 2, "subject": "8" },
+        { "order": 3, "subject": "2" },
+        { "order": 4, "subject": "3" },
+        { "order": 5, "subject": "4" },
+        { "order": 6, "subject": "5" },
+        { "order": 7, "subject": "6" },
+        { "order": 8, "subject": "9" },
+        { "order": 9, "subject": "10" },
+        { "order": 10, "subject": "11" },
+        { "order": 11, "subject": "12" },
+        { "order": 12, "subject": "13" },
+        { "order": 13, "subject": "7" },
+        { "order": 14, "subject": "14" },
+        { "order": 15, "subject": "15" },
+        { "order": 16, "subject": "16" },
+        { "order": 17, "subject": "17" },
+        { "order": 18, "subject": "18" },
+        { "order": 19, "subject": "19" },
+        { "order": 20, "subject": "20" },
+        { "order": 21, "subject": "21" },
+        { "order": 22, "subject": "22" },
+        { "order": 23, "subject": "23" },
+        { "order": 24, "subject": "24" },
+        { "order": 25, "subject": "25" },
+        { "order": 26, "subject": "26" }
+      ]
+    }
+  },
+  {
+    "model": "polls.vote",
+    "pk": 23,
+    "fields": {
+      "user": 1,
+      "topic": 1,
+      "submitted": false,
+      "date_voted": null,
+      "date_updated": "2025-02-02T14:36:40.154Z",
+      "rankings": [
+        { "order": 1, "subject": "1" },
+        { "order": 2, "subject": "2" },
+        { "order": 3, "subject": "3" },
+        { "order": 4, "subject": "4" },
+        { "order": 5, "subject": "5" },
+        { "order": 6, "subject": "6" },
+        { "order": 7, "subject": "9" },
+        { "order": 8, "subject": "10" },
+        { "order": 9, "subject": "11" },
+        { "order": 10, "subject": "12" },
+        { "order": 11, "subject": "13" },
+        { "order": 12, "subject": "7" },
+        { "order": 13, "subject": "8" },
+        { "order": 14, "subject": "14" },
+        { "order": 15, "subject": "15" },
+        { "order": 16, "subject": "16" },
+        { "order": 17, "subject": "17" },
+        { "order": 18, "subject": "18" },
+        { "order": 19, "subject": "19" },
+        { "order": 20, "subject": "20" },
+        { "order": 21, "subject": "21" },
+        { "order": 22, "subject": "22" },
+        { "order": 23, "subject": "23" },
+        { "order": 24, "subject": "24" },
+        { "order": 25, "subject": "25" },
+        { "order": 26, "subject": "26" }
+      ]
+    }
+  },
+  {
+    "model": "polls.vote",
+    "pk": 24,
+    "fields": {
+      "user": 1,
+      "topic": 1,
+      "submitted": false,
+      "date_voted": null,
+      "date_updated": "2025-02-02T14:37:33.440Z",
+      "rankings": [
+        { "order": 1, "subject": "1" },
+        { "order": 2, "subject": "2" },
+        { "order": 3, "subject": "3" },
+        { "order": 4, "subject": "4" },
+        { "order": 5, "subject": "5" },
+        { "order": 6, "subject": "6" },
+        { "order": 7, "subject": "7" },
+        { "order": 8, "subject": "9" },
+        { "order": 9, "subject": "10" },
+        { "order": 10, "subject": "11" },
+        { "order": 11, "subject": "12" },
+        { "order": 12, "subject": "8" },
+        { "order": 13, "subject": "13" },
+        { "order": 14, "subject": "14" },
+        { "order": 15, "subject": "15" },
+        { "order": 16, "subject": "16" },
+        { "order": 17, "subject": "17" },
+        { "order": 18, "subject": "18" },
+        { "order": 19, "subject": "19" },
+        { "order": 20, "subject": "20" },
+        { "order": 21, "subject": "21" },
+        { "order": 22, "subject": "22" },
+        { "order": 23, "subject": "23" },
+        { "order": 24, "subject": "24" },
+        { "order": 25, "subject": "25" },
+        { "order": 26, "subject": "26" }
+      ]
+    }
+  },
+  {
+    "model": "polls.vote",
+    "pk": 25,
+    "fields": {
+      "user": 1,
+      "topic": 1,
+      "submitted": false,
+      "date_voted": null,
+      "date_updated": "2025-02-02T14:37:34.180Z",
+      "rankings": [
+        { "order": 1, "subject": "1" },
+        { "order": 2, "subject": "2" },
+        { "order": 3, "subject": "3" },
+        { "order": 4, "subject": "4" },
+        { "order": 5, "subject": "5" },
+        { "order": 6, "subject": "6" },
+        { "order": 7, "subject": "13" },
+        { "order": 8, "subject": "7" },
+        { "order": 9, "subject": "9" },
+        { "order": 10, "subject": "10" },
+        { "order": 11, "subject": "11" },
+        { "order": 12, "subject": "12" },
+        { "order": 13, "subject": "8" },
+        { "order": 14, "subject": "14" },
+        { "order": 15, "subject": "15" },
+        { "order": 16, "subject": "16" },
+        { "order": 17, "subject": "17" },
+        { "order": 18, "subject": "18" },
+        { "order": 19, "subject": "19" },
+        { "order": 20, "subject": "20" },
+        { "order": 21, "subject": "21" },
+        { "order": 22, "subject": "22" },
+        { "order": 23, "subject": "23" },
+        { "order": 24, "subject": "24" },
+        { "order": 25, "subject": "25" },
+        { "order": 26, "subject": "26" }
+      ]
+    }
+  },
+  {
+    "model": "polls.vote",
+    "pk": 26,
+    "fields": {
+      "user": 1,
+      "topic": 1,
+      "submitted": false,
+      "date_voted": null,
+      "date_updated": "2025-02-02T14:38:11.196Z",
+      "rankings": [
+        { "order": 1, "subject": "1" },
+        { "order": 2, "subject": "2" },
+        { "order": 3, "subject": "3" },
+        { "order": 4, "subject": "5" },
+        { "order": 5, "subject": "6" },
+        { "order": 6, "subject": "7" },
+        { "order": 7, "subject": "8" },
+        { "order": 8, "subject": "9" },
+        { "order": 9, "subject": "10" },
+        { "order": 10, "subject": "11" },
+        { "order": 11, "subject": "12" },
+        { "order": 12, "subject": "13" },
+        { "order": 13, "subject": "4" },
+        { "order": 14, "subject": "14" },
+        { "order": 15, "subject": "15" },
+        { "order": 16, "subject": "16" },
+        { "order": 17, "subject": "17" },
+        { "order": 18, "subject": "18" },
+        { "order": 19, "subject": "19" },
+        { "order": 20, "subject": "20" },
+        { "order": 21, "subject": "21" },
+        { "order": 22, "subject": "22" },
+        { "order": 23, "subject": "23" },
+        { "order": 24, "subject": "24" },
+        { "order": 25, "subject": "25" },
+        { "order": 26, "subject": "26" }
+      ]
+    }
+  },
+  {
+    "model": "polls.vote",
+    "pk": 27,
+    "fields": {
+      "user": 1,
+      "topic": 1,
+      "submitted": false,
+      "date_voted": null,
+      "date_updated": "2025-02-02T14:38:11.957Z",
+      "rankings": [
+        { "order": 1, "subject": "1" },
+        { "order": 2, "subject": "2" },
+        { "order": 3, "subject": "3" },
+        { "order": 4, "subject": "4" },
+        { "order": 5, "subject": "5" },
+        { "order": 6, "subject": "6" },
+        { "order": 7, "subject": "7" },
+        { "order": 8, "subject": "8" },
+        { "order": 9, "subject": "9" },
+        { "order": 10, "subject": "10" },
+        { "order": 11, "subject": "11" },
+        { "order": 12, "subject": "12" },
+        { "order": 13, "subject": "13" },
+        { "order": 14, "subject": "14" },
+        { "order": 15, "subject": "15" },
+        { "order": 16, "subject": "16" },
+        { "order": 17, "subject": "17" },
+        { "order": 18, "subject": "18" },
+        { "order": 19, "subject": "19" },
+        { "order": 20, "subject": "20" },
+        { "order": 21, "subject": "21" },
+        { "order": 22, "subject": "22" },
+        { "order": 23, "subject": "23" },
+        { "order": 24, "subject": "24" },
+        { "order": 25, "subject": "25" },
+        { "order": 26, "subject": "26" }
+      ]
+    }
+  },
+  {
+    "model": "polls.vote",
+    "pk": 28,
+    "fields": {
+      "user": 1,
+      "topic": 1,
+      "submitted": false,
+      "date_voted": null,
+      "date_updated": "2025-02-02T14:38:12.535Z",
+      "rankings": [
+        { "order": 1, "subject": "1" },
+        { "order": 2, "subject": "2" },
+        { "order": 3, "subject": "3" },
+        { "order": 4, "subject": "5" },
+        { "order": 5, "subject": "6" },
+        { "order": 6, "subject": "7" },
+        { "order": 7, "subject": "8" },
+        { "order": 8, "subject": "9" },
+        { "order": 9, "subject": "10" },
+        { "order": 10, "subject": "11" },
+        { "order": 11, "subject": "12" },
+        { "order": 12, "subject": "13" },
+        { "order": 13, "subject": "14" },
+        { "order": 14, "subject": "4" },
+        { "order": 15, "subject": "15" },
+        { "order": 16, "subject": "16" },
+        { "order": 17, "subject": "17" },
+        { "order": 18, "subject": "18" },
+        { "order": 19, "subject": "19" },
+        { "order": 20, "subject": "20" },
+        { "order": 21, "subject": "21" },
+        { "order": 22, "subject": "22" },
+        { "order": 23, "subject": "23" },
+        { "order": 24, "subject": "24" },
+        { "order": 25, "subject": "25" },
+        { "order": 26, "subject": "26" }
+      ]
+    }
+  },
+  {
+    "model": "polls.vote",
+    "pk": 29,
+    "fields": {
+      "user": 1,
+      "topic": 1,
+      "submitted": false,
+      "date_voted": null,
+      "date_updated": "2025-02-02T14:38:13.815Z",
+      "rankings": [
+        { "order": 1, "subject": "1" },
+        { "order": 2, "subject": "2" },
+        { "order": 3, "subject": "3" },
+        { "order": 4, "subject": "5" },
+        { "order": 5, "subject": "6" },
+        { "order": 6, "subject": "7" },
+        { "order": 7, "subject": "9" },
+        { "order": 8, "subject": "10" },
+        { "order": 9, "subject": "11" },
+        { "order": 10, "subject": "12" },
+        { "order": 11, "subject": "13" },
+        { "order": 12, "subject": "14" },
+        { "order": 13, "subject": "4" },
+        { "order": 14, "subject": "15" },
+        { "order": 15, "subject": "16" },
+        { "order": 16, "subject": "17" },
+        { "order": 17, "subject": "8" },
+        { "order": 18, "subject": "18" },
+        { "order": 19, "subject": "19" },
+        { "order": 20, "subject": "20" },
+        { "order": 21, "subject": "21" },
+        { "order": 22, "subject": "22" },
+        { "order": 23, "subject": "23" },
+        { "order": 24, "subject": "24" },
+        { "order": 25, "subject": "25" },
+        { "order": 26, "subject": "26" }
+      ]
+    }
+  },
+  {
+    "model": "polls.vote",
+    "pk": 30,
+    "fields": {
+      "user": 1,
+      "topic": 1,
+      "submitted": false,
+      "date_voted": null,
+      "date_updated": "2025-02-02T14:38:15.928Z",
+      "rankings": [
+        { "order": 1, "subject": "1" },
+        { "order": 2, "subject": "2" },
+        { "order": 3, "subject": "3" },
+        { "order": 4, "subject": "5" },
+        { "order": 5, "subject": "6" },
+        { "order": 6, "subject": "7" },
+        { "order": 7, "subject": "9" },
+        { "order": 8, "subject": "11" },
+        { "order": 9, "subject": "12" },
+        { "order": 10, "subject": "13" },
+        { "order": 11, "subject": "14" },
+        { "order": 12, "subject": "4" },
+        { "order": 13, "subject": "15" },
+        { "order": 14, "subject": "16" },
+        { "order": 15, "subject": "10" },
+        { "order": 16, "subject": "17" },
+        { "order": 17, "subject": "8" },
+        { "order": 18, "subject": "18" },
+        { "order": 19, "subject": "19" },
+        { "order": 20, "subject": "20" },
+        { "order": 21, "subject": "21" },
+        { "order": 22, "subject": "22" },
+        { "order": 23, "subject": "23" },
+        { "order": 24, "subject": "24" },
+        { "order": 25, "subject": "25" },
+        { "order": 26, "subject": "26" }
+      ]
+    }
+  },
+  {
+    "model": "polls.vote",
+    "pk": 31,
+    "fields": {
+      "user": 1,
+      "topic": 1,
+      "submitted": false,
+      "date_voted": null,
+      "date_updated": "2025-02-02T14:38:16.835Z",
+      "rankings": [
+        { "order": 1, "subject": "1" },
+        { "order": 2, "subject": "2" },
+        { "order": 3, "subject": "3" },
+        { "order": 4, "subject": "5" },
+        { "order": 5, "subject": "6" },
+        { "order": 6, "subject": "7" },
+        { "order": 7, "subject": "9" },
+        { "order": 8, "subject": "11" },
+        { "order": 9, "subject": "12" },
+        { "order": 10, "subject": "13" },
+        { "order": 11, "subject": "14" },
+        { "order": 12, "subject": "4" },
+        { "order": 13, "subject": "15" },
+        { "order": 14, "subject": "16" },
+        { "order": 15, "subject": "17" },
+        { "order": 16, "subject": "8" },
+        { "order": 17, "subject": "18" },
+        { "order": 18, "subject": "19" },
+        { "order": 19, "subject": "10" },
+        { "order": 20, "subject": "20" },
+        { "order": 21, "subject": "21" },
+        { "order": 22, "subject": "22" },
+        { "order": 23, "subject": "23" },
+        { "order": 24, "subject": "24" },
+        { "order": 25, "subject": "25" },
+        { "order": 26, "subject": "26" }
+      ]
+    }
+  },
+  {
+    "model": "polls.vote",
+    "pk": 32,
+    "fields": {
+      "user": 1,
+      "topic": 1,
+      "submitted": false,
+      "date_voted": null,
+      "date_updated": "2025-02-02T14:38:20.327Z",
+      "rankings": [
+        { "order": 1, "subject": "1" },
+        { "order": 2, "subject": "2" },
+        { "order": 3, "subject": "3" },
+        { "order": 4, "subject": "5" },
+        { "order": 5, "subject": "6" },
+        { "order": 6, "subject": "7" },
+        { "order": 7, "subject": "9" },
+        { "order": 8, "subject": "11" },
+        { "order": 9, "subject": "12" },
+        { "order": 10, "subject": "13" },
+        { "order": 11, "subject": "14" },
+        { "order": 12, "subject": "4" },
+        { "order": 13, "subject": "15" },
+        { "order": 14, "subject": "18" },
+        { "order": 15, "subject": "16" },
+        { "order": 16, "subject": "17" },
+        { "order": 17, "subject": "8" },
+        { "order": 18, "subject": "19" },
+        { "order": 19, "subject": "10" },
+        { "order": 20, "subject": "20" },
+        { "order": 21, "subject": "21" },
+        { "order": 22, "subject": "22" },
+        { "order": 23, "subject": "23" },
+        { "order": 24, "subject": "24" },
+        { "order": 25, "subject": "25" },
+        { "order": 26, "subject": "26" }
+      ]
+    }
+  },
+  {
+    "model": "polls.vote",
+    "pk": 33,
+    "fields": {
+      "user": 1,
+      "topic": 1,
+      "submitted": false,
+      "date_voted": null,
+      "date_updated": "2025-02-02T14:38:24.136Z",
+      "rankings": [
+        { "order": 1, "subject": "1" },
+        { "order": 2, "subject": "2" },
+        { "order": 3, "subject": "3" },
+        { "order": 4, "subject": "5" },
+        { "order": 5, "subject": "6" },
+        { "order": 6, "subject": "7" },
+        { "order": 7, "subject": "9" },
+        { "order": 8, "subject": "11" },
+        { "order": 9, "subject": "12" },
+        { "order": 10, "subject": "13" },
+        { "order": 11, "subject": "14" },
+        { "order": 12, "subject": "18" },
+        { "order": 13, "subject": "4" },
+        { "order": 14, "subject": "15" },
+        { "order": 15, "subject": "16" },
+        { "order": 16, "subject": "17" },
+        { "order": 17, "subject": "8" },
+        { "order": 18, "subject": "19" },
+        { "order": 19, "subject": "10" },
+        { "order": 20, "subject": "20" },
+        { "order": 21, "subject": "21" },
+        { "order": 22, "subject": "22" },
+        { "order": 23, "subject": "23" },
+        { "order": 24, "subject": "24" },
+        { "order": 25, "subject": "25" },
+        { "order": 26, "subject": "26" }
+      ]
+    }
+  },
+  {
+    "model": "polls.vote",
+    "pk": 34,
+    "fields": {
+      "user": 1,
+      "topic": 1,
+      "submitted": false,
+      "date_voted": null,
+      "date_updated": "2025-02-02T14:38:27.634Z",
+      "rankings": [
+        { "order": 1, "subject": "1" },
+        { "order": 2, "subject": "2" },
+        { "order": 3, "subject": "3" },
+        { "order": 4, "subject": "18" },
+        { "order": 5, "subject": "5" },
+        { "order": 6, "subject": "6" },
+        { "order": 7, "subject": "7" },
+        { "order": 8, "subject": "9" },
+        { "order": 9, "subject": "11" },
+        { "order": 10, "subject": "12" },
+        { "order": 11, "subject": "13" },
+        { "order": 12, "subject": "14" },
+        { "order": 13, "subject": "4" },
+        { "order": 14, "subject": "15" },
+        { "order": 15, "subject": "16" },
+        { "order": 16, "subject": "17" },
+        { "order": 17, "subject": "8" },
+        { "order": 18, "subject": "19" },
+        { "order": 19, "subject": "10" },
+        { "order": 20, "subject": "20" },
+        { "order": 21, "subject": "21" },
+        { "order": 22, "subject": "22" },
+        { "order": 23, "subject": "23" },
+        { "order": 24, "subject": "24" },
+        { "order": 25, "subject": "25" },
+        { "order": 26, "subject": "26" }
+      ]
+    }
+  },
+  {
+    "model": "polls.vote",
+    "pk": 35,
+    "fields": {
+      "user": 1,
+      "topic": 1,
+      "submitted": false,
+      "date_voted": null,
+      "date_updated": "2025-02-02T14:39:38.589Z",
+      "rankings": [
+        { "order": 1, "subject": "1" },
+        { "order": 2, "subject": "2" },
+        { "order": 3, "subject": "3" },
+        { "order": 4, "subject": "4" },
+        { "order": 5, "subject": "5" },
+        { "order": 6, "subject": "6" },
+        { "order": 7, "subject": "7" },
+        { "order": 8, "subject": "8" },
+        { "order": 9, "subject": "9" },
+        { "order": 10, "subject": "10" },
+        { "order": 11, "subject": "12" },
+        { "order": 12, "subject": "13" },
+        { "order": 13, "subject": "14" },
+        { "order": 14, "subject": "15" },
+        { "order": 15, "subject": "16" },
+        { "order": 16, "subject": "17" },
+        { "order": 17, "subject": "18" },
+        { "order": 18, "subject": "19" },
+        { "order": 19, "subject": "20" },
+        { "order": 20, "subject": "21" },
+        { "order": 21, "subject": "22" },
+        { "order": 22, "subject": "11" },
+        { "order": 23, "subject": "23" },
+        { "order": 24, "subject": "24" },
+        { "order": 25, "subject": "25" },
+        { "order": 26, "subject": "26" }
+      ]
+    }
+  },
+  {
+    "model": "polls.vote",
+    "pk": 36,
+    "fields": {
+      "user": 1,
+      "topic": 1,
+      "submitted": false,
+      "date_voted": null,
+      "date_updated": "2025-02-02T14:39:39.681Z",
+      "rankings": [
+        { "order": 1, "subject": "1" },
+        { "order": 2, "subject": "2" },
+        { "order": 3, "subject": "3" },
+        { "order": 4, "subject": "4" },
+        { "order": 5, "subject": "23" },
+        { "order": 6, "subject": "5" },
+        { "order": 7, "subject": "6" },
+        { "order": 8, "subject": "7" },
+        { "order": 9, "subject": "8" },
+        { "order": 10, "subject": "9" },
+        { "order": 11, "subject": "10" },
+        { "order": 12, "subject": "12" },
+        { "order": 13, "subject": "13" },
+        { "order": 14, "subject": "14" },
+        { "order": 15, "subject": "15" },
+        { "order": 16, "subject": "16" },
+        { "order": 17, "subject": "17" },
+        { "order": 18, "subject": "18" },
+        { "order": 19, "subject": "19" },
+        { "order": 20, "subject": "20" },
+        { "order": 21, "subject": "21" },
+        { "order": 22, "subject": "22" },
+        { "order": 23, "subject": "11" },
+        { "order": 24, "subject": "24" },
+        { "order": 25, "subject": "25" },
+        { "order": 26, "subject": "26" }
+      ]
+    }
+  },
+  {
+    "model": "polls.vote",
+    "pk": 37,
+    "fields": {
+      "user": 1,
+      "topic": 1,
+      "submitted": false,
+      "date_voted": null,
+      "date_updated": "2025-02-02T14:40:38.680Z",
+      "rankings": [
+        { "order": 1, "subject": "1" },
+        { "order": 2, "subject": "2" },
+        { "order": 3, "subject": "3" },
+        { "order": 4, "subject": "4" },
+        { "order": 5, "subject": "5" },
+        { "order": 6, "subject": "6" },
+        { "order": 7, "subject": "7" },
+        { "order": 8, "subject": "8" },
+        { "order": 9, "subject": "9" },
+        { "order": 10, "subject": "10" },
+        { "order": 11, "subject": "11" },
+        { "order": 12, "subject": "12" },
+        { "order": 13, "subject": "13" },
+        { "order": 14, "subject": "14" },
+        { "order": 15, "subject": "15" },
+        { "order": 16, "subject": "16" },
+        { "order": 17, "subject": "17" },
+        { "order": 18, "subject": "18" },
+        { "order": 19, "subject": "19" },
+        { "order": 20, "subject": "20" },
+        { "order": 21, "subject": "21" },
+        { "order": 22, "subject": "22" },
+        { "order": 23, "subject": "23" },
+        { "order": 24, "subject": "24" },
+        { "order": 25, "subject": "25" },
+        { "order": 26, "subject": "26" }
+      ]
+    }
+  },
+  {
+    "model": "polls.vote",
+    "pk": 38,
+    "fields": {
+      "user": 1,
+      "topic": 1,
+      "submitted": false,
+      "date_voted": null,
+      "date_updated": "2025-02-02T14:40:39.524Z",
+      "rankings": [
+        { "order": 1, "subject": "1" },
+        { "order": 2, "subject": "2" },
+        { "order": 3, "subject": "3" },
+        { "order": 4, "subject": "4" },
+        { "order": 5, "subject": "5" },
+        { "order": 6, "subject": "6" },
+        { "order": 7, "subject": "7" },
+        { "order": 8, "subject": "8" },
+        { "order": 9, "subject": "9" },
+        { "order": 10, "subject": "10" },
+        { "order": 11, "subject": "11" },
+        { "order": 12, "subject": "12" },
+        { "order": 13, "subject": "13" },
+        { "order": 14, "subject": "14" },
+        { "order": 15, "subject": "15" },
+        { "order": 16, "subject": "16" },
+        { "order": 17, "subject": "17" },
+        { "order": 18, "subject": "18" },
+        { "order": 19, "subject": "19" },
+        { "order": 20, "subject": "20" },
+        { "order": 21, "subject": "21" },
+        { "order": 22, "subject": "22" },
+        { "order": 23, "subject": "23" },
+        { "order": 24, "subject": "24" },
+        { "order": 25, "subject": "25" },
+        { "order": 26, "subject": "26" }
+      ]
+    }
+  },
+  {
+    "model": "polls.vote",
+    "pk": 39,
+    "fields": {
+      "user": 1,
+      "topic": 1,
+      "submitted": false,
+      "date_voted": null,
+      "date_updated": "2025-02-02T14:40:52.428Z",
+      "rankings": [
+        { "order": 1, "subject": "1" },
+        { "order": 2, "subject": "2" },
+        { "order": 3, "subject": "3" },
+        { "order": 4, "subject": "4" },
+        { "order": 5, "subject": "5" },
+        { "order": 6, "subject": "6" },
+        { "order": 7, "subject": "7" },
+        { "order": 8, "subject": "8" },
+        { "order": 9, "subject": "9" },
+        { "order": 10, "subject": "10" },
+        { "order": 11, "subject": "11" },
+        { "order": 12, "subject": "12" },
+        { "order": 13, "subject": "13" },
+        { "order": 14, "subject": "14" },
+        { "order": 15, "subject": "15" },
+        { "order": 16, "subject": "16" },
+        { "order": 17, "subject": "17" },
+        { "order": 18, "subject": "18" },
+        { "order": 19, "subject": "19" },
+        { "order": 20, "subject": "20" },
+        { "order": 21, "subject": "21" },
+        { "order": 22, "subject": "22" },
+        { "order": 23, "subject": "23" },
+        { "order": 24, "subject": "24" },
+        { "order": 25, "subject": "25" },
+        { "order": 26, "subject": "26" }
+      ]
+    }
+  },
+  {
+    "model": "polls.vote",
+    "pk": 40,
+    "fields": {
+      "user": 1,
+      "topic": 1,
+      "submitted": false,
+      "date_voted": null,
+      "date_updated": "2025-02-02T14:40:52.923Z",
+      "rankings": [
+        { "order": 1, "subject": "1" },
+        { "order": 2, "subject": "2" },
+        { "order": 3, "subject": "3" },
+        { "order": 4, "subject": "4" },
+        { "order": 5, "subject": "5" },
+        { "order": 6, "subject": "6" },
+        { "order": 7, "subject": "7" },
+        { "order": 8, "subject": "8" },
+        { "order": 9, "subject": "9" },
+        { "order": 10, "subject": "10" },
+        { "order": 11, "subject": "11" },
+        { "order": 12, "subject": "12" },
+        { "order": 13, "subject": "13" },
+        { "order": 14, "subject": "14" },
+        { "order": 15, "subject": "15" },
+        { "order": 16, "subject": "16" },
+        { "order": 17, "subject": "17" },
+        { "order": 18, "subject": "18" },
+        { "order": 19, "subject": "19" },
+        { "order": 20, "subject": "20" },
+        { "order": 21, "subject": "21" },
+        { "order": 22, "subject": "22" },
+        { "order": 23, "subject": "23" },
+        { "order": 24, "subject": "24" },
+        { "order": 25, "subject": "25" },
+        { "order": 26, "subject": "26" }
+      ]
+    }
+  },
+  {
+    "model": "polls.vote",
+    "pk": 41,
+    "fields": {
+      "user": 1,
+      "topic": 1,
+      "submitted": false,
+      "date_voted": null,
+      "date_updated": "2025-02-02T14:50:13.417Z",
+      "rankings": [
+        { "order": 1, "subject": "1" },
+        { "order": 2, "subject": "2" },
+        { "order": 3, "subject": "3" },
+        { "order": 4, "subject": "4" },
+        { "order": 5, "subject": "6" },
+        { "order": 6, "subject": "7" },
+        { "order": 7, "subject": "8" },
+        { "order": 8, "subject": "9" },
+        { "order": 9, "subject": "10" },
+        { "order": 10, "subject": "5" },
+        { "order": 11, "subject": "11" },
+        { "order": 12, "subject": "12" },
+        { "order": 13, "subject": "13" },
+        { "order": 14, "subject": "14" },
+        { "order": 15, "subject": "15" },
+        { "order": 16, "subject": "16" },
+        { "order": 17, "subject": "17" },
+        { "order": 18, "subject": "18" },
+        { "order": 19, "subject": "19" },
+        { "order": 20, "subject": "20" },
+        { "order": 21, "subject": "21" },
+        { "order": 22, "subject": "22" },
+        { "order": 23, "subject": "23" },
+        { "order": 24, "subject": "24" },
+        { "order": 25, "subject": "25" },
+        { "order": 26, "subject": "26" }
+      ]
+    }
+  },
+  {
+    "model": "polls.vote",
+    "pk": 42,
+    "fields": {
+      "user": 1,
+      "topic": 1,
+      "submitted": false,
+      "date_voted": null,
+      "date_updated": "2025-02-02T14:51:50.356Z",
+      "rankings": [
+        { "order": 1, "subject": "1" },
+        { "order": 2, "subject": "2" },
+        { "order": 3, "subject": "4" },
+        { "order": 4, "subject": "5" },
+        { "order": 5, "subject": "6" },
+        { "order": 6, "subject": "7" },
+        { "order": 7, "subject": "8" },
+        { "order": 8, "subject": "3" },
+        { "order": 9, "subject": "9" },
+        { "order": 10, "subject": "10" },
+        { "order": 11, "subject": "11" },
+        { "order": 12, "subject": "12" },
+        { "order": 13, "subject": "13" },
+        { "order": 14, "subject": "14" },
+        { "order": 15, "subject": "15" },
+        { "order": 16, "subject": "16" },
+        { "order": 17, "subject": "17" },
+        { "order": 18, "subject": "18" },
+        { "order": 19, "subject": "19" },
+        { "order": 20, "subject": "20" },
+        { "order": 21, "subject": "21" },
+        { "order": 22, "subject": "22" },
+        { "order": 23, "subject": "23" },
+        { "order": 24, "subject": "24" },
+        { "order": 25, "subject": "25" },
+        { "order": 26, "subject": "26" }
+      ]
+    }
+  },
+  {
+    "model": "polls.vote",
+    "pk": 43,
+    "fields": {
+      "user": 1,
+      "topic": 1,
+      "submitted": false,
+      "date_voted": null,
+      "date_updated": "2025-02-02T14:57:39.803Z",
+      "rankings": [
+        { "order": 1, "subject": "1" },
+        { "order": 2, "subject": "2" },
+        { "order": 3, "subject": "3" },
+        { "order": 4, "subject": "4" },
+        { "order": 5, "subject": "5" },
+        { "order": 6, "subject": "6" },
+        { "order": 7, "subject": "7" },
+        { "order": 8, "subject": "8" },
+        { "order": 9, "subject": "10" },
+        { "order": 10, "subject": "11" },
+        { "order": 11, "subject": "12" },
+        { "order": 12, "subject": "9" },
+        { "order": 13, "subject": "13" },
+        { "order": 14, "subject": "14" },
+        { "order": 15, "subject": "15" },
+        { "order": 16, "subject": "16" },
+        { "order": 17, "subject": "17" },
+        { "order": 18, "subject": "18" },
+        { "order": 19, "subject": "19" },
+        { "order": 20, "subject": "20" },
+        { "order": 21, "subject": "21" },
+        { "order": 22, "subject": "22" },
+        { "order": 23, "subject": "23" },
+        { "order": 24, "subject": "24" },
+        { "order": 25, "subject": "25" },
+        { "order": 26, "subject": "26" }
+      ]
+    }
+  },
+  {
+    "model": "polls.vote",
+    "pk": 44,
+    "fields": {
+      "user": 1,
+      "topic": 1,
+      "submitted": false,
+      "date_voted": null,
+      "date_updated": "2025-02-02T14:57:41.015Z",
+      "rankings": [
+        { "order": 1, "subject": "1" },
+        { "order": 2, "subject": "2" },
+        { "order": 3, "subject": "3" },
+        { "order": 4, "subject": "4" },
+        { "order": 5, "subject": "5" },
+        { "order": 6, "subject": "16" },
+        { "order": 7, "subject": "6" },
+        { "order": 8, "subject": "7" },
+        { "order": 9, "subject": "8" },
+        { "order": 10, "subject": "10" },
+        { "order": 11, "subject": "11" },
+        { "order": 12, "subject": "12" },
+        { "order": 13, "subject": "9" },
+        { "order": 14, "subject": "13" },
+        { "order": 15, "subject": "14" },
+        { "order": 16, "subject": "15" },
+        { "order": 17, "subject": "17" },
+        { "order": 18, "subject": "18" },
+        { "order": 19, "subject": "19" },
+        { "order": 20, "subject": "20" },
+        { "order": 21, "subject": "21" },
+        { "order": 22, "subject": "22" },
+        { "order": 23, "subject": "23" },
+        { "order": 24, "subject": "24" },
+        { "order": 25, "subject": "25" },
+        { "order": 26, "subject": "26" }
+      ]
+    }
+  },
+  {
+    "model": "polls.vote",
+    "pk": 45,
+    "fields": {
+      "user": 1,
+      "topic": 1,
+      "submitted": false,
+      "date_voted": null,
+      "date_updated": "2025-02-02T14:57:43.336Z",
+      "rankings": [
+        { "order": 1, "subject": "1" },
+        { "order": 2, "subject": "2" },
+        { "order": 3, "subject": "4" },
+        { "order": 4, "subject": "5" },
+        { "order": 5, "subject": "16" },
+        { "order": 6, "subject": "6" },
+        { "order": 7, "subject": "7" },
+        { "order": 8, "subject": "3" },
+        { "order": 9, "subject": "8" },
+        { "order": 10, "subject": "10" },
+        { "order": 11, "subject": "11" },
+        { "order": 12, "subject": "12" },
+        { "order": 13, "subject": "9" },
+        { "order": 14, "subject": "13" },
+        { "order": 15, "subject": "14" },
+        { "order": 16, "subject": "15" },
+        { "order": 17, "subject": "17" },
+        { "order": 18, "subject": "18" },
+        { "order": 19, "subject": "19" },
+        { "order": 20, "subject": "20" },
+        { "order": 21, "subject": "21" },
+        { "order": 22, "subject": "22" },
+        { "order": 23, "subject": "23" },
+        { "order": 24, "subject": "24" },
+        { "order": 25, "subject": "25" },
+        { "order": 26, "subject": "26" }
+      ]
+    }
+  },
+  {
+    "model": "polls.vote",
+    "pk": 46,
+    "fields": {
+      "user": 1,
+      "topic": 1,
+      "submitted": false,
+      "date_voted": null,
+      "date_updated": "2025-02-02T14:57:51.951Z",
+      "rankings": [
+        { "order": 1, "subject": "2" },
+        { "order": 2, "subject": "3" },
+        { "order": 3, "subject": "4" },
+        { "order": 4, "subject": "5" },
+        { "order": 5, "subject": "6" },
+        { "order": 6, "subject": "7" },
+        { "order": 7, "subject": "8" },
+        { "order": 8, "subject": "9" },
+        { "order": 9, "subject": "10" },
+        { "order": 10, "subject": "1" },
+        { "order": 11, "subject": "11" },
+        { "order": 12, "subject": "12" },
+        { "order": 13, "subject": "13" },
+        { "order": 14, "subject": "14" },
+        { "order": 15, "subject": "15" },
+        { "order": 16, "subject": "16" },
+        { "order": 17, "subject": "17" },
+        { "order": 18, "subject": "18" },
+        { "order": 19, "subject": "19" },
+        { "order": 20, "subject": "20" },
+        { "order": 21, "subject": "21" },
+        { "order": 22, "subject": "22" },
+        { "order": 23, "subject": "23" },
+        { "order": 24, "subject": "24" },
+        { "order": 25, "subject": "25" },
+        { "order": 26, "subject": "26" }
+      ]
+    }
+  },
+  {
+    "model": "polls.vote",
+    "pk": 47,
+    "fields": {
+      "user": 1,
+      "topic": 1,
+      "submitted": false,
+      "date_voted": null,
+      "date_updated": "2025-02-02T14:57:53.395Z",
+      "rankings": [
+        { "order": 1, "subject": "2" },
+        { "order": 2, "subject": "3" },
+        { "order": 3, "subject": "4" },
+        { "order": 4, "subject": "5" },
+        { "order": 5, "subject": "6" },
+        { "order": 6, "subject": "7" },
+        { "order": 7, "subject": "8" },
+        { "order": 8, "subject": "19" },
+        { "order": 9, "subject": "9" },
+        { "order": 10, "subject": "10" },
+        { "order": 11, "subject": "1" },
+        { "order": 12, "subject": "11" },
+        { "order": 13, "subject": "12" },
+        { "order": 14, "subject": "13" },
+        { "order": 15, "subject": "14" },
+        { "order": 16, "subject": "15" },
+        { "order": 17, "subject": "16" },
+        { "order": 18, "subject": "17" },
+        { "order": 19, "subject": "18" },
+        { "order": 20, "subject": "20" },
+        { "order": 21, "subject": "21" },
+        { "order": 22, "subject": "22" },
+        { "order": 23, "subject": "23" },
+        { "order": 24, "subject": "24" },
+        { "order": 25, "subject": "25" },
+        { "order": 26, "subject": "26" }
+      ]
+    }
+  },
+  {
+    "model": "polls.vote",
+    "pk": 48,
+    "fields": {
+      "user": 1,
+      "topic": 1,
+      "submitted": false,
+      "date_voted": null,
+      "date_updated": "2025-02-02T15:11:42.275Z",
+      "rankings": [
+        { "order": 1, "subject": "2" },
+        { "order": 2, "subject": "3" },
+        { "order": 3, "subject": "4" },
+        { "order": 4, "subject": "5" },
+        { "order": 5, "subject": "6" },
+        { "order": 6, "subject": "7" },
+        { "order": 7, "subject": "8" },
+        { "order": 8, "subject": "9" },
+        { "order": 9, "subject": "1" },
+        { "order": 10, "subject": "10" },
+        { "order": 11, "subject": "11" },
+        { "order": 12, "subject": "12" },
+        { "order": 13, "subject": "13" },
+        { "order": 14, "subject": "14" },
+        { "order": 15, "subject": "15" },
+        { "order": 16, "subject": "16" },
+        { "order": 17, "subject": "17" },
+        { "order": 18, "subject": "18" },
+        { "order": 19, "subject": "19" },
+        { "order": 20, "subject": "20" },
+        { "order": 21, "subject": "21" },
+        { "order": 22, "subject": "22" },
+        { "order": 23, "subject": "23" },
+        { "order": 24, "subject": "24" },
+        { "order": 25, "subject": "25" },
+        { "order": 26, "subject": "26" }
+      ]
+    }
+  },
+  {
+    "model": "polls.vote",
+    "pk": 49,
+    "fields": {
+      "user": 1,
+      "topic": 1,
+      "submitted": false,
+      "date_voted": null,
+      "date_updated": "2025-02-02T15:13:11.441Z",
+      "rankings": [
+        { "order": 1, "subject": "1" },
+        { "order": 2, "subject": "2" },
+        { "order": 3, "subject": "3" },
+        { "order": 4, "subject": "4" },
+        { "order": 5, "subject": "5" },
+        { "order": 6, "subject": "6" },
+        { "order": 7, "subject": "7" },
+        { "order": 8, "subject": "8" },
+        { "order": 9, "subject": "9" },
+        { "order": 10, "subject": "10" },
+        { "order": 11, "subject": "11" },
+        { "order": 12, "subject": "12" },
+        { "order": 13, "subject": "13" },
+        { "order": 14, "subject": "14" },
+        { "order": 15, "subject": "15" },
+        { "order": 16, "subject": "16" },
+        { "order": 17, "subject": "17" },
+        { "order": 18, "subject": "18" },
+        { "order": 19, "subject": "19" },
+        { "order": 20, "subject": "20" },
+        { "order": 21, "subject": "21" },
+        { "order": 22, "subject": "22" },
+        { "order": 23, "subject": "23" },
+        { "order": 24, "subject": "24" },
+        { "order": 25, "subject": "25" },
+        { "order": 26, "subject": "26" },
+        { "order": 27, "subject": "27" }
+      ]
+    }
+  },
+  {
+    "model": "polls.vote",
+    "pk": 50,
+    "fields": {
+      "user": 1,
+      "topic": 1,
+      "submitted": false,
+      "date_voted": null,
+      "date_updated": "2025-02-02T15:13:59.368Z",
+      "rankings": [
+        { "order": 1, "subject": "1" },
+        { "order": 2, "subject": "2" },
+        { "order": 3, "subject": "3" },
+        { "order": 4, "subject": "4" },
+        { "order": 5, "subject": "5" },
+        { "order": 6, "subject": "6" },
+        { "order": 7, "subject": "7" },
+        { "order": 8, "subject": "8" },
+        { "order": 9, "subject": "9" },
+        { "order": 10, "subject": "10" },
+        { "order": 11, "subject": "11" },
+        { "order": 12, "subject": "12" },
+        { "order": 13, "subject": "13" },
+        { "order": 14, "subject": "14" },
+        { "order": 15, "subject": "15" },
+        { "order": 16, "subject": "16" },
+        { "order": 17, "subject": "17" },
+        { "order": 18, "subject": "18" },
+        { "order": 19, "subject": "19" },
+        { "order": 20, "subject": "20" },
+        { "order": 21, "subject": "21" },
+        { "order": 22, "subject": "22" },
+        { "order": 23, "subject": "23" },
+        { "order": 24, "subject": "24" },
+        { "order": 25, "subject": "25" },
+        { "order": 26, "subject": "26" }
+      ]
+    }
+  },
+  {
+    "model": "polls.vote",
+    "pk": 51,
+    "fields": {
+      "user": 1,
+      "topic": 1,
+      "submitted": false,
+      "date_voted": null,
+      "date_updated": "2025-02-02T15:14:47.733Z",
+      "rankings": [
+        { "order": 1, "subject": "1" },
+        { "order": 2, "subject": "2" },
+        { "order": 3, "subject": "3" },
+        { "order": 4, "subject": "4" },
+        { "order": 5, "subject": "5" },
+        { "order": 6, "subject": "6" },
+        { "order": 7, "subject": "7" },
+        { "order": 8, "subject": "8" },
+        { "order": 9, "subject": "9" },
+        { "order": 10, "subject": "10" },
+        { "order": 11, "subject": "11" },
+        { "order": 12, "subject": "12" },
+        { "order": 13, "subject": "13" },
+        { "order": 14, "subject": "14" },
+        { "order": 15, "subject": "15" },
+        { "order": 16, "subject": "16" },
+        { "order": 17, "subject": "17" },
+        { "order": 18, "subject": "18" },
+        { "order": 19, "subject": "19" },
+        { "order": 20, "subject": "20" },
+        { "order": 21, "subject": "21" },
+        { "order": 22, "subject": "22" },
+        { "order": 23, "subject": "23" },
+        { "order": 24, "subject": "24" },
+        { "order": 25, "subject": "25" },
+        { "order": 26, "subject": "26" }
+      ]
+    }
+  },
+  {
+    "model": "polls.vote",
+    "pk": 52,
+    "fields": {
+      "user": 1,
+      "topic": 1,
+      "submitted": false,
+      "date_voted": null,
+      "date_updated": "2025-02-02T15:15:33.549Z",
+      "rankings": [
+        { "order": 1, "subject": "1" },
+        { "order": 2, "subject": "2" },
+        { "order": 3, "subject": "3" },
+        { "order": 4, "subject": "4" },
+        { "order": 5, "subject": "5" },
+        { "order": 6, "subject": "6" },
+        { "order": 7, "subject": "7" },
+        { "order": 8, "subject": "8" },
+        { "order": 9, "subject": "9" },
+        { "order": 10, "subject": "10" },
+        { "order": 11, "subject": "11" },
+        { "order": 12, "subject": "12" },
+        { "order": 13, "subject": "13" },
+        { "order": 14, "subject": "14" },
+        { "order": 15, "subject": "15" },
+        { "order": 16, "subject": "16" },
+        { "order": 17, "subject": "17" },
+        { "order": 18, "subject": "18" },
+        { "order": 19, "subject": "19" },
+        { "order": 20, "subject": "20" },
+        { "order": 21, "subject": "21" },
+        { "order": 22, "subject": "22" },
+        { "order": 23, "subject": "23" },
+        { "order": 24, "subject": "24" },
+        { "order": 25, "subject": "25" },
+        { "order": 26, "subject": "26" }
+      ]
+    }
+  },
+  {
+    "model": "polls.vote",
+    "pk": 53,
+    "fields": {
+      "user": 1,
+      "topic": 1,
+      "submitted": false,
+      "date_voted": null,
+      "date_updated": "2025-02-02T15:15:53.959Z",
+      "rankings": [
+        { "order": 1, "subject": "1" },
+        { "order": 2, "subject": "2" },
+        { "order": 3, "subject": "3" },
+        { "order": 4, "subject": "4" },
+        { "order": 5, "subject": "5" },
+        { "order": 6, "subject": "6" },
+        { "order": 7, "subject": "7" },
+        { "order": 8, "subject": "8" },
+        { "order": 9, "subject": "9" },
+        { "order": 10, "subject": "10" },
+        { "order": 11, "subject": "11" },
+        { "order": 12, "subject": "12" },
+        { "order": 13, "subject": "13" },
+        { "order": 14, "subject": "14" },
+        { "order": 15, "subject": "15" },
+        { "order": 16, "subject": "16" },
+        { "order": 17, "subject": "17" },
+        { "order": 18, "subject": "18" },
+        { "order": 19, "subject": "19" },
+        { "order": 20, "subject": "20" },
+        { "order": 21, "subject": "21" },
+        { "order": 22, "subject": "22" },
+        { "order": 23, "subject": "23" },
+        { "order": 24, "subject": "24" },
+        { "order": 25, "subject": "25" },
+        { "order": 26, "subject": "26" },
+        { "order": 27, "subject": "27" }
+      ]
+    }
+  },
+  {
+    "model": "polls.vote",
+    "pk": 54,
+    "fields": {
+      "user": 1,
+      "topic": 1,
+      "submitted": false,
+      "date_voted": null,
+      "date_updated": "2025-02-02T15:16:01.753Z",
+      "rankings": [
+        { "order": 1, "subject": "1" },
+        { "order": 2, "subject": "2" },
+        { "order": 3, "subject": "3" },
+        { "order": 4, "subject": "4" },
+        { "order": 5, "subject": "5" },
+        { "order": 6, "subject": "6" },
+        { "order": 7, "subject": "7" },
+        { "order": 8, "subject": "8" },
+        { "order": 9, "subject": "9" },
+        { "order": 10, "subject": "26" },
+        { "order": 11, "subject": "10" },
+        { "order": 12, "subject": "11" },
+        { "order": 13, "subject": "12" },
+        { "order": 14, "subject": "13" },
+        { "order": 15, "subject": "14" },
+        { "order": 16, "subject": "15" },
+        { "order": 17, "subject": "16" },
+        { "order": 18, "subject": "17" },
+        { "order": 19, "subject": "18" },
+        { "order": 20, "subject": "19" },
+        { "order": 21, "subject": "20" },
+        { "order": 22, "subject": "21" },
+        { "order": 23, "subject": "22" },
+        { "order": 24, "subject": "23" },
+        { "order": 25, "subject": "24" },
+        { "order": 26, "subject": "25" },
+        { "order": 27, "subject": "27" }
+      ]
+    }
+  },
+  {
+    "model": "polls.vote",
+    "pk": 55,
+    "fields": {
+      "user": 1,
+      "topic": 1,
+      "submitted": false,
+      "date_voted": null,
+      "date_updated": "2025-02-02T15:16:07.245Z",
+      "rankings": [
+        { "order": 1, "subject": "1" },
+        { "order": 2, "subject": "2" },
+        { "order": 3, "subject": "3" },
+        { "order": 4, "subject": "4" },
+        { "order": 5, "subject": "5" },
+        { "order": 6, "subject": "6" },
+        { "order": 7, "subject": "7" },
+        { "order": 8, "subject": "8" },
+        { "order": 9, "subject": "9" },
+        { "order": 10, "subject": "26" },
+        { "order": 11, "subject": "10" },
+        { "order": 12, "subject": "11" },
+        { "order": 13, "subject": "12" },
+        { "order": 14, "subject": "13" },
+        { "order": 15, "subject": "27" },
+        { "order": 16, "subject": "14" },
+        { "order": 17, "subject": "15" },
+        { "order": 18, "subject": "16" },
+        { "order": 19, "subject": "17" },
+        { "order": 20, "subject": "18" },
+        { "order": 21, "subject": "19" },
+        { "order": 22, "subject": "20" },
+        { "order": 23, "subject": "21" },
+        { "order": 24, "subject": "22" },
+        { "order": 25, "subject": "23" },
+        { "order": 26, "subject": "24" },
+        { "order": 27, "subject": "25" }
+      ]
+    }
+  },
+  {
+    "model": "polls.vote",
+    "pk": 56,
+    "fields": {
+      "user": 1,
+      "topic": 1,
+      "submitted": false,
+      "date_voted": null,
+      "date_updated": "2025-02-02T15:16:43.658Z",
+      "rankings": [
+        { "order": 1, "subject": "1" },
+        { "order": 2, "subject": "2" },
+        { "order": 3, "subject": "3" },
+        { "order": 4, "subject": "4" },
+        { "order": 5, "subject": "5" },
+        { "order": 6, "subject": "6" },
+        { "order": 7, "subject": "7" },
+        { "order": 8, "subject": "8" },
+        { "order": 9, "subject": "9" },
+        { "order": 10, "subject": "10" },
+        { "order": 11, "subject": "11" },
+        { "order": 12, "subject": "12" },
+        { "order": 13, "subject": "13" },
+        { "order": 14, "subject": "14" },
+        { "order": 15, "subject": "15" },
+        { "order": 16, "subject": "16" },
+        { "order": 17, "subject": "17" },
+        { "order": 18, "subject": "27" },
+        { "order": 19, "subject": "18" },
+        { "order": 20, "subject": "19" },
+        { "order": 21, "subject": "20" },
+        { "order": 22, "subject": "21" },
+        { "order": 23, "subject": "22" },
+        { "order": 24, "subject": "23" },
+        { "order": 25, "subject": "24" },
+        { "order": 26, "subject": "25" },
+        { "order": 27, "subject": "26" }
+      ]
+    }
+  },
+  {
+    "model": "polls.vote",
+    "pk": 57,
+    "fields": {
+      "user": 1,
+      "topic": 1,
+      "submitted": false,
+      "date_voted": null,
+      "date_updated": "2025-02-02T15:18:05.759Z",
+      "rankings": [
+        { "order": 1, "subject": "1" },
+        { "order": 2, "subject": "2" },
+        { "order": 3, "subject": "3" },
+        { "order": 4, "subject": "4" },
+        { "order": 5, "subject": "17" },
+        { "order": 6, "subject": "5" },
+        { "order": 7, "subject": "6" },
+        { "order": 8, "subject": "7" },
+        { "order": 9, "subject": "8" },
+        { "order": 10, "subject": "9" },
+        { "order": 11, "subject": "10" },
+        { "order": 12, "subject": "11" },
+        { "order": 13, "subject": "12" },
+        { "order": 14, "subject": "13" },
+        { "order": 15, "subject": "14" },
+        { "order": 16, "subject": "15" },
+        { "order": 17, "subject": "16" },
+        { "order": 18, "subject": "27" },
+        { "order": 19, "subject": "18" },
+        { "order": 20, "subject": "19" },
+        { "order": 21, "subject": "20" },
+        { "order": 22, "subject": "21" },
+        { "order": 23, "subject": "22" },
+        { "order": 24, "subject": "23" },
+        { "order": 25, "subject": "24" },
+        { "order": 26, "subject": "25" },
+        { "order": 27, "subject": "26" }
+      ]
+    }
+  },
+  {
+    "model": "polls.vote",
+    "pk": 58,
+    "fields": {
+      "user": 1,
+      "topic": 1,
+      "submitted": false,
+      "date_voted": null,
+      "date_updated": "2025-02-02T15:25:43.202Z",
+      "rankings": [
+        { "order": 1, "subject": "2" },
+        { "order": 2, "subject": "3" },
+        { "order": 3, "subject": "4" },
+        { "order": 4, "subject": "17" },
+        { "order": 5, "subject": "5" },
+        { "order": 6, "subject": "6" },
+        { "order": 7, "subject": "1" },
+        { "order": 8, "subject": "7" },
+        { "order": 9, "subject": "8" },
+        { "order": 10, "subject": "9" },
+        { "order": 11, "subject": "10" },
+        { "order": 12, "subject": "11" },
+        { "order": 13, "subject": "12" },
+        { "order": 14, "subject": "13" },
+        { "order": 15, "subject": "14" },
+        { "order": 16, "subject": "15" },
+        { "order": 17, "subject": "16" },
+        { "order": 18, "subject": "27" },
+        { "order": 19, "subject": "18" },
+        { "order": 20, "subject": "19" },
+        { "order": 21, "subject": "20" },
+        { "order": 22, "subject": "21" },
+        { "order": 23, "subject": "22" },
+        { "order": 24, "subject": "23" },
+        { "order": 25, "subject": "24" },
+        { "order": 26, "subject": "25" },
+        { "order": 27, "subject": "26" }
+      ]
+    }
+  },
+  {
+    "model": "polls.vote",
+    "pk": 59,
+    "fields": {
+      "user": 1,
+      "topic": 1,
+      "submitted": false,
+      "date_voted": null,
+      "date_updated": "2025-02-02T15:33:15.227Z",
+      "rankings": [
+        { "order": 1, "subject": "2" },
+        { "order": 2, "subject": "3" },
+        { "order": 3, "subject": "4" },
+        { "order": 4, "subject": "17" },
+        { "order": 5, "subject": "5" },
+        { "order": 6, "subject": "6" },
+        { "order": 7, "subject": "1" },
+        { "order": 8, "subject": "7" },
+        { "order": 9, "subject": "8" },
+        { "order": 10, "subject": "9" },
+        { "order": 11, "subject": "10" },
+        { "order": 12, "subject": "11" },
+        { "order": 13, "subject": "12" },
+        { "order": 14, "subject": "14" },
+        { "order": 15, "subject": "15" },
+        { "order": 16, "subject": "16" },
+        { "order": 17, "subject": "27" },
+        { "order": 18, "subject": "13" },
+        { "order": 19, "subject": "18" },
+        { "order": 20, "subject": "19" },
+        { "order": 21, "subject": "20" },
+        { "order": 22, "subject": "21" },
+        { "order": 23, "subject": "22" },
+        { "order": 24, "subject": "23" },
+        { "order": 25, "subject": "24" },
+        { "order": 26, "subject": "25" },
+        { "order": 27, "subject": "26" }
+      ]
+    }
+  },
+  {
+    "model": "polls.vote",
+    "pk": 60,
+    "fields": {
+      "user": 1,
+      "topic": 1,
+      "submitted": false,
+      "date_voted": null,
+      "date_updated": "2025-02-02T15:33:16.367Z",
+      "rankings": [
+        { "order": 1, "subject": "2" },
+        { "order": 2, "subject": "3" },
+        { "order": 3, "subject": "4" },
+        { "order": 4, "subject": "17" },
+        { "order": 5, "subject": "5" },
+        { "order": 6, "subject": "6" },
+        { "order": 7, "subject": "1" },
+        { "order": 8, "subject": "7" },
+        { "order": 9, "subject": "8" },
+        { "order": 10, "subject": "9" },
+        { "order": 11, "subject": "10" },
+        { "order": 12, "subject": "11" },
+        { "order": 13, "subject": "12" },
+        { "order": 14, "subject": "20" },
+        { "order": 15, "subject": "14" },
+        { "order": 16, "subject": "15" },
+        { "order": 17, "subject": "16" },
+        { "order": 18, "subject": "27" },
+        { "order": 19, "subject": "13" },
+        { "order": 20, "subject": "18" },
+        { "order": 21, "subject": "19" },
+        { "order": 22, "subject": "21" },
+        { "order": 23, "subject": "22" },
+        { "order": 24, "subject": "23" },
+        { "order": 25, "subject": "24" },
+        { "order": 26, "subject": "25" },
+        { "order": 27, "subject": "26" }
+      ]
+    }
+  },
+  {
+    "model": "polls.vote",
+    "pk": 61,
+    "fields": {
+      "user": 1,
+      "topic": 1,
+      "submitted": true,
+      "date_voted": "2025-02-02T15:34:20.369Z",
+      "date_updated": "2025-02-02T15:34:20.370Z",
+      "rankings": [
+        { "order": 1, "subject": "2" },
+        { "order": 2, "subject": "3" },
+        { "order": 3, "subject": "4" },
+        { "order": 4, "subject": "17" },
+        { "order": 5, "subject": "5" },
+        { "order": 6, "subject": "6" },
+        { "order": 7, "subject": "1" },
+        { "order": 8, "subject": "7" },
+        { "order": 9, "subject": "8" },
+        { "order": 10, "subject": "9" },
+        { "order": 11, "subject": "10" },
+        { "order": 12, "subject": "11" },
+        { "order": 13, "subject": "12" },
+        { "order": 14, "subject": "20" },
+        { "order": 15, "subject": "14" },
+        { "order": 16, "subject": "15" },
+        { "order": 17, "subject": "16" },
+        { "order": 18, "subject": "27" },
+        { "order": 19, "subject": "13" },
+        { "order": 20, "subject": "18" },
+        { "order": 21, "subject": "19" },
+        { "order": 22, "subject": "21" },
+        { "order": 23, "subject": "22" },
+        { "order": 24, "subject": "23" },
+        { "order": 25, "subject": "24" },
+        { "order": 26, "subject": "25" },
+        { "order": 27, "subject": "26" }
+      ]
+    }
+  },
+  {
+    "model": "polls.vote",
+    "pk": 62,
+    "fields": {
+      "user": 2,
+      "topic": 1,
+      "submitted": true,
+      "date_voted": "2025-02-02T15:36:04Z",
+      "date_updated": "2025-02-02T16:07:26.262Z",
+      "rankings": [
+        { "order": 1, "subject": "2" },
+        { "order": 2, "subject": "3" },
+        { "order": 3, "subject": "4" },
+        { "order": 4, "subject": "17" },
+        { "order": 5, "subject": "5" },
+        { "order": 6, "subject": "6" },
+        { "order": 7, "subject": "1" },
+        { "order": 8, "subject": "7" },
+        { "order": 9, "subject": "8" },
+        { "order": 10, "subject": "9" },
+        { "order": 11, "subject": "10" },
+        { "order": 12, "subject": "11" },
+        { "order": 13, "subject": "12" },
+        { "order": 14, "subject": "20" },
+        { "order": 15, "subject": "14" },
+        { "order": 16, "subject": "15" },
+        { "order": 17, "subject": "16" },
+        { "order": 18, "subject": "27" },
+        { "order": 19, "subject": "13" },
+        { "order": 20, "subject": "18" },
+        { "order": 21, "subject": "19" },
+        { "order": 22, "subject": "21" },
+        { "order": 23, "subject": "22" },
+        { "order": 24, "subject": "23" },
+        { "order": 25, "subject": "24" },
+        { "order": 26, "subject": "25" },
+        { "order": 27, "subject": "26" }
+      ]
+    }
+  },
+  {
+    "model": "polls.vote",
+    "pk": 63,
+    "fields": {
+      "user": 1,
+      "topic": 1,
+      "submitted": true,
+      "date_voted": "2025-02-02T15:36:21.435Z",
+      "date_updated": "2025-02-02T15:36:21.437Z",
+      "rankings": [
+        { "order": 1, "subject": "2" },
+        { "order": 2, "subject": "3" },
+        { "order": 3, "subject": "4" },
+        { "order": 4, "subject": "17" },
+        { "order": 5, "subject": "5" },
+        { "order": 6, "subject": "6" },
+        { "order": 7, "subject": "1" },
+        { "order": 8, "subject": "7" },
+        { "order": 9, "subject": "8" },
+        { "order": 10, "subject": "9" },
+        { "order": 11, "subject": "10" },
+        { "order": 12, "subject": "11" },
+        { "order": 13, "subject": "12" },
+        { "order": 14, "subject": "20" },
+        { "order": 15, "subject": "14" },
+        { "order": 16, "subject": "15" },
+        { "order": 17, "subject": "16" },
+        { "order": 18, "subject": "27" },
+        { "order": 19, "subject": "13" },
+        { "order": 20, "subject": "18" },
+        { "order": 21, "subject": "19" },
+        { "order": 22, "subject": "21" },
+        { "order": 23, "subject": "22" },
+        { "order": 24, "subject": "23" },
+        { "order": 25, "subject": "24" },
+        { "order": 26, "subject": "25" },
+        { "order": 27, "subject": "26" }
+      ]
+    }
+  }
+]

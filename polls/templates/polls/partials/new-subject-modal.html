@@ -1,0 +1,23 @@
+<form hx-post="{% url 'polls:add_subject' %}" id="new-subject-form" class="new-subject-form">
+    {% csrf_token %}
+    <div class="new-subject-form__subject">
+        <label class="asterisk" for="subject">Subject</label>
+        <input type="text" id="subject" name="subject"  required
+        hx-post="{% url 'polls:validate_subject' %}"
+        hx-trigger="input changed"
+        hx-swap="innerHTML">
+        <span id="subject-error" class="error-message"></span>
+    </div>
+    <div class="new-subject-form__details">
+        <label class="asterisk" for="details">Details</label>
+        <textarea id="details" name="details" placeholder="Details">
+
+        </textarea>
+        
+        <span id="details-error" class="error-message"></span>
+    </div>
+
+    <div class="new-subject-form__buttons">
+        <button class="button modal__button btn-save-return" name="btn-save-return" type="submit">Save and return</button>
+    </div>
+    <div></div>

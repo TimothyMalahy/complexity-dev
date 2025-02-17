@@ -1,0 +1,34 @@
+.new-topic-form {
+  display: grid;
+  grid-auto-columns: 1fr;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  gap: 0.5rem;
+  grid-template-areas:
+    "new-topic-form__topic"
+    "new-topic-form__reference-link"
+    "new-topic-form__admin-options"
+    "new-topic-form__buttons";
+}
+
+.new-topic-form__topic {
+  grid-area: new-topic-form__topic;
+}
+.new-topic-form__reference-link {
+  grid-area: new-topic-form__reference-link;
+}
+
+.new-topic-form__admin-options {
+  grid-area: new-topic-form__admin-options;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+.new-topic-form__buttons {
+  grid-area: new-topic-form__buttons;
+  justify-self: center;
+  align-content: end;
+}
+
+.selector-label {
+  align-content: end !important;
+}

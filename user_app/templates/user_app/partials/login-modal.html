@@ -1,0 +1,31 @@
+{% comment %}https://docs.djangoproject.com/en/5.1/topics/auth/default/#how-to-log-a-user-in{% endcomment %}
+
+<form hx-post="{% url 'user_app:login_user' %}" id="login-form" class="login-form">
+    {% csrf_token %}
+    <div class="login-form__email">
+        <label class="asterisk" for="email">Email</label>
+        <input type="email" id="email" name="email" required {% if debug %} value="{{email}}" {% endif %}
+        hx-post="{% url 'user_app:validate_email' %}"
+        hx-trigger="input changed delay:250ms"
+        hx-swap="innerHTML">
+        <span id="email-error" class="error-message"></span>
+    </div>
+    <div class="login-form__password">
+        <label class="asterisk" for="password">Password</label>
+        <input type="password" id="password" name="password" required {% if debug %} value='{{password}}' {% endif %}
+        hx-post="{% url 'user_app:validate_password' %}"
+        hx-trigger="input changed"
+        hx-swap="innerHTML">
+        <span id="password-error" class="error-message"></span>
+    </div>
+    <div class="login-form__buttons">
+        <button class="button modal__button btn-login" name="btn-login" type="submit">Login</button>
+        <button 
+        class="button modal__button btn-register"
+        name="btn-register" 
+        type="button"
+        hx-target="#modal-content"
+        hx-get="{% url 'user_app:render_register_modal' %}"> Switch to Register Form</button>
+        <button class="button modal__button btn-forgot-password" name="btn-forgot-password" type="button">Forgot Password</button>
+    </div>
+</form>

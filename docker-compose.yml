@@ -1,0 +1,51 @@
+version: "3.8"
+
+services:
+  postgres:
+    image: postgres:latest
+    container_name: dev-difficulty-pg
+    hostname: localhost
+    environment:
+      POSTGRES_USER: django
+      POSTGRES_PASSWORD: django
+      POSTGRES_DB: devdifficulty
+      PGDATA: /var/lib/postgresql/data/pgdata # Add this line
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+    networks:
+      - pgnetwork
+    restart: unless-stopped # Add this line
+
+  # adminer:
+  #   image: adminer
+  #   restart: always
+  #   ports:
+  #     - 8080:8080
+  pgadmin:
+    image: dpage/pgadmin4:latest
+    container_name: eager_jones
+    environment:
+      PGADMIN_DEFAULT_EMAIL: admin@example.com
+      PGADMIN_DEFAULT_PASSWORD: admin
+    ports:
+      - "80:80"
+    depends_on:
+      - postgres
+    networks:
+      - pgnetwork
+  # app:
+  #   build: .
+  #   ports:
+  #     - "8000:8000"
+  #   depends_on:
+  #     - postgres
+networks:
+  pgnetwork:
+    driver: bridge
+    name: dev-difficulty-pgnetwork
+
+volumes:
+  pgdata:
+    name: dev-difficulty-pgdata

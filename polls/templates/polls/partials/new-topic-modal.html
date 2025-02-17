@@ -1,0 +1,47 @@
+
+<!-- CSS exists in a separate file that is imported at the top of home.html -->
+
+    <form hx-post="{% url 'polls:add_topic' %}" id="new-topic-form" class="new-topic-form">
+        {% csrf_token %}
+        <div class="new-topic-form__topic">
+            <label class="asterisk" for="topic">Topic</label>
+            <input type="text" id="topic" name="topic"  required
+            hx-post="{% url 'polls:validate_topic' %}"
+            hx-trigger="input changed"
+            hx-swap="innerHTML">
+            <span id="topic-error" class="error-message"></span>
+        </div>
+        <div class="new-topic-form__reference-link">
+            <label for="reference-link">Reference Link</label>
+            <input type="url" id="reference-link" name="reference-link" placeholder="https://example.com">
+            <span id="topic-error" class="error-message"></span>
+        </div>
+            <div class="new-topic-form__admin-options">
+                <div class="new-topic-form__viewing-options selector-div">
+                    <label class="selector-label" for="viewing-choice">Viewing</label>
+                    <select id="viewing-choice" name="viewing-choice" class="selector">
+                        <option value="public">Public</option>
+                        <option value="private">Private</option>
+                    </select>
+                </div>
+                <div class="new-topic-form__voting-options selector-div">
+                    <label class="selector-label" for="voting-choice">Voting</label>
+                    <select id="voting-choice" name="voting-choice" class="selector">
+                        <option value="public">Public</option>
+                        <option value="private">Private</option>
+                    </select>
+                </div>
+                <div class="new-topic-form__new-subject-options selector-div">
+                    <label class="selector-label" for="new-subject-choice">New Subjects</label>
+                    <select id="new-subject-choice" name="new-subject-choice" class="selector">
+                        <option value="public">Public</option>
+                        <option value="private">Private (defaults to owner, but groups can be added)</option>
+                    </select>
+                </div>
+            </div>
+        <div class="new-topic-form__buttons">
+            <button class="button modal__button btn-save-return" name="btn-save-return" type="submit">Save and return</button>
+            <button class="button modal__button btn-save-open" name="btn-save-open" type="submit">Save and Open Topic</button>
+        </div>
+        <div></div>
+    </form>

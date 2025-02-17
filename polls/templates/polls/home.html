@@ -1,17 +1,95 @@
 {% extends "base.html" %}
 
+{% load static %}
 {% block title %}Home{% endblock %}
 
+{% block extrahead %}
+    <link rel="stylesheet" href="{% static 'css/polls/home.css' %}">
+    <link rel="stylesheet" href="{% static 'css/polls/partials/new-topic-modal.css' %}">
+
+{% endblock %}
 
 
 {% block content %}
-    <h2>Select a Topic Below</h2>
-    <ul>
-        {% for topic in topics %}
-            <li><a href="{% url 'polls:vote' topic.id %}">{{ topic.topic_text }}</a></li>
-        {% endfor %}
-    </ul>
+    <h2>Topics</h2>
     
+    <div class="search-container">
+        <input type="text" id="search" placeholder="Search our {{public_topic_count}} public topics!"
+        
+        name="search"
+        hx-post = "{% url 'polls:topics_search' %}" 
+        hx-trigger="input changed delay:500ms, keyup[key=='Enter'], load"
+        hx-target=".topics__grid"
+        hx-indicator=".loader"
+        {% comment %} 
+        This is what loads in the topics from searching. It loads in topics-search.html
+        This is done because A - it needs to be searched. B - It needs to render on load, but stream the results
+        {% endcomment %}
+        >
+        <div class="loader htmx-indicator"></div>
+    </div>
+    
+    <div class="buttons__container">
+        <button 
+            class="button open-modal"
+            id="new-topic"
+            hx-get="{% url 'polls:render_modal' %}"
+            hx-target="#modal-content"
+            >Add New Topic</button>
+        <a class="button" href="{% url 'polls:random_topic_detail' %}">Find a Random Topic</a>
+        <button class="button" >My Topics</button>
+    </div>
+
+    <div id="topics__grid" class="topics__grid">
+        {% comment %} Topics are displayed with partials/topics-search.html {% endcomment %}
+    </div>
+
+    <dialog class="modal" id="modal">
+        <div class="modal__header" id="modal__header">
+            <button class="button modal__button" id="modalClose">X</button>
+        </div>
+        <div class="modal-content" id="modal-content"></div>
+        
+    </dialog>
+
+    
+
 {% endblock %}
 
-{%}
+{% block extra_scripts %}
+<script>
+    const modal = document.getElementById('modal')
+    
+    const openModalButtons = document.querySelectorAll('.open-modal');
+    openModalButtons.forEach(button => {
+        button.onclick = () => modal.showModal();
+    });
+    const closeModal = document.getElementById('modalClose')
+    
+    closeModal.onclick = () => modal.close()
+
+    document.body.addEventListener('closeModal', () => {
+        /* This function is called by the add_topic view in polls/views.py */
+        /* This function is called by the register_user view in user_app/views.py */
+        modal.close()
+    })
+    function getInner(ids) {
+        const errors = {};
+        if (Array.isArray(ids)) {
+            ids.forEach(id => {
+                const element = document.getElementById(id);
+                if (element) {
+                    errors[id] = element.innerHTML;
+                }
+            });
+        } else {
+            const element = document.getElementById(ids);
+            if (element) {
+                errors[ids] = element.innerHTML;
+            }
+        }
+        return errors;
+    }
+</script>
+{% endblock %}
+
