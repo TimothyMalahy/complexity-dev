@@ -136,34 +136,15 @@
 
     <div id="screen-reader-updates" aria-live="polite" style="position: absolute; left: -9999px;"></div>
 
-    <dialog class="modal" id="modal">
-        <div class="modal__header" id="modal__header">
-            <button class="button modal__button" id="modalClose">X</button>
-        </div>
-        <div class="modal-content" id="modal-content"></div>
-        
-    </dialog>
-    {% static 'js/sweetalert.min.js' %}
+
+    
 {% endblock %}
 
 {% block extra_scripts %}
-<script src="{% static 'js/sweetalert.min.js' %}"></script>
+
 
 <script>
-    const modal = document.getElementById('modal')
-    
-    const openModalButtons = document.querySelectorAll('.open-modal');
-    openModalButtons.forEach(button => {
-        button.onclick = () => modal.showModal();
-    });
-    const closeModal = document.getElementById('modalClose')
-    
-    closeModal.onclick = () => modal.close()
 
-    document.body.addEventListener('closeModal', () => {
-        /* Views.py need to return this in the trigger_client_event to close the modal */
-        modal.close()
-    })
     
 
     document.addEventListener('DOMContentLoaded', function() {

@@ -44,13 +44,6 @@
         {% comment %} Topics are displayed with partials/topics-search.html {% endcomment %}
     </div>
 
-    <dialog class="modal" id="modal">
-        <div class="modal__header" id="modal__header">
-            <button class="button modal__button" id="modalClose">X</button>
-        </div>
-        <div class="modal-content" id="modal-content"></div>
-        
-    </dialog>
 
     
 
@@ -58,21 +51,7 @@
 
 {% block extra_scripts %}
 <script>
-    const modal = document.getElementById('modal')
-    
-    const openModalButtons = document.querySelectorAll('.open-modal');
-    openModalButtons.forEach(button => {
-        button.onclick = () => modal.showModal();
-    });
-    const closeModal = document.getElementById('modalClose')
-    
-    closeModal.onclick = () => modal.close()
 
-    document.body.addEventListener('closeModal', () => {
-        /* This function is called by the add_topic view in polls/views.py */
-        /* This function is called by the register_user view in user_app/views.py */
-        modal.close()
-    })
     function getInner(ids) {
         const errors = {};
         if (Array.isArray(ids)) {

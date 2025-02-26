@@ -26,6 +26,7 @@ urlpatterns = [
     path("polls/", include(("polls.urls", "polls"), namespace="polls")),
     path("admin/", admin.site.urls),
     path("user/", include(("user_app.urls", "user_app"), namespace="user_app")),
+    path("accounts/", include("django.contrib.auth.urls")),
     path("__reload__/", include("django_browser_reload.urls")),
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 

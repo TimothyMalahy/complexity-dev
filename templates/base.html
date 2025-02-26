@@ -47,11 +47,17 @@
                         <li class="nav-item"><a class="nav-link" href="{% url 'home:home' %}#home">Home</a></li>
                         <li class="nav-item"><a class="nav-link" href="{% url 'home:home' %}#blog">Blog</a></li>
                         {% if user.is_authenticated %}
-                            <li class="nav-item"><a class="nav-link" href="#">Logout</a></li>
+                            <li class="nav-item"><a class="nav-link" href="{% url 'user_app:logout_user' %}">Logout</a></li>
                             {% comment %} TODO: Make this into an icon and dropdown? {% endcomment %}
                         {% else %}
-                            <li class="nav-item"><a class="nav-link" href="#">Login</a></li>
-                            <li class="nav-item"><a class="nav-link" href="#">Register</a></li>
+                            <li class="nav-item"><a class="nav-link open-modal"
+                                id="login"
+                                hx-get="{% url 'user_app:render_login_modal' %}"
+                                hx-target="#modal-content">Login</a></li>
+                            <li class="nav-item"><a class="nav-link open-modal" 
+                                id="register"
+                                hx-get="{% url 'user_app:render_register_modal' %}"
+                                hx-target="#modal-content">Register</a></li>
                         {% endif %}
                     </ul>
                 </nav>
@@ -64,17 +70,36 @@
         <div class="container">
             {% block content %}{% endblock %}
         </div>
+        <dialog class="modal" id="modal">
+            <div class="modal__header" id="modal__header">
+                <button class="button modal__button" id="modalClose">X</button>
+            </div>
+            <div class="modal-content" id="modal-content"></div>
+            
+        </dialog>
     </main>
     <footer>
         <p>&copy; 2025 My Site</p>
     </footer>
 </body>
-{% comment %}
-<script>
-    feather.replace();
-</script>
-{% endcomment %}
 
+<script>
+    const modal = document.getElementById('modal')
+    
+    const openModalButtons = document.querySelectorAll('.open-modal');
+    openModalButtons.forEach(button => {
+        button.onclick = () => modal.showModal();
+    });
+    const closeModal = document.getElementById('modalClose')
+    
+    closeModal.onclick = () => modal.close()
+
+    document.body.addEventListener('closeModal', () => {
+        /* Views.py need to return this in the trigger_client_event to close the modal */
+        modal.close()
+    })
+</script>
+<script src="{% static 'js/sweetalert.min.js' %}"></script>
 {% block extra_scripts %}{% endblock %}
 </html>
 

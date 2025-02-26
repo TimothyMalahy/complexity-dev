@@ -4,6 +4,7 @@ from .views import (
     send_test_email,
     login_user,
     register_user,
+    logout_user,
     render_login_modal,
     render_register_modal,
 )
@@ -17,6 +18,7 @@ urlpatterns = [
 htmx_patterns = [
     path("htmx/login-user/", login_user, name="login_user"),
     path("htmx/register-user/", register_user, name="register_user"),
+    path("htmx/logout-user/", logout_user, name="logout_user"),
     path("htmx/render-login-modal/", render_login_modal, name="render_login_modal"),
     path("htmx/render-register-modal/", render_register_modal, name="render_register_modal"),
 ]

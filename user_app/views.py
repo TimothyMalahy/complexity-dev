@@ -1,4 +1,4 @@
-from django.contrib.auth import authenticate, login
+from django.contrib.auth import authenticate, login, logout
 from django.shortcuts import render, redirect
 from django.utils import timezone
 from django.http import HttpResponse, HttpRequest, HttpResponseRedirect
@@ -84,6 +84,11 @@ def login_user(request: HtmxHttpRequest) -> HttpResponse:
     else:
         return HttpResponse("Invalid login credentials", status=401)
     pass
+
+
+def logout_user(request: HtmxHttpRequest) -> HttpResponse:
+    logout(request)
+    return HttpResponseClientRedirect("/")
 
 
 def register_user(request: HtmxHttpRequest) -> HttpResponse:
