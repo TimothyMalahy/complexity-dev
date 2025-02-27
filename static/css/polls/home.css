@@ -62,27 +62,6 @@ input {
   font-family: var(--font-family);
 }
 
-.button {
-  background-color: hsl(0, 0%, 12%);
-  color: var(--accent-color-dark);
-  border: hsl(0, 0%, 40%) 2px solid;
-  border-radius: 6px;
-  padding: 0.75rem;
-  text-decoration: none;
-  text-align: center;
-}
-
-.button:hover {
-  background-color: hsl(0, 0%, 0%);
-  cursor: pointer;
-}
-
-.button:active {
-  background-color: hsl(0, 0%, 12%);
-  color: hsl(0, 0%, 100%);
-  border: hsl(0, 0%, 60%) 2px solid;
-}
-
 /* Topics Part of the page */
 .topics__grid {
   display: grid;

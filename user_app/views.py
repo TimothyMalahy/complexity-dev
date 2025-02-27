@@ -14,6 +14,7 @@ from django_htmx.http import (
     retarget,
     reswap,
     HttpResponseClientRedirect,
+    HttpResponseLocation,
     push_url,
 )
 from django_htmx.middleware import HtmxDetails
@@ -87,17 +88,20 @@ def login_user(request: HtmxHttpRequest) -> HttpResponse:
     email = request.POST.get("email")
     password = request.POST.get("password")
     user = authenticate(request, email=email, password=password)
+
     if user is not None:
         login(request, user)
-        return HttpResponseClientRedirect("/")
+        referrer = request.headers.get("Referer", "/")
+        return HttpResponseClientRedirect(referrer)
     else:
         return HttpResponse("Invalid login credentials", status=401)
     pass
 
 
-def logout_user(request: HtmxHttpRequest) -> HttpResponse:
+def logout_user(request) -> HttpResponse:
     logout(request)
-    return HttpResponseClientRedirect("/")
+    referrer = request.headers.get("Referer")
+    return HttpResponseRedirect(referrer)
 
 
 def register_user(request: HtmxHttpRequest) -> HttpResponse:

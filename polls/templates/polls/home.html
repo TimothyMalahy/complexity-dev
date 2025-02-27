@@ -35,6 +35,7 @@
             id="new-topic"
             hx-get="{% url 'polls:render_modal' %}"
             hx-target="#modal-content"
+            disabled
             >Add New Topic</button>
         <a class="button" href="{% url 'polls:random_topic_detail' %}">Find a Random Topic</a>
         <button class="button" >My Topics</button>

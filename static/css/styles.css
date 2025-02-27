@@ -218,3 +218,29 @@ p {
   font-size: var(--font-size-text);
   line-height: 1.5;
 }
+
+.button {
+  background-color: hsl(0, 0%, 17%);
+  color: var(--accent-color-dark);
+  border: hsl(0, 0%, 40%) 2px solid;
+  border-radius: 6px;
+  padding: 0.75rem;
+  text-decoration: none;
+  text-align: center;
+}
+
+.button:hover {
+  background-color: hsl(0, 0%, 0%);
+  cursor: pointer;
+}
+
+.button:active {
+  background-color: hsl(0, 0%, 12%);
+  color: hsl(0, 0%, 100%);
+  border: hsl(0, 0%, 60%) 2px solid;
+}
+.button:disabled {
+  background-color: hsl(0, 0%, 40%);
+  color: hsl(0, 0%, 60%);
+  cursor: not-allowed;
+}
