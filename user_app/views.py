@@ -9,7 +9,13 @@ from post_office import mail
 import json
 
 
-from django_htmx.http import trigger_client_event, retarget, reswap, HttpResponseClientRedirect
+from django_htmx.http import (
+    trigger_client_event,
+    retarget,
+    reswap,
+    HttpResponseClientRedirect,
+    push_url,
+)
 from django_htmx.middleware import HtmxDetails
 import random
 import string
@@ -67,11 +73,14 @@ def render_register_modal(request: HtmxHttpRequest) -> HttpResponse:
 
 
 def render_login_modal(request: HtmxHttpRequest) -> HttpResponse:
+    print("RENDER LOGIN MODAL")
     context = {}
     random_user = CustomUser.objects.order_by("?").first()
     context["email"] = random_user.email
     context["password"] = "abcdefgh12"
-    return render(request, "user_app/partials/login-modal.html", context=context)
+    response = render(request, "user_app/partials/login-modal.html", context=context)
+    response = trigger_client_event(response, "openModal", after="swap")
+    return response
 
 
 def login_user(request: HtmxHttpRequest) -> HttpResponse:

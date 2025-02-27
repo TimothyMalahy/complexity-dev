@@ -17,10 +17,6 @@
     <!-- jsDelivr :: Sortable :: Latest (https://www.jsdelivr.com/package/npm/sortablejs) -->
     <script src="{% static 'js/sortable.min.js' %}" ></script>
     
-    {% comment %}
-    <!-- Feather icons -->
-    <script src="{% static 'js/feather.min.js' %}"></script> <!-- https://github.com/feathericons/feather -->
-    {% endcomment %}
 
     <!-- HTMX and extensions -->
     {% load django_htmx %}
@@ -85,11 +81,6 @@
 
 <script>
     const modal = document.getElementById('modal')
-    
-    const openModalButtons = document.querySelectorAll('.open-modal');
-    openModalButtons.forEach(button => {
-        button.onclick = () => modal.showModal();
-    });
     const closeModal = document.getElementById('modalClose')
     
     closeModal.onclick = () => modal.close()
@@ -97,6 +88,10 @@
     document.body.addEventListener('closeModal', () => {
         /* Views.py need to return this in the trigger_client_event to close the modal */
         modal.close()
+    })
+    document.body.addEventListener('openModal', () => {
+        /* Views.py need to return this in the trigger_client_event to open the modal */
+        modal.showModal()
     })
 </script>
 <script src="{% static 'js/sweetalert.min.js' %}"></script>

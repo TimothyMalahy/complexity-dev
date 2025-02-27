@@ -1,4 +1,9 @@
-from django_htmx.http import trigger_client_event, retarget, reswap, HttpResponseClientRedirect
+from django_htmx.http import (
+    trigger_client_event,
+    retarget,
+    reswap,
+    HttpResponseClientRedirect,
+)
 from django.shortcuts import render
 from user_app.views import render_register_modal, render_login_modal
 
@@ -7,6 +12,7 @@ from .models import Topic, Subject, TopicOwner, Vote, Ranking
 from django.http import HttpResponse, HttpRequest, HttpResponseRedirect
 
 from django_htmx.middleware import HtmxDetails
+
 from django.utils import timezone
 
 
@@ -79,6 +85,7 @@ def random_topic_detail(request):
 def render_modal(request: HtmxHttpRequest) -> HttpResponse:
     trigger = request.htmx.trigger
     modal_config = MODAL_CONFIG.get(trigger)
+    context = {}
 
     if not modal_config:
         return HttpResponse(status=404)
@@ -87,18 +94,15 @@ def render_modal(request: HtmxHttpRequest) -> HttpResponse:
         return render_login_modal(request)
 
     template = modal_config["template"]
-    context = {}
-    return render(request, template, context)
+    response = render(request, template, context)
+    response = trigger_client_event(response, "openModal", after="swap")
+    return response
 
 
 def add_topic(request: HtmxHttpRequest) -> HttpResponse:
     if request.POST:
         topic = request.POST.get("topic")
         reference_link = request.POST.get("reference-link")
-
-        print("viewing-choice======================", request.POST.get("viewing-choice"))
-        print("voting-choice======================", request.POST.get("voting-choice"))
-        print("new-subject-choice======================", request.POST.get("new-subject-choice"))
         user = request.user
 
         try:
