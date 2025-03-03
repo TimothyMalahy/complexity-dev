@@ -28,10 +28,14 @@ MODAL_CONFIG = {
     # Pattern
     # "element-id": {"template": "path/to/template.html", "auth_required": True/False},
     # Auth not required
+    "suggest-topic": {
+        "template": "polls/modals/suggest-topic.html",
+        "auth_required": False,
+    },
     # Auth Required
-    "new-topic": {"template": "polls/partials/new-topic-modal.html", "auth_required": True},
-    "edit-topic": {"template": "polls/partials/edit-topic-modal.html", "auth_required": True},
-    "new-subject": {"template": "polls/partials/new-subject-modal.html", "auth_required": True},
+    "new-topic": {"template": "polls/modals/new-topic.html", "auth_required": True},
+    "edit-topic": {"template": "polls/modals/edit-topic.html", "auth_required": True},
+    "new-subject": {"template": "polls/modals/new-subject.html", "auth_required": True},
 }
 
 
@@ -130,6 +134,15 @@ def add_topic(request: HtmxHttpRequest) -> HttpResponse:
             return response
 
 
+def suggest_topic(request: HtmxHttpRequest) -> HttpResponse:
+    if request.POST:
+        # TODO: Email the topic to the owner of the site
+        # TODO add a message to the user that their suggestion has been submitted
+        response = HttpResponse("Suggestion submitted")
+        response = trigger_client_event(response, "closeModal", after="swap")
+        return response
+
+
 def add_subject(request: HtmxHttpRequest) -> HttpResponse:
     if request.POST:
         topic = Topic.objects.get(id=request.POST.get("topic"))
@@ -157,11 +170,8 @@ def load_subjects(request: HtmxHttpRequest) -> HttpResponse:
     user = request.user
     community_list = request.GET.get("is-community-list", None)
 
-    print("USERTYPE================", dir(user))
-
     context = {}
     if community_list or user.is_anonymous:  # Checkbox is true or user is anonymous
-        print("USER================", user)
         context["topic"] = Topic.objects.get(id=request.GET.get("topic"))
         context["subjects"] = context["topic"].subject_set.all()
         context["subjects"] = sorted(context["subjects"], key=lambda subject: subject.total_score)

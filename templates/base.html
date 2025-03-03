@@ -95,6 +95,29 @@
     })
 </script>
 <script src="{% static 'js/sweetalert.min.js' %}"></script>
+
+
+<script>
+
+    function getInner(ids) {
+        const errors = {};
+        if (Array.isArray(ids)) {
+            ids.forEach(id => {
+                const element = document.getElementById(id);
+                if (element) {
+                    errors[id] = element.innerHTML;
+                }
+            });
+        } else {
+            const element = document.getElementById(ids);
+            if (element) {
+                errors[ids] = element.innerHTML;
+            }
+        }
+        return errors;
+    }
+</script>
+
 {% block extra_scripts %}{% endblock %}
 </html>
 

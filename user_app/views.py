@@ -70,7 +70,9 @@ def render_register_modal(request: HtmxHttpRequest) -> HttpResponse:
     email = generate_random_email()
     request.POST = request.POST.copy()
     request.POST["email"] = email
-    return render(request, "user_app/partials/register-modal.html", {"email": email})
+    response = render(request, "user_app/partials/register-modal.html", {"email": email})
+    response = trigger_client_event(response, "openModal", after="swap")
+    return response
 
 
 def render_login_modal(request: HtmxHttpRequest) -> HttpResponse:
@@ -94,8 +96,9 @@ def login_user(request: HtmxHttpRequest) -> HttpResponse:
         referrer = request.headers.get("Referer", "/")
         return HttpResponseClientRedirect(referrer)
     else:
-        return HttpResponse("Invalid login credentials", status=401)
-    pass
+        response = HttpResponse("Invalid login credentials", status=200)
+        response = retarget(response, "#form-errors")
+        return response
 
 
 def logout_user(request) -> HttpResponse:
@@ -105,6 +108,10 @@ def logout_user(request) -> HttpResponse:
 
 
 def register_user(request: HtmxHttpRequest) -> HttpResponse:
+    """
+    Errors are related to the form fields. Basically each input has a validation step that is found in validation_views.py
+    After the form is validated, the user is created and the modal is closed.
+    """
     response = HttpResponse("", status=200)
     errors = request.POST.get("errors")
     errors_response = []

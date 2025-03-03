@@ -244,3 +244,91 @@ p {
   color: hsl(0, 0%, 60%);
   cursor: not-allowed;
 }
+
+.modal {
+  gap: 0.5rem;
+  background-color: hsl(0, 0%, 20%);
+  border: hsl(0, 0%, 40%) 2px solid;
+  border-radius: 6px;
+}
+
+.modal__header {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 0.5rem;
+}
+
+.modal-content div:has(> input),
+.modal-content div:has(> select),
+.modal-content div:has(> textarea) {
+  display: grid;
+  justify-content: center;
+}
+
+.modal-content label {
+  font-family: var(--font-family);
+  font-size: 1.25rem;
+  color: hsl(0, 0%, 100%);
+  padding-bottom: 0.25rem;
+}
+.modal-content input + span,
+.modal-content select + span,
+.modal-content textarea + span {
+  display: inline-block;
+  min-height: 1.25rem;
+}
+
+.modal::backdrop {
+  background-color: hsl(0, 0%, 0%, 0.5);
+}
+
+.modal__button {
+  font-size: 1rem;
+  font-weight: 600;
+  font-family: var(--font-family);
+}
+
+.modal__button:disabled {
+  background-color: hsl(0, 0%, 40%);
+  color: hsl(0, 0%, 60%);
+  cursor: not-allowed;
+}
+
+.asterisk::after {
+  content: "*";
+  color: hsl(0, 100%, 89%);
+  font-family: var(--font-family);
+  font-size: 1.25rem;
+}
+
+.error-message {
+  color: hsl(0, 100%, 89%);
+  font-family: var(--font-family);
+}
+
+.button {
+  justify-content: center;
+}
+
+input {
+  font-family: var(--font-family);
+  font-size: 1.25rem;
+  padding: 0.5rem;
+  background-color: hsl(0, 0%, 20%);
+  color: var(--brand-color-dark);
+  border: hsl(0, 0%, 40%) 2px solid;
+  border-radius: 6px;
+  flex: 1;
+}
+
+textarea {
+  font-family: var(--font-family);
+  font-size: 1.25rem;
+  padding: 0.5rem;
+  background-color: hsl(0, 0%, 20%);
+  color: var(--brand-color-dark);
+  border: hsl(0, 0%, 40%) 2px solid;
+  border-radius: 6px;
+  flex: 1;
+}

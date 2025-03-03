@@ -28,15 +28,23 @@
         >
         <div class="loader htmx-indicator"></div>
     </div>
-    
     <div class="buttons__container">
+        {% comment %}
         <button 
             class="button open-modal"
             id="new-topic"
             hx-get="{% url 'polls:render_modal' %}"
             hx-target="#modal-content"
-            disabled
+            
             >Add New Topic</button>
+            {% endcomment %}
+        <button 
+            class="button open-modal"
+            id="suggest-topic"
+            hx-get="{% url 'polls:render_modal' %}"
+            hx-target="#modal-content"
+            
+            >Suggest New Topic</button>
         <a class="button" href="{% url 'polls:random_topic_detail' %}">Find a Random Topic</a>
         <button class="button" >My Topics</button>
     </div>
@@ -48,28 +56,5 @@
 
     
 
-{% endblock %}
-
-{% block extra_scripts %}
-<script>
-
-    function getInner(ids) {
-        const errors = {};
-        if (Array.isArray(ids)) {
-            ids.forEach(id => {
-                const element = document.getElementById(id);
-                if (element) {
-                    errors[id] = element.innerHTML;
-                }
-            });
-        } else {
-            const element = document.getElementById(ids);
-            if (element) {
-                errors[ids] = element.innerHTML;
-            }
-        }
-        return errors;
-    }
-</script>
 {% endblock %}
 

@@ -18,6 +18,7 @@
         hx-swap="innerHTML">
         <span id="password-error" class="error-message"></span>
     </div>
+    <span id="form-errors" class="error-message"></span>
     <div class="login-form__buttons">
         <button class="button modal__button btn-login" name="btn-login" type="submit">Login</button>
         <button 
@@ -28,4 +29,5 @@
         hx-get="{% url 'user_app:render_register_modal' %}"> Switch to Register Form</button>
         <button class="button modal__button btn-forgot-password" name="btn-forgot-password" type="button">Forgot Password</button>
     </div>
+
 </form>

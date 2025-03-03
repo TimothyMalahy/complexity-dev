@@ -1,0 +1,26 @@
+<form hx-post="{% url 'polls:suggest_topic' %}" id="suggest-topic-form" class="sauggest-topic-form">
+    {% csrf_token %}
+    <div class="suggest-topic-form__topic">
+        <label class="asterisk" for="topic">Topic</label>
+        <input type="text" id="topic" name="topic"  required
+        hx-post="{% url 'polls:validate_topic_suggestion' %}"
+        hx-trigger="input changed"
+        hx-swap="innerHTML">
+        <span id="topic-error" class="error-message"></span>
+    </div>
+    <div class="suggest-topic-form__reference-link">
+        <label for="reference-link">Reference Link</label>
+        <input type="url" id="reference-link" name="reference-link" placeholder="https://example.com">
+        <span id="topic-error" class="error-message"></span>
+    <div class="suggest-topic-form__details">
+        <label class="asterisk" for="details">Details</label>
+        <textarea id="details" name="details" placeholder="Details"></textarea>
+        
+        <span id="details-error" class="error-message"></span>
+
+    </div>
+
+    <div class="suggest-topic-form__buttons">
+        <button class="button modal__button btn-save-return" name="btn-save-return" type="submit">Save and return</button>
+    </div>
+    
