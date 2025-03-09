@@ -3,7 +3,8 @@ from django.contrib.auth.models import AbstractBaseUser, BaseUserManager, Permis
 from django.utils.translation import gettext_lazy as _
 from django.utils.crypto import get_random_string
 from django.utils import timezone
-from datetime import timedelta
+from django.dispatch import receiver
+from django.db.models.signals import post_save
 
 
 class CustomUserManager(BaseUserManager):
@@ -34,7 +35,7 @@ class CustomUserManager(BaseUserManager):
 
 
 class CustomUser(AbstractBaseUser, PermissionsMixin):
-    email = models.EmailField(_("email address"), unique=True)
+    email = models.EmailField(_("email address"), unique=True, db_index=True)
     first_name = models.CharField(_("first name"), max_length=255, blank=True, null=True)
     last_name = models.CharField(_("last name"), max_length=255, blank=True, null=True)
     is_active = models.BooleanField(_("active"), default=True)
@@ -59,3 +60,10 @@ class CustomUser(AbstractBaseUser, PermissionsMixin):
         self.verification_token = get_random_string(length=64)
         self.token_expiration = timezone.now() + timezone.timedelta(days=1)
         self.save()
+
+
+# Use signals to handle non-critical updates asynchronously
+@receiver(post_save, sender=CustomUser)
+def update_last_login(sender, instance, **kwargs):
+    # Update last_login or perform other non-critical operations
+    pass

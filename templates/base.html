@@ -5,7 +5,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>{% block title %}My Site{% endblock %}</title>
+    <title>{% block title %}Complexity Index{% endblock %}</title>
     <link rel="stylesheet" href="{% static 'css/styles.css' %}">
     <link rel="stylesheet" href="{% static 'css/login-modal.css' %}">
     <link rel="preconnect" href="https://fonts.googleapis.com"> 
@@ -15,7 +15,7 @@
     
     
     <!-- jsDelivr :: Sortable :: Latest (https://www.jsdelivr.com/package/npm/sortablejs) -->
-    <script src="{% static 'js/sortable.min.js' %}" ></script>
+    <script src="{% static 'js/sortable.min.js' %}" async></script>
     
 
     <!-- HTMX and extensions -->
@@ -68,6 +68,7 @@
         </div>
         <dialog class="modal" id="modal">
             <div class="modal__header" id="modal__header">
+                <div id="modal-loader" class="loader htmx-modal-indicator"></div>
                 <button class="button modal__button" id="modalClose">X</button>
             </div>
             <div class="modal-content" id="modal-content"></div>
@@ -75,7 +76,9 @@
         </dialog>
     </main>
     <footer>
-        <p>&copy; 2025 My Site</p>
+        <div class="footer-container">
+            <p class="footer-container__copyright">&copy; 2025 Complexity Index</p>
+        </div>
     </footer>
 </body>
 
@@ -117,7 +120,20 @@
         return errors;
     }
 </script>
-
+<script>
+    {% if debug %}
+    if (typeof window.htmx !== "undefined") {
+        htmx.on("htmx:afterSettle", function(detail) {
+            if (
+                typeof window.djdt !== "undefined"
+                && detail.target instanceof HTMLBodyElement
+            ) {
+                djdt.show_toolbar();
+            }
+        });
+    }
+{% endif %}
+</script>
 {% block extra_scripts %}{% endblock %}
 </html>
 

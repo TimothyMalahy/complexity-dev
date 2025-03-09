@@ -40,6 +40,8 @@ MODAL_CONFIG = {
 
 
 def home(request: HtmxHttpRequest) -> HttpResponse:
+    # authenticated users can see the new topic button, suggest topic button, and my topics
+    # unauthenticated users can see the search bar, the public topics, and "find a random topic"
     context = {}
     context["public_topic_count"] = Topic.objects.filter(publicly_visible=True).count()
     return render(request, "polls/home.html", context=context)
@@ -107,6 +109,7 @@ def add_topic(request: HtmxHttpRequest) -> HttpResponse:
     if request.POST:
         topic = request.POST.get("topic")
         reference_link = request.POST.get("reference-link")
+        print(request.POST)
         user = request.user
 
         try:

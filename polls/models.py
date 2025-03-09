@@ -38,6 +38,10 @@ class Topic(models.Model):
     owner = models.ForeignKey(
         CustomUser, on_delete=models.CASCADE, related_name="owner", blank=True, null=True
     )
+    promoted = models.BooleanField(
+        default=False,
+        help_text="Used to become the de facto topic for repeats. Often comes from owner of site.",
+    )
 
     def __str__(self):
         if self.owner:

@@ -2,6 +2,7 @@
 
 <form hx-post="{% url 'user_app:register_user' %}" id="register-form" class="register-form"
 hx-vals='js:{errors: getInner(["email-error", "password-error", "confirm-password-error"])}'
+hx-indicator="#modal-loader"
 >
     {% csrf_token %}
     <div class="register-form__email">

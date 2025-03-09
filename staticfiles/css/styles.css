@@ -1,0 +1,349 @@
+/* 
+Initial set of rules below from - https://piccalil.li/blog/a-more-modern-css-reset/
+CSS heavily inspired by options on https://stylestage.dev/ 
+CSS more specifically inspired by https://stylestage.dev/styles/hackytoberfest/ 
+    Author: Jordana Morais
+    Twitter: https://twitter.com/JordanaBananza
+    https://jordanaharrison.com/
+*/
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+:root {
+  --font-family: "Inter", "Arial", sans-serif;
+  --font-weight-strong: 600;
+  --font-size-h1: 3rem;
+  --font-size-h2: 1.5rem;
+  --font-size-h3: 1.6rem;
+  --font-size-h4: 1.35rem;
+  --font-size-text: 1.25rem;
+  --border-radius: 0;
+  --brand-color-dark: hsl(316, 71%, 74%);
+  --brand-color-dark-intense: hsl(316, 91%, 74%);
+  --brand-color-dark-subtle: hsl(316, 31%, 74%);
+  --accent-color-dark-intense: hsl(198, 93%, 74%);
+  --accent-color-dark: hsl(198, 73%, 74%);
+  --accent-color-dark-subtle: hsl(198, 33%, 74%);
+  --container-background-color-dark: hsl(0, 0%, 20%);
+  --container-border-color-dark: hsl(0, 0%, 40%) 2px solid;
+  --container-border-radius-dark: 6px;
+
+  --quote-background-color: hsl(197, 9%, 45%);
+}
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Prevent font size inflation */
+html {
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+}
+
+/* Remove default margin in favour of better control in authored CSS */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin-block-end: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  line-height: 1.5;
+}
+
+/* Set shorter line heights on headings and interactive elements */
+h1,
+h2,
+h3,
+h4,
+button,
+input,
+label {
+  line-height: 1.1;
+}
+
+/* Balance text wrapping on headings */
+h1,
+h2,
+h3,
+h4 {
+  text-wrap: balance;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+  color: currentColor;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font-family: inherit;
+  font-size: inherit;
+}
+
+/* Make sure textareas without a rows attribute are not tiny */
+textarea:not([rows]) {
+  min-height: 10em;
+}
+
+/* Anything that has been anchored to should have extra scroll margin */
+:target {
+  scroll-margin-block: 5ex;
+}
+
+/* ################################ */
+/* ########## Custom CSS ########## */
+/* ################################ */
+
+body {
+  min-height: 100vh;
+  font-size: 100%;
+  line-height: 1.5;
+  text-rendering: optimizeSpeed;
+  overflow-x: hidden;
+  background: hsl(0, 0%, 12%);
+}
+
+.nav-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  list-style: none;
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.nav-link {
+  color: var(--brand-color-dark-intense);
+  font-size: 1.5rem;
+  font-family: var(--font-family);
+  font-weight: 700;
+  text-transform: uppercase;
+  text-decoration: none;
+  display: inline-grid;
+  padding: 0.5rem;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+  cursor: pointer;
+}
+
+.nav-link::after {
+  width: 100%;
+  height: 0.33em;
+  /* background-color: #fff; */
+  background-color: var(--accent-color-dark);
+  opacity: 0;
+  content: "";
+}
+.nav-link:hover::after {
+  opacity: 1;
+  color: #fff;
+}
+
+.nav-item {
+  margin: 0 0.5rem 0 0;
+}
+
+.container {
+  width: 100%;
+  max-width: 1280px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.footer-container {
+  display: flex;
+  width: 100%;
+  max-width: 1280px;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.footer-container__copyright {
+  font-family: var(--font-family);
+  font-weight: 500;
+  color: hsl(0, 0%, 100%);
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+.default-header {
+  width: 100%;
+  max-width: 1280px;
+  margin-right: auto;
+  margin-left: auto;
+  display: grid;
+  place-items: center;
+  align-items: end;
+}
+
+.default-header__h1 {
+  font-size: var(--font-size-h1);
+  color: var(--brand-color-dark-intense);
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+.default-header__default-nav {
+  margin: 0.25rem 0 0 0;
+  padding: 0rem 0 0 0;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-family);
+  font-weight: 700;
+  color: hsl(0, 0%, 100%);
+}
+
+p {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: var(--font-size-text);
+  line-height: 1.5;
+}
+
+.button {
+  background-color: hsl(0, 0%, 17%);
+  color: var(--accent-color-dark);
+  border: hsl(0, 0%, 40%) 2px solid;
+  border-radius: 6px;
+  padding: 0.75rem;
+  text-decoration: none;
+  text-align: center;
+}
+
+.button:hover {
+  background-color: hsl(0, 0%, 0%);
+  cursor: pointer;
+}
+
+.button:active {
+  background-color: hsl(0, 0%, 12%);
+  color: hsl(0, 0%, 100%);
+  border: hsl(0, 0%, 60%) 2px solid;
+}
+.button:disabled {
+  background-color: hsl(0, 0%, 40%);
+  color: hsl(0, 0%, 60%);
+  cursor: not-allowed;
+}
+
+.modal {
+  gap: 0.5rem;
+  background-color: hsl(0, 0%, 20%);
+  border: hsl(0, 0%, 40%) 2px solid;
+  border-radius: 6px;
+}
+
+.modal__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem;
+}
+
+.modal-content div:has(> input),
+.modal-content div:has(> select),
+.modal-content div:has(> textarea) {
+  display: grid;
+  justify-content: center;
+}
+
+.modal-content label {
+  font-family: var(--font-family);
+  font-size: 1.25rem;
+  color: hsl(0, 0%, 100%);
+  padding-bottom: 0.25rem;
+}
+.modal-content input + span,
+.modal-content select + span,
+.modal-content textarea + span {
+  display: inline-block;
+  min-height: 1.25rem;
+}
+
+.modal::backdrop {
+  background-color: hsl(0, 0%, 0%, 0.5);
+}
+
+.modal__button {
+  font-size: 1rem;
+  font-weight: 600;
+  font-family: var(--font-family);
+}
+
+.modal__button:disabled {
+  background-color: hsl(0, 0%, 40%);
+  color: hsl(0, 0%, 60%);
+  cursor: not-allowed;
+}
+
+.asterisk::after {
+  content: "*";
+  color: hsl(0, 100%, 89%);
+  font-family: var(--font-family);
+  font-size: 1.25rem;
+}
+
+.error-message {
+  color: hsl(0, 100%, 89%);
+  font-family: var(--font-family);
+}
+
+.button {
+  justify-content: center;
+}
+
+input {
+  font-family: var(--font-family);
+  font-size: 1.25rem;
+  padding: 0.5rem;
+  background-color: hsl(0, 0%, 20%);
+  color: var(--brand-color-dark);
+  border: hsl(0, 0%, 40%) 2px solid;
+  border-radius: 6px;
+  flex: 1;
+}
+
+textarea {
+  font-family: var(--font-family);
+  font-size: 1.25rem;
+  padding: 0.5rem;
+  background-color: hsl(0, 0%, 20%);
+  color: var(--brand-color-dark);
+  border: hsl(0, 0%, 40%) 2px solid;
+  border-radius: 6px;
+  flex: 1;
+}

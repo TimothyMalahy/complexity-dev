@@ -16,32 +16,35 @@
             <input type="url" id="reference-link" name="reference-link" placeholder="https://example.com">
             <span id="topic-error" class="error-message"></span>
         </div>
-            <div class="new-topic-form__admin-options">
-                <div class="new-topic-form__viewing-options selector-div">
-                    <label class="selector-label" for="viewing-choice">Viewing</label>
-                    <select id="viewing-choice" name="viewing-choice" class="selector">
-                        <option value="public">Public</option>
-                        <option value="private">Private</option>
-                    </select>
-                </div>
-                <div class="new-topic-form__voting-options selector-div">
-                    <label class="selector-label" for="voting-choice">Voting</label>
-                    <select id="voting-choice" name="voting-choice" class="selector">
-                        <option value="public">Public</option>
-                        <option value="private">Private</option>
-                    </select>
-                </div>
-                <div class="new-topic-form__new-subject-options selector-div">
-                    <label class="selector-label" for="new-subject-choice">New Subjects</label>
-                    <select id="new-subject-choice" name="new-subject-choice" class="selector">
-                        <option value="public">Public</option>
-                        <option value="private">Private (defaults to owner, but groups can be added)</option>
-                    </select>
-                </div>
-            </div>
+        <div class="new-topic-form__new-subject-options">
+            <label for="new-subject-options">New Subject Rules</label>
+            <select id="new-subject-options" name="new-subject-options">
+                <option value="public">Public</option>
+                <option value="private">Private</option>
+            </select>
+            <span id="topic-error" class="error-message"></span>
+        </div>
+
+        <div class="new-topic-form__admin-options">
+            
+                <span id="viewing-choice-label" for="viewing-choice">Viewing</span>
+                
+                <input name="viewing-choice" type="radio" id="viewing-option-public" value="public" checked>
+                
+                <input name="viewing-choice" type="radio" id="viewing-option-private" value="private">
+            
+            
+                <span id="voting-choice-label" for="voting-choice">Voting</span>
+                
+                <input name="voting-choice" type="radio" id="voting-option-public" value="public" checked>
+                
+                <input name="voting-choice" type="radio" id="voting-option-private" value="private">
+                <span id="radio-column-header-public">Public</span>
+                <span id="radio-column-header-private">Private</span>
+        </div>
         <div class="new-topic-form__buttons">
             <button class="button modal__button btn-save-return" name="btn-save-return" type="submit">Save and return</button>
             <button class="button modal__button btn-save-open" name="btn-save-open" type="submit">Save and Open Topic</button>
         </div>
-        <div></div>
+
     </form>

@@ -1,0 +1,52 @@
+.new-topic-form {
+  width: 100%;
+  display: grid;
+  grid-auto-columns: 1fr;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  gap: 0.5rem;
+  grid-template-areas:
+    "new-topic-form__topic"
+    "new-topic-form__reference-link"
+    "new-topic-form__admin-options"
+    "new-topic-form__buttons";
+}
+
+.new-topic-form__topic {
+  grid-area: new-topic-form__topic;
+}
+.new-topic-form__reference-link {
+  grid-area: new-topic-form__reference-link;
+}
+
+.new-topic-form__buttons {
+  grid-area: new-topic-form__buttons;
+  justify-self: center;
+  align-content: end;
+}
+
+.selector-label {
+  align-content: end !important;
+}
+
+.new-topic-form__admin-options {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(3, 1fr);
+  grid-template-areas:
+    "new-topic-form__viewing-options"
+    "new-topic-form__voting-options"
+    "new-topic-form__new-subject-options";
+}
+
+.new-topic-form__viewing-options {
+  display: flex;
+  flex-direction: row;
+}
+.new-topic-form__voting-options {
+  display: flex;
+}
+.new-topic-form__new-subject-options {
+  display: flex;
+}

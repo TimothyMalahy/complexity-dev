@@ -29,7 +29,7 @@
         <div class="loader htmx-indicator"></div>
     </div>
     <div class="buttons__container">
-        {% comment %}
+        {% if user.is_authenticated %}
         <button 
             class="button open-modal"
             id="new-topic"
@@ -37,7 +37,9 @@
             hx-target="#modal-content"
             
             >Add New Topic</button>
-            {% endcomment %}
+        {% endif %}
+        {% comment %}
+        {% if user.is_authenticated %}
         <button 
             class="button open-modal"
             id="suggest-topic"
@@ -45,8 +47,12 @@
             hx-target="#modal-content"
             
             >Suggest New Topic</button>
+        {% endif %}
+        {% endcomment %}
         <a class="button" href="{% url 'polls:random_topic_detail' %}">Find a Random Topic</a>
-        <button class="button" >My Topics</button>
+        {% if user.is_authenticated %}
+            <button class="button" >My Topics</button>
+        {% endif %}
     </div>
 
     <div id="topics__grid" class="topics__grid">

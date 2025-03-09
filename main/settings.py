@@ -24,9 +24,14 @@ SECRET_KEY = "django-insecure-2e6km%tjiw58zi6!pkb)dtyyldta@v288z$uug#p9i@cq+f+me
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
-INTERNAL_IPS = ["127.0.0.1"]
+INTERNAL_IPS = ["127.0.0.1", "localhost", "*"]
 
 ALLOWED_HOSTS = ["*"]
+CORS_ALLOWED_ORIGINS = ["http://localhost:8000", "*"]
+
+# EMAIL_BACKEND = "post_office.EmailBackend"
+EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
+SITE_URL = "http://127.0.0.1:80"
 
 
 # Application definition
@@ -47,9 +52,10 @@ FIRST_PARTY_APPS = [
 
 THIRD_PARTY_APPS = [
     "django_browser_reload",
+    "debug_toolbar",
     "post_office",
     "django_extensions",
-    "guardian",
+    # "guardian",
     "django_htmx",
 ]
 
@@ -63,6 +69,7 @@ MIDDLEWARE = [
     "django.middleware.csrf.CsrfViewMiddleware",
     "django.contrib.auth.middleware.AuthenticationMiddleware",
     "django.contrib.messages.middleware.MessageMiddleware",
+    "debug_toolbar.middleware.DebugToolbarMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
     "django_browser_reload.middleware.BrowserReloadMiddleware",
     "django_htmx.middleware.HtmxMiddleware",
@@ -70,21 +77,8 @@ MIDDLEWARE = [
 
 AUTHENTICATION_BACKENDS = (
     "django.contrib.auth.backends.ModelBackend",  # default
-    "guardian.backends.ObjectPermissionBackend",
+    # "guardian.backends.ObjectPermissionBackend",
 )
-
-EMAIL_BACKEND = "post_office.EmailBackend"
-# EMAIL_HOST = "smtp.example.com"
-# EMAIL_PORT = 587
-# EMAIL_USE_TLS = True
-# EMAIL_HOST_USER = 'your-email@example.com'
-# EMAIL_HOST_PASSWORD = 'your-email-password'
-# DEFAULT_FROM_EMAIL = 'webmaster@example.com'
-EMAIL_HOST = "localhost"
-EMAIL_PORT = 1025
-EMAIL_USE_TLS = False
-EMAIL_USE_SSL = False
-SITE_URL = "http://localhost:8000"
 
 
 ROOT_URLCONF = "main.urls"

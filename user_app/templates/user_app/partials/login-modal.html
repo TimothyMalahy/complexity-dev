@@ -1,6 +1,14 @@
 {% comment %}https://docs.djangoproject.com/en/5.1/topics/auth/default/#how-to-log-a-user-in{% endcomment %}
+{% load static %}
 
-<form hx-post="{% url 'user_app:login_user' %}" id="login-form" class="login-form">
+<script src="{% static 'js/htmx/extensions/preload.js' %}" defer></script>
+
+<form 
+hx-post="{% url 'user_app:login_user' %}" 
+id="login-form" 
+class="login-form"
+hx-indicator="#modal-loader"
+hx-ext="preload">
     {% csrf_token %}
     <div class="login-form__email">
         <label class="asterisk" for="email">Email</label>
@@ -20,7 +28,11 @@
     </div>
     <span id="form-errors" class="error-message"></span>
     <div class="login-form__buttons">
-        <button class="button modal__button btn-login" name="btn-login" type="submit">Login</button>
+        <button 
+            class="button modal__button btn-login" 
+            name="btn-login" 
+            type="submit">
+        Login </button>
         <button 
         class="button modal__button btn-register"
         name="btn-register" 

@@ -4,6 +4,8 @@ from django.utils import timezone
 from django.http import HttpResponse, HttpRequest, HttpResponseRedirect
 from .models import CustomUser
 from django.conf import settings
+from utils import timeit
+
 
 from post_office import mail
 import json
@@ -38,11 +40,14 @@ def send_test_email(request):
 
 
 def send_verification_email(user):
+    print("USER", user)
     token = user.generate_verification_token()
-    verification_link = f"{settings.SITE_URL}/verify/{token}"
+    print("TOKEN", token)
+    print(user.verification_token)
+    verification_link = f"{settings.SITE_URL}/user/verify/{user.verification_token}"
     mail.send(
         recipients=user.email,
-        sender=f"donotreply@{settings.SITE_URL}",
+        sender=f"donotreply@complexityindex.com",
         subject="Verify your account",
         message=f"Click the link to verify your account: {verification_link}",
     )
@@ -76,7 +81,6 @@ def render_register_modal(request: HtmxHttpRequest) -> HttpResponse:
 
 
 def render_login_modal(request: HtmxHttpRequest) -> HttpResponse:
-    print("RENDER LOGIN MODAL")
     context = {}
     random_user = CustomUser.objects.order_by("?").first()
     context["email"] = random_user.email
@@ -86,6 +90,7 @@ def render_login_modal(request: HtmxHttpRequest) -> HttpResponse:
     return response
 
 
+@timeit.timeit
 def login_user(request: HtmxHttpRequest) -> HttpResponse:
     email = request.POST.get("email")
     password = request.POST.get("password")
@@ -132,6 +137,8 @@ def register_user(request: HtmxHttpRequest) -> HttpResponse:
     new_user.first_name = request.POST.get("first-name")
     new_user.last_name = request.POST.get("last-name")
     new_user.save()
+
+    send_verification_email(new_user)
 
     response = trigger_client_event(response, "closeModal", after="receive")
     return response

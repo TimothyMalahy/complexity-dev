@@ -20,15 +20,22 @@ from django.urls import path
 from django.urls import include
 from django.conf import settings
 from django.conf.urls.static import static
+from debug_toolbar.toolbar import debug_toolbar_urls
 
-urlpatterns = [
-    path("", include(("home.urls", "home"), namespace="home")),
-    path("polls/", include(("polls.urls", "polls"), namespace="polls")),
-    path("admin/", admin.site.urls),
-    path("user/", include(("user_app.urls", "user_app"), namespace="user_app")),
-    path("accounts/", include("django.contrib.auth.urls")),
-    path("__reload__/", include("django_browser_reload.urls")),
-] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+urlpatterns = (
+    [
+        path("", include(("home.urls", "home"), namespace="home")),
+        path("polls/", include(("polls.urls", "polls"), namespace="polls")),
+        path("admin/", admin.site.urls),
+        path("user/", include(("user_app.urls", "user_app"), namespace="user_app")),
+        path("accounts/", include("django.contrib.auth.urls")),
+        path("__reload__/", include("django_browser_reload.urls")),
+    ]
+    + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+    + debug_toolbar_urls()
+)
 
 if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+
+urlpatterns

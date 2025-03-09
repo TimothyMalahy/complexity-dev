@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Home</title>
+    <link rel="stylesheet" href="Home_files/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com/"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+    <link href="Home_files/css2.css" rel="stylesheet">
+    
+    
+    
+    <!-- jsDelivr :: Sortable :: Latest (https://www.jsdelivr.com/package/npm/sortablejs) -->
+    <script src="Home_files/sortable.min.js"></script>
+    <!-- Feather icons -->
+    <script src="Home_files/feather.min.js" defer="defer"></script> <!-- https://github.com/feathericons/feather -->
+
+    <!-- HTMX and extensions -->
+    <script src="Home_files/htmx.min.js" defer="defer"></script>
+    <script src="Home_files/sse.js" defer="defer"></script>
+
+    
+    <link rel="stylesheet" href="Home_files/vote.css">
+
+<style>      .htmx-indicator{opacity:0}      .htmx-request .htmx-indicator{opacity:1; transition: opacity 200ms ease-in;}      .htmx-request.htmx-indicator{opacity:1; transition: opacity 200ms ease-in;}      </style></head>
+<body class="gradient-background" hx-ext="sse">
+    
+    <header>
+        
+        <div class="default-header">
+            <div class="header-autofit">
+                <h1><a href="http://127.0.0.1:8000/#home">Complexity.Dev</a></h1>
+                <nav class="default-nav">
+                    <ul class="nav-list">
+                        <li><a href="http://127.0.0.1:8000/#about">About</a></li>
+                        <li><a href="http://127.0.0.1:8000/polls/">See Topics</a></li>
+                        <li><a href="http://127.0.0.1:8000/#home">Home</a></li>
+                        <li><a href="http://127.0.0.1:8000/#blog">Blog</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        
+    </header>
+
+    
+    <main>
+        <div class="container">
+            
+    <h2>Order the below items from least complex to most complex</h2>
+    <h4>Least Complex</h4>
+    <div id="polllist" class="poll-list">
+        
+        <div class="poll-list-item" tabindex="0" data-id="1" draggable="false">
+            Shadow DOM 
+        </div>
+        
+        
+        
+        
+        
+        <div class="poll-list-item" tabindex="0" data-id="3">
+            Box Model 
+        </div><div class="poll-list-item" tabindex="0" data-id="7">
+            Responsive Design 
+        </div><div class="poll-list-item" tabindex="0" data-id="15">
+            Z-Index 
+        </div>
+        
+        
+        <div class="poll-list-item" tabindex="0" data-id="4">
+            Positioning 
+        </div>
+        
+        
+        
+        
+        
+        <div class="poll-list-item" tabindex="0" data-id="6">
+            Grid Layout 
+        </div>
+        
+        
+        <div class="poll-list-item" tabindex="0" data-id="2">
+            CSS Selectors 
+        </div>
+        
+        
+        
+        
+        
+        <div class="poll-list-item" tabindex="0" data-id="9">
+            Typography 
+        </div>
+        
+        
+        <div class="poll-list-item" tabindex="0" data-id="12">
+            CSS Transforms 
+        </div><div class="poll-list-item" tabindex="0" data-id="5">
+            Flexbox 
+        </div><div class="poll-list-item" tabindex="0" data-id="10">
+            Transitions 
+        </div>
+        
+        
+        
+        
+        
+        
+        
+        
+        <div class="poll-list-item" tabindex="0" data-id="13">
+            Shadows 
+        </div>
+        
+        
+        <div class="poll-list-item" tabindex="0" data-id="18">
+            CSS Layout Techniques 
+        </div><div class="poll-list-item" tabindex="0" data-id="14">
+            CSS Colors 
+        </div><div class="poll-list-item" tabindex="0" data-id="11">
+            CSS Animations 
+        </div><div class="poll-list-item" tabindex="0" data-id="8">
+            CSS Variables 
+        </div>
+        
+        
+        
+        
+        
+        <div class="poll-list-item" tabindex="0" data-id="16">
+            Float and Clear 
+        </div>
+        
+        
+        <div class="poll-list-item" tabindex="0" data-id="17">
+            CSS Functions 
+        </div>
+        
+        
+        
+        
+        
+        <div class="poll-list-item" tabindex="0" data-id="19">
+            Form Styling 
+        </div>
+        
+        
+        <div class="poll-list-item" tabindex="0" data-id="20">
+            CSS Filters 
+        </div>
+        
+        
+        <div class="poll-list-item" tabindex="0" data-id="21">
+            Clip-path 
+        </div>
+        
+        
+        <div class="poll-list-item" tabindex="0" data-id="22">
+            CSS Specificity 
+        </div>
+        
+        
+        <div class="poll-list-item" tabindex="0" data-id="23">
+            CSS Frameworks 
+        </div>
+        
+        
+        <div class="poll-list-item" tabindex="0" data-id="24">
+            CSS Preprocessors 
+        </div>
+        
+        
+        <div class="poll-list-item" tabindex="0" data-id="25">
+            CSS Custom Properties (Scoped) 
+        </div>
+        
+        
+        <div class="poll-list-item" tabindex="0" data-id="26">
+            CSS Grid and Flexbox Responsiveness 
+        </div>
+        
+        
+    </div>
+    <h4>Most Complex</h4>
+
+        </div>
+    </main>
+    <footer>
+        <p>© 2025 My Site</p>
+    </footer>
+<script src="Home_files/reload-listener.js" data-worker-script-path="/static/django-browser-reload/reload-worker.js" data-events-path="/__reload__/events/" defer="defer"></script>
+<script>
+    feather.replace();
+</script>
+
+<script>
+    var sortable = new Sortable(polllist, {
+        animation: 150,
+        ghostClass: 'sortable-ghost'
+    });
+</script>
+
+
+<script>
+    document.addEventListener('keydown', function moveelement(event) {
+        if (event.code === 'ArrowUp') {
+            event.preventDefault(); // Prevent the default arrow key action (scrolling)
+            let activeElement = document.activeElement;
+            let items = document.querySelectorAll('#polllist .poll-list-item');
+            let currentIndex = Array.from(items).indexOf(activeElement);
+            let nextIndex = currentIndex + (event.code === 'ArrowUp' ? -1 : 1);
+            if (nextIndex >= 0 && nextIndex < items.length) {
+                let nextElement = items[nextIndex];
+                activeElement.parentElement.insertBefore(activeElement, nextElement);
+                activeElement.focus();
+            }
+        }
+        if (event.code === 'ArrowDown') {
+            event.preventDefault(); // Prevent the default arrow key action (scrolling)
+            let activeElement = document.activeElement;
+            let items = document.querySelectorAll('#polllist .poll-list-item');
+            let currentIndex = Array.from(items).indexOf(activeElement);
+            let nextIndex = currentIndex + 1;
+            if (nextIndex >= 0 && nextIndex < items.length) {
+                let nextElement = items[nextIndex].nextSibling;
+                activeElement.parentElement.insertBefore(activeElement, nextElement);
+                activeElement.focus();
+            }
+        }
+    });
+
+</script>
+
+
+
+
+</body></html>

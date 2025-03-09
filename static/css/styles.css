@@ -177,14 +177,29 @@ body {
 
 .container {
   width: 100%;
-  max-width: 950px;
+  max-width: 1280px;
   margin-right: auto;
   margin-left: auto;
 }
 
+.footer-container {
+  display: flex;
+  width: 100%;
+  max-width: 1280px;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.footer-container__copyright {
+  font-family: var(--font-family);
+  font-weight: 500;
+  color: hsl(0, 0%, 100%);
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
 .default-header {
   width: 100%;
-  max-width: 950px;
+  max-width: 1280px;
   margin-right: auto;
   margin-left: auto;
   display: grid;
@@ -254,24 +269,26 @@ p {
 
 .modal__header {
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
   align-items: center;
   padding: 0.5rem;
 }
 
-.modal-content div:has(> input),
+.modal-content div:has(> input:not([type="radio"])),
 .modal-content div:has(> select),
 .modal-content div:has(> textarea) {
   display: grid;
   justify-content: center;
 }
 
-.modal-content label {
+.modal-content label,
+.modal-content span {
   font-family: var(--font-family);
   font-size: 1.25rem;
   color: hsl(0, 0%, 100%);
   padding-bottom: 0.25rem;
 }
+
 .modal-content input + span,
 .modal-content select + span,
 .modal-content textarea + span {

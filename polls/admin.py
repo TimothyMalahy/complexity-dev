@@ -10,7 +10,7 @@ from .models import (
     Ranking,
     TopicGroup,
 )
-from guardian.admin import GuardedModelAdmin
+# from guardian.admin import GuardedModelAdmin
 
 
 class TopicGroupInline(admin.TabularInline):
@@ -106,7 +106,7 @@ class SubjectScoreAdmin(admin.ModelAdmin):
 
 
 @admin.register(SubjectLinks)
-class SubjectLinksAdmin(GuardedModelAdmin):
+class SubjectLinksAdmin(admin.ModelAdmin):
     list_display = ("id", "subject", "link_text", "link_url", "pub_date")
     list_filter = ("subject", "pub_date")
 
